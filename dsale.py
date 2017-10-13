@@ -43,7 +43,7 @@ for i, x in enumerate(result):
     sheet1.write(i+1, 0, x[0])
     sheet1.write(i+1, 1, x[1])
 
-scur.execute(lastSales.format(condition.format('', 'or', '', 'or', '', 'asc')))
+scur.execute(lastSales.format(condition.format('', 'or', '', 'or', ''), 'asc'))
 result = scur.fetchall()
 sheet2 = workBook.add_sheet('苹果龙虎榜')
 sheet2.write(0, 0, '机型')
@@ -52,7 +52,7 @@ for i, x in enumerate(result):
     sheet2.write(i+1, 0, x[0])
     sheet2.write(i+1, 1, x[1])
 
-scur.execute(lastSales.format(condition.format('not', 'and', 'not', 'and', 'not', 'asc')))
+scur.execute(lastSales.format(condition.format('not', 'and', 'not', 'and', 'not'), 'asc'))
 result = scur.fetchall()
 sheet3 = workBook.add_sheet("安卓龙虎榜")
 sheet3.write(0, 0, '机型')
@@ -128,11 +128,11 @@ for i, n in enumerate(groundings):
     sheet4.write(i+1, 2, n[2])
 
 storage = '''
-SELECT pm.`model_name`,COUNT(1) `count` FROM panda.`pdi_product` pp
+SELECT pm.model_name,COUNT(1) `count` FROM panda.`stg_warehouse` sw
 LEFT JOIN panda.`pdi_model` pm
-ON pp.model_id = pm.`model_id`
-WHERE pp.status =1 
-GROUP BY pm.`model_name`
+ON sw.model_id = pm.`model_id`
+WHERE sw.`warehouse_status` = 1
+GROUP BY pm.model_name
 ORDER BY `count` DESC
 '''
 scur.execute(storage)
@@ -140,7 +140,7 @@ result = scur.fetchall()
 sheet5 = workBook.add_sheet('库存统计')
 sheet5.write(0, 0, '机型')
 sheet5.write(0, 1, '库存数量')
-for i, r in result:
+for i, r in enumerate(result):
     sheet5.write(i+1, 0, r[0])
     sheet5.write(i+1, 1, r[1])
 
