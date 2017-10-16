@@ -18,6 +18,37 @@ pset = set()
 fenshi = {}
 jiance = {}
 shangjia = {}
+
+versionsql = '''
+SELECT ppv.pvid,ppv.pv_name FROM panda.`pdi_prop_value` ppv
+WHERE ppv.pnid = 5
+'''
+vd = {}
+scur.execute(versionsql)
+versions = scur.fetchall()
+for v in versions:
+    vd[str(v[0])] = v[1]
+
+colorsql = '''
+SELECT ppv.pvid,ppv.pv_name FROM panda.`pdi_prop_value` ppv
+WHERE ppv.pnid = 10
+'''
+cd = {}
+scur.execute(colorsql)
+colors = scur.fetchall()
+for c in colors:
+    cd[str(c[0])] = c[1]
+
+memorysql = '''
+SELECT ppv.pvid,ppv.pv_name FROM panda.`pdi_prop_value` ppv
+WHERE ppv.pnid = 11
+'''
+md = {}
+scur.execute(memorysql)
+memorys = scur.fetchall()
+for m in memorys:
+    md[str(m[0])] = m[1]
+
 for wnum in warehouse_num:
     storagesql = '''
     SELECT pm.`model_name`,sw.`key_props`,sw.`warehouse_num` FROM panda.`stg_warehouse` sw
@@ -28,36 +59,6 @@ for wnum in warehouse_num:
     '''
     scur.execute(storagesql.format(wnum))
     storages = scur.fetchall()
-
-    versionsql = '''
-    SELECT ppv.pvid,ppv.pv_name FROM panda.`pdi_prop_value` ppv
-    WHERE ppv.pnid = 5
-    '''
-    vd = {}
-    scur.execute(versionsql)
-    versions = scur.fetchall()
-    for v in versions:
-        vd[str(v[0])] = v[1]
-
-    colorsql = '''
-    SELECT ppv.pvid,ppv.pv_name FROM panda.`pdi_prop_value` ppv
-    WHERE ppv.pnid = 10
-    '''
-    cd = {}
-    scur.execute(colorsql)
-    colors = scur.fetchall()
-    for c in colors:
-        cd[str(c[0])] = c[1]
-
-    memorysql = '''
-    SELECT ppv.pvid,ppv.pv_name FROM panda.`pdi_prop_value` ppv
-    WHERE ppv.pnid = 11
-    '''
-    md = {}
-    scur.execute(memorysql)
-    memorys = scur.fetchall()
-    for m in memorys:
-        md[str(m[0])] = m[1]
 
     products = []
     for s in storages:
