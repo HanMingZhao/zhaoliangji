@@ -1,14 +1,18 @@
 import pymysql as db
 import numpy as np
+import xlwt
+import datetime as dt
 
 warehouse_nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 11]
 
 src_con = db.connect(host='rm-bp13wnvyc2dh86ju1.mysql.rds.aliyuncs.com', user='panda_reader', passwd='zhaoliangji3503',
-                   db='panda', charset='utf8')
+                     db='panda', charset='utf8')
 dst_con = db.connect(host='114.215.176.190', user='root', passwd='huodao123', db='ods', port=33069, charset='utf8')
 
 src_cur = src_con.cursor()
 dst_cur = dst_con.cursor()
+
+wb = xlwt.Workbook()
 
 sku = []
 
@@ -145,8 +149,48 @@ for row in matrix2:
 
 insertsql = '''insert into ods.ods_warehouse_sum  VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s,%s)'''
 
-dst_cur.executemany(insertsql,dst_arg)
+dst_cur.executemany(insertsql, dst_arg)
 dst_con.commit()
+
+sheet = wb.add_sheet('sheet1')
+sheet.write(0, 0, 'sku')
+sheet.write(0, 1, '分拾')
+sheet.write(0, 2, '检测')
+sheet.write(0, 3, '市场')
+sheet.write(0, 4, '维修')
+sheet.write(0, 5, '报废')
+sheet.write(0, 6, 'B端')
+sheet.write(0, 7, '预上架')
+sheet.write(0, 8, '外包维修')
+sheet.write(0, 9, '京东')
+sheet.write(0, 10, '上架')
+sheet.write(0, 11, '总计')
+sheet.write(0, 12, '占比')
+querySql = '''
+select * from ods.ods_warehouse_sum
+'''
+dst_cur.execute(querySql)
+result = dst_cur.fetchall()
+for i, r in enumerate(result):
+    for j, x in enumerate(r):
+        sheet.write(i+1, j, int(x) if j > 0 else x)
+    sheet.write(i+1, len(r), int(r[10])/int(r[11]))
+sheetLength = len(sheet.rows)
+lastRow = len(result) - 1
+sheet.write(sheetLength, 0, '占比')
+sheet.write(sheetLength, 1, int(result[lastRow][1])/int(result[lastRow][11]))
+sheet.write(sheetLength, 2, int(result[lastRow][2])/int(result[lastRow][11]))
+sheet.write(sheetLength, 3, int(result[lastRow][3])/int(result[lastRow][11]))
+sheet.write(sheetLength, 4, int(result[lastRow][4])/int(result[lastRow][11]))
+sheet.write(sheetLength, 5, int(result[lastRow][5])/int(result[lastRow][11]))
+sheet.write(sheetLength, 6, int(result[lastRow][6])/int(result[lastRow][11]))
+sheet.write(sheetLength, 7, int(result[lastRow][7])/int(result[lastRow][11]))
+sheet.write(sheetLength, 8, int(result[lastRow][8])/int(result[lastRow][11]))
+sheet.write(sheetLength, 9, int(result[lastRow][9])/int(result[lastRow][11]))
+sheet.write(sheetLength, 10, int(result[lastRow][10])/int(result[lastRow][11]))
+
+path = '~/python3/'
+wb.save(path + str(dt.datetime.today().date()) + 'warehouse.xls')
 
 src_cur.close()
 src_con.close()

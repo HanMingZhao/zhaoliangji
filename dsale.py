@@ -4,6 +4,7 @@ from datetime import datetime
 import numpy as np
 
 today = str(datetime.now().date())
+path = '~/python3/'
 
 scon = db.connect(host='rm-bp13wnvyc2dh86ju1.mysql.rds.aliyuncs.com', user='panda_reader', passwd='zhaoliangji3503',
                   db='panda', charset='utf8')
@@ -208,6 +209,7 @@ SELECT bt.model_name,COUNT(1) FROM
     ) psw
     LEFT JOIN panda.`pdi_model`  pm  ON  psw.model_id = pm.model_id
     WHERE psw.warehouse_status = 1
+    AND psw.warehouse_num in (2,4,8)
     ORDER BY pm.model_name ,times,imei
     )bt
     where {}
@@ -281,7 +283,7 @@ matrix4.reverse()
 for i, r in enumerate(matrix4[0]):
     sheet6.write(1, i, r)
 
-workBook.save(wbTitle.format(today))
+workBook.save(path + wbTitle.format(today))
 
 scur.close()
 scon.close()
