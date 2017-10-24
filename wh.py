@@ -189,7 +189,7 @@ sheet.write(sheetLength, 8, int(result[lastRow][8])/int(result[lastRow][11]))
 sheet.write(sheetLength, 9, int(result[lastRow][9])/int(result[lastRow][11]))
 sheet.write(sheetLength, 10, int(result[lastRow][10])/int(result[lastRow][11]))
 
-path = '~/python3/'
+path = '/var/www/python3/'
 wb.save(path + str(dt.datetime.today().date()) + 'warehouse.xls')
 
 src_cur.close()
