@@ -11,7 +11,7 @@ src_cur = src_con.cursor()
 dst_cur = dst_con.cursor()
 
 workBook = xlwt.Workbook()
-path = '~/python3/'
+path = '/var/www/python3/'
 
 
 times = ["afs.times < 1           ",

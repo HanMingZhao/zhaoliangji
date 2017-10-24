@@ -4,7 +4,7 @@ from datetime import datetime
 import numpy as np
 
 today = str(datetime.now().date())
-path = '~/python3/'
+path = '/var/www/python3/'
 
 scon = db.connect(host='rm-bp13wnvyc2dh86ju1.mysql.rds.aliyuncs.com', user='panda_reader', passwd='zhaoliangji3503',
                   db='panda', charset='utf8')

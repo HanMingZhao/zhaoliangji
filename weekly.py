@@ -8,7 +8,7 @@ scon = db.connect(host='rm-bp13wnvyc2dh86ju1.mysql.rds.aliyuncs.com', user='pand
 scur = scon.cursor()
 workBook = xlwt.Workbook()
 today = str(dt.datetime.today().date())
-path = '~/python3/'
+path = '/var/www/python3/'
 
 versionsql = '''
 SELECT ppv.pvid,ppv.pv_name FROM panda.`pdi_prop_value` ppv
