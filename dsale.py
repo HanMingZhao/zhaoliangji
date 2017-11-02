@@ -51,8 +51,8 @@ SELECT COUNT(1) FROM panda.`odi_order` oo
 LEFT JOIN panda.`aci_user_info` aui
 ON oo.user_id = aui.user_id
 WHERE oo.order_status IN (1,2,4,5)
-AND oo.create_at > {}
-AND oo.create_at < {}
+AND oo.create_at > '{}'
+AND oo.create_at < '{}'
 AND aui.`from_shop` NOT IN ('Patica','猎趣','趣分期','中捷代购','钱到到','小卖家','趣先享','京东店铺','机密')
 '''
 dateToday = datetime.datetime.today()
