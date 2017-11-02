@@ -55,11 +55,30 @@ AND oo.create_at > DATE(NOW()) {}
 AND oo.create_at < DATE(NOW()) {}
 AND aui.`from_shop` NOT IN ('Patica','猎趣','趣分期','中捷代购','钱到到','小卖家','趣先享','京东店铺','机密')
 '''
+
 scur.execute(timesql.format('-1 ', ''))
 lastCount = scur.fetchone()[0]
-scur.execute(timesql.format('-2 ', '-1 '))
+timesql = '''
+SELECT COUNT(1) FROM panda.`odi_order` oo
+LEFT JOIN panda.`aci_user_info` aui
+ON oo.user_id = aui.user_id
+WHERE oo.order_status IN (1,2,4,5)
+AND oo.create_at > '2017-10-31 00:00:00'
+AND oo.create_at < '2017-11-1 00:00:00'
+AND aui.`from_shop` NOT IN ('Patica','猎趣','趣分期','中捷代购','钱到到','小卖家','趣先享','京东店铺','机密')
+'''
+scur.execute(timesql)
 beforeLast = scur.fetchone()[0]
-scur.execute(timesql.format('-8 ', '-7 '))
+timesql = '''
+SELECT COUNT(1) FROM panda.`odi_order` oo
+LEFT JOIN panda.`aci_user_info` aui
+ON oo.user_id = aui.user_id
+WHERE oo.order_status IN (1,2,4,5)
+AND oo.create_at > '2017-10-25 00:00:00'
+AND oo.create_at < '2017-10-26 00:00:00'
+AND aui.`from_shop` NOT IN ('Patica','猎趣','趣分期','中捷代购','钱到到','小卖家','趣先享','京东店铺','机密')
+'''
+scur.execute(timesql)
 lastWeek = scur.fetchone()[0]
 
 sheet1.write(0, 5, '同比')
