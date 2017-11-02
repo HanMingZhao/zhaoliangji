@@ -1,9 +1,9 @@
 import pymysql as db
 import xlwt
-from datetime import datetime
+import datetime
 import numpy as np
 
-today = str(datetime.now().date())
+today = str(datetime.datetime.now().date())
 path = '/var/www/python3/'
 
 scon = db.connect(host='rm-bp13wnvyc2dh86ju1.mysql.rds.aliyuncs.com', user='panda_reader', passwd='zhaoliangji3503',
@@ -51,34 +51,21 @@ SELECT COUNT(1) FROM panda.`odi_order` oo
 LEFT JOIN panda.`aci_user_info` aui
 ON oo.user_id = aui.user_id
 WHERE oo.order_status IN (1,2,4,5)
-AND oo.create_at > DATE(NOW()) {}
-AND oo.create_at < DATE(NOW()) {}
+AND oo.create_at > {}
+AND oo.create_at < {}
 AND aui.`from_shop` NOT IN ('Patica','猎趣','趣分期','中捷代购','钱到到','小卖家','趣先享','京东店铺','机密')
 '''
-
-scur.execute(timesql.format('-1 ', ''))
+dateToday = datetime.datetime.today()
+dateYesterday = dateToday - datetime.timedelta(1)
+dateBeforeYesterday = dateYesterday - datetime.timedelta(1)
+dateLastWeekDay = dateToday - datetime.timedelta(7)
+dateBeforeLastWeekDay = dateLastWeekDay - datetime.timedelta(1)
+dtformat = "%Y-%m-%d"
+scur.execute(timesql.format(dateYesterday.strftime(dtformat), dateToday.strftime(dtformat)))
 lastCount = scur.fetchone()[0]
-timesql = '''
-SELECT COUNT(1) FROM panda.`odi_order` oo
-LEFT JOIN panda.`aci_user_info` aui
-ON oo.user_id = aui.user_id
-WHERE oo.order_status IN (1,2,4,5)
-AND oo.create_at > '2017-10-31 00:00:00'
-AND oo.create_at < '2017-11-1 00:00:00'
-AND aui.`from_shop` NOT IN ('Patica','猎趣','趣分期','中捷代购','钱到到','小卖家','趣先享','京东店铺','机密')
-'''
-scur.execute(timesql)
+scur.execute(timesql.format(dateBeforeYesterday.strftime(dtformat), dateYesterday.strftime(dtformat)))
 beforeLast = scur.fetchone()[0]
-timesql = '''
-SELECT COUNT(1) FROM panda.`odi_order` oo
-LEFT JOIN panda.`aci_user_info` aui
-ON oo.user_id = aui.user_id
-WHERE oo.order_status IN (1,2,4,5)
-AND oo.create_at > '2017-10-25 00:00:00'
-AND oo.create_at < '2017-10-26 00:00:00'
-AND aui.`from_shop` NOT IN ('Patica','猎趣','趣分期','中捷代购','钱到到','小卖家','趣先享','京东店铺','机密')
-'''
-scur.execute(timesql)
+scur.execute(timesql.format(dateBeforeLastWeekDay.strftime(dtformat), dateLastWeekDay.strftime(dtformat)))
 lastWeek = scur.fetchone()[0]
 
 sheet1.write(0, 5, '同比')
