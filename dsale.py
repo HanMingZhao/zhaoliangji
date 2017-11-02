@@ -61,6 +61,8 @@ dateBeforeYesterday = dateYesterday - datetime.timedelta(1)
 dateLastWeekDay = dateToday - datetime.timedelta(7)
 dateBeforeLastWeekDay = dateLastWeekDay - datetime.timedelta(1)
 dtformat = "%Y-%m-%d"
+print(dateToday.strftime(dtformat), dateYesterday.strftime(dtformat), dateBeforeYesterday.strftime(dtformat),
+      dateLastWeekDay.strftime(dtformat), dateBeforeLastWeekDay.strftime(dtformat))
 scur.execute(timesql.format(dateYesterday.strftime(dtformat), dateToday.strftime(dtformat)))
 lastCount = scur.fetchone()[0]
 scur.execute(timesql.format(dateBeforeYesterday.strftime(dtformat), dateYesterday.strftime(dtformat)))
