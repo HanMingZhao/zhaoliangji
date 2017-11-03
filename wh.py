@@ -54,7 +54,8 @@ w7 = np.zeros(len(sku), dtype=int)
 w8 = np.zeros(len(sku), dtype=int)
 w9 = np.zeros(len(sku), dtype=int)
 w11 = np.zeros(len(sku), dtype=int)
-wdict = {1: w1, 2: w2, 3: w3, 4: w4, 5: w5, 6: w6, 7: w7, 8: w8, 9: w9, 11: w11}
+w12 = np.zeros(len(sku), dtype=int)
+wdict = {1: w1, 2: w2, 3: w3, 4: w4, 5: w5, 6: w6, 7: w7, 8: w8, 9: w9, 11: w11, 12: w12}
 
 for whnum in warehouse_nums:
     askusql = '''SELECT pm.brand_name,COUNT(1) FROM panda.`stg_warehouse` sw 
@@ -101,6 +102,8 @@ l9 = [int(x) for x in w9]
 l9.append(sum(l9))
 l11 = [int(x) for x in w11]
 l11.append(sum(l11))
+l12 = [int(x) for x in w12]
+l12.append(sum(l12))
 l1.insert(0, '分拾')
 l2.insert(0, '检测')
 l3.insert(0, '市场')
@@ -111,8 +114,9 @@ l7.insert(0, 'B端')
 l8.insert(0, '预上架')
 l9.insert(0, '外包维修')
 l11.insert(0, '京东')
+l12.insert(0, '代卖库')
 
-matrix = np.matrix([sku, l1, l2, l3, l5, l6, l7, l8, l9, l11, l4])
+matrix = np.matrix([sku, l1, l2, l3, l5, l6, l7, l8, l9, l11, l12, l4])
 matrix2 = matrix.transpose().tolist()
 
 tablesql = '''
@@ -128,6 +132,7 @@ CREATE TABLE ods.ods_warehouse_sum
 `预上架` SMALLINT(4), 
 `外包维修` SMALLINT(4), 
 `京东` SMALLINT(4),
+`待卖` SMALLINT(4),
 `上架` SMALLINT(4),
 `总计` SMALLINT(4)
 )ENGINE=MYISAM CHARSET=utf8; 
@@ -141,13 +146,13 @@ for row in matrix2:
         continue
     if row[0] == '总计' and int(row[1]) == 0 and int(row[2]) == 0 and int(row[3]) == 0 and int(row[4]) == 0\
             and int(row[5]) == 0 and int(row[6]) == 0 and int(row[7]) == 0 and int(row[8]) == 0 and int(row[9]) == 0\
-            and int(row[10]) == 0:
+            and int(row[10]) == 0 and int(row[11]) == 0:
         continue
     dst_arg.append((row[0], int(row[1]), int(row[2]), int(row[3]), int(row[4]), int(row[5]), int(row[6]), int(row[7]),
-                    int(row[8]), int(row[9]), int(row[10]), int(row[1]) + int(row[2]) + int(row[3]) + int(row[4]) +
-                    int(row[5]) + int(row[6]) + int(row[7]) + int(row[8]) + int(row[9]) + int(row[10])))
+                    int(row[8]), int(row[9]), int(row[10]), int(row[11]), int(row[1]) + int(row[2]) + int(row[3]) +
+                    int(row[4]) + int(row[5]) + int(row[6]) + int(row[7]) + int(row[8]) + int(row[9]) + int(row[10])))
 
-insertsql = '''insert into ods.ods_warehouse_sum  VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s,%s)'''
+insertsql = '''insert into ods.ods_warehouse_sum  VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s,%s,%s)'''
 
 dst_cur.executemany(insertsql, dst_arg)
 dst_con.commit()
@@ -163,9 +168,10 @@ sheet.write(0, 6, 'B端')
 sheet.write(0, 7, '预上架')
 sheet.write(0, 8, '外包维修')
 sheet.write(0, 9, '京东')
-sheet.write(0, 10, '上架')
-sheet.write(0, 11, '总计')
-sheet.write(0, 12, '占比')
+sheet.write(0, 10, '待卖')
+sheet.write(0, 11, '上架')
+sheet.write(0, 12, '总计')
+sheet.write(0, 13, '占比')
 querySql = '''
 select * from ods.ods_warehouse_sum
 '''
@@ -174,20 +180,21 @@ result = dst_cur.fetchall()
 for i, r in enumerate(result):
     for j, x in enumerate(r):
         sheet.write(i+1, j, int(x) if j > 0 else x)
-    sheet.write(i+1, len(r), int(r[10])/int(r[11]))
+    sheet.write(i+1, len(r), int(r[11])/int(r[12]))
 sheetLength = len(sheet.rows)
 lastRow = len(result) - 1
 sheet.write(sheetLength, 0, '占比')
-sheet.write(sheetLength, 1, int(result[lastRow][1])/int(result[lastRow][11]))
-sheet.write(sheetLength, 2, int(result[lastRow][2])/int(result[lastRow][11]))
-sheet.write(sheetLength, 3, int(result[lastRow][3])/int(result[lastRow][11]))
-sheet.write(sheetLength, 4, int(result[lastRow][4])/int(result[lastRow][11]))
-sheet.write(sheetLength, 5, int(result[lastRow][5])/int(result[lastRow][11]))
-sheet.write(sheetLength, 6, int(result[lastRow][6])/int(result[lastRow][11]))
-sheet.write(sheetLength, 7, int(result[lastRow][7])/int(result[lastRow][11]))
-sheet.write(sheetLength, 8, int(result[lastRow][8])/int(result[lastRow][11]))
-sheet.write(sheetLength, 9, int(result[lastRow][9])/int(result[lastRow][11]))
-sheet.write(sheetLength, 10, int(result[lastRow][10])/int(result[lastRow][11]))
+sheet.write(sheetLength, 1, int(result[lastRow][1])/int(result[lastRow][12]))
+sheet.write(sheetLength, 2, int(result[lastRow][2])/int(result[lastRow][12]))
+sheet.write(sheetLength, 3, int(result[lastRow][3])/int(result[lastRow][12]))
+sheet.write(sheetLength, 4, int(result[lastRow][4])/int(result[lastRow][12]))
+sheet.write(sheetLength, 5, int(result[lastRow][5])/int(result[lastRow][12]))
+sheet.write(sheetLength, 6, int(result[lastRow][6])/int(result[lastRow][12]))
+sheet.write(sheetLength, 7, int(result[lastRow][7])/int(result[lastRow][12]))
+sheet.write(sheetLength, 8, int(result[lastRow][8])/int(result[lastRow][12]))
+sheet.write(sheetLength, 9, int(result[lastRow][9])/int(result[lastRow][12]))
+sheet.write(sheetLength, 10, int(result[lastRow][10])/int(result[lastRow][12]))
+sheet.write(sheetLength, 11, int(result[lastRow][11])/int(result[lastRow][12]))
 
 path = '/var/www/python3/'
 wb.save(path + str(dt.datetime.today().date()) + 'warehouse.xls')

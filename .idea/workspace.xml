@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4a99546f-643b-4833-b464-5e20828d8662" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wh.py" afterPath="$PROJECT_DIR$/wh.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/whsku.py" afterPath="$PROJECT_DIR$/whsku.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -47,7 +45,7 @@
       <file leaf-file-name="dsale.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dsale.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1377">
+            <state relative-caret-position="27">
               <caret line="54" column="23" lean-forward="false" selection-start-line="54" selection-start-column="23" selection-end-line="54" selection-end-column="23" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
@@ -70,7 +68,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="54">
@@ -139,23 +137,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="wh.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="wh.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wh.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="5" column="51" lean-forward="false" selection-start-line="5" selection-start-column="51" selection-end-line="5" selection-end-column="51" />
+            <state relative-caret-position="407">
+              <caret line="208" column="0" lean-forward="true" selection-start-line="208" selection-start-column="0" selection-end-line="208" selection-end-column="0" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
-                <marker date="1509703956012" expanded="true" signature="516:835" ph="SELECT DISTI... *" />
-                <marker date="1509703956012" expanded="true" signature="554:677" ph="SELECT sw.*,... stg_warehouse" />
-                <marker date="1509703956012" expanded="true" signature="947:1270" ph="SELECT DISTI... *" />
-                <marker date="1509703956012" expanded="true" signature="985:1108" ph="SELECT sw.*,... stg_warehouse" />
-                <marker date="1509703956012" expanded="true" signature="1846:2121" ph="SELECT pm.br... stg_warehouse" />
-                <marker date="1509703956012" expanded="true" signature="2286:2556" ph="SELECT pm.mo... stg_warehouse" />
-                <marker date="1509703956012" expanded="true" signature="3511:3553" ph="drop table i... " />
-                <marker date="1509703956012" expanded="true" signature="3555:3847" ph="CREATE TABLE... ods_warehouse_sum" />
-                <marker date="1509703956012" expanded="true" signature="4604:4693" ph="insert into ods.ods_warehouse_sum... " />
-                <marker date="1509703956012" expanded="true" signature="5121:5156" ph="select * fro... ods_warehouse_sum" />
+                <marker date="1509710914392" expanded="true" signature="516:835" ph="SELECT DISTI... *" />
+                <marker date="1509710914392" expanded="true" signature="554:677" ph="SELECT sw.*,... stg_warehouse" />
+                <marker date="1509710914392" expanded="true" signature="947:1270" ph="SELECT DISTI... *" />
+                <marker date="1509710914392" expanded="true" signature="985:1108" ph="SELECT sw.*,... stg_warehouse" />
+                <marker date="1509710914392" expanded="true" signature="1891:2166" ph="SELECT pm.br... stg_warehouse" />
+                <marker date="1509710914392" expanded="true" signature="2331:2601" ph="SELECT pm.mo... stg_warehouse" />
+                <marker date="1509710914392" expanded="true" signature="3631:3673" ph="drop table i... " />
+                <marker date="1509710914392" expanded="true" signature="3675:3985" ph="CREATE TABLE... ods_warehouse_sum" />
+                <marker date="1509710914392" expanded="true" signature="4778:4870" ph="insert into ods.ods_warehouse_sum... " />
+                <marker date="1509710914392" expanded="true" signature="5323:5358" ph="select * fro... ods_warehouse_sum" />
               </folding>
             </state>
           </provider>
@@ -271,8 +269,8 @@
         <option value="$PROJECT_DIR$/aftersale.py" />
         <option value="$PROJECT_DIR$/dsale.py" />
         <option value="$PROJECT_DIR$/whsku.py" />
-        <option value="$PROJECT_DIR$/wh.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/wh.py" />
       </list>
     </option>
   </component>
@@ -515,16 +513,16 @@
           <caret line="20" column="30" lean-forward="false" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
-            <marker date="1509703956012" expanded="true" signature="516:835" ph="SELECT DISTI... *" />
-            <marker date="1509703956012" expanded="true" signature="554:677" ph="SELECT sw.*,... stg_warehouse" />
-            <marker date="1509703956012" expanded="true" signature="947:1270" ph="SELECT DISTI... *" />
-            <marker date="1509703956012" expanded="true" signature="985:1108" ph="SELECT sw.*,... stg_warehouse" />
-            <marker date="1509703956012" expanded="true" signature="1846:2121" ph="SELECT pm.br... stg_warehouse" />
-            <marker date="1509703956012" expanded="true" signature="2286:2556" ph="SELECT pm.mo... stg_warehouse" />
-            <marker date="1509703956012" expanded="true" signature="3511:3553" ph="drop table i... " />
-            <marker date="1509703956012" expanded="true" signature="3555:3847" ph="CREATE TABLE... ods_warehouse_sum" />
-            <marker date="1509703956012" expanded="true" signature="4604:4693" ph="insert into ods.ods_warehouse_sum... " />
-            <marker date="1509703956012" expanded="true" signature="5121:5156" ph="select * fro... ods_warehouse_sum" />
+            <marker date="1509710914392" expanded="true" signature="516:835" ph="SELECT DISTI... *" />
+            <marker date="1509710914392" expanded="true" signature="554:677" ph="SELECT sw.*,... stg_warehouse" />
+            <marker date="1509710914392" expanded="true" signature="947:1270" ph="SELECT DISTI... *" />
+            <marker date="1509710914392" expanded="true" signature="985:1108" ph="SELECT sw.*,... stg_warehouse" />
+            <marker date="1509710914392" expanded="true" signature="1891:2166" ph="SELECT pm.br... stg_warehouse" />
+            <marker date="1509710914392" expanded="true" signature="2331:2601" ph="SELECT pm.mo... stg_warehouse" />
+            <marker date="1509710914392" expanded="true" signature="3631:3673" ph="drop table i... " />
+            <marker date="1509710914392" expanded="true" signature="3675:3985" ph="CREATE TABLE... ods_warehouse_sum" />
+            <marker date="1509710914392" expanded="true" signature="4778:4870" ph="insert into ods.ods_warehouse_sum... " />
+            <marker date="1509710914392" expanded="true" signature="5323:5358" ph="select * fro... ods_warehouse_sum" />
           </folding>
         </state>
       </provider>
@@ -609,16 +607,16 @@
           <caret line="20" column="30" lean-forward="true" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
-            <marker date="1509703956012" expanded="true" signature="516:835" ph="SELECT DISTI... *" />
-            <marker date="1509703956012" expanded="true" signature="554:677" ph="SELECT sw.*,... stg_warehouse" />
-            <marker date="1509703956012" expanded="true" signature="947:1270" ph="SELECT DISTI... *" />
-            <marker date="1509703956012" expanded="true" signature="985:1108" ph="SELECT sw.*,... stg_warehouse" />
-            <marker date="1509703956012" expanded="true" signature="1846:2121" ph="SELECT pm.br... stg_warehouse" />
-            <marker date="1509703956012" expanded="true" signature="2286:2556" ph="SELECT pm.mo... stg_warehouse" />
-            <marker date="1509703956012" expanded="true" signature="3511:3553" ph="drop table i... " />
-            <marker date="1509703956012" expanded="true" signature="3555:3847" ph="CREATE TABLE... ods_warehouse_sum" />
-            <marker date="1509703956012" expanded="true" signature="4604:4693" ph="insert into ods.ods_warehouse_sum... " />
-            <marker date="1509703956012" expanded="true" signature="5121:5156" ph="select * fro... ods_warehouse_sum" />
+            <marker date="1509710914392" expanded="true" signature="516:835" ph="SELECT DISTI... *" />
+            <marker date="1509710914392" expanded="true" signature="554:677" ph="SELECT sw.*,... stg_warehouse" />
+            <marker date="1509710914392" expanded="true" signature="947:1270" ph="SELECT DISTI... *" />
+            <marker date="1509710914392" expanded="true" signature="985:1108" ph="SELECT sw.*,... stg_warehouse" />
+            <marker date="1509710914392" expanded="true" signature="1891:2166" ph="SELECT pm.br... stg_warehouse" />
+            <marker date="1509710914392" expanded="true" signature="2331:2601" ph="SELECT pm.mo... stg_warehouse" />
+            <marker date="1509710914392" expanded="true" signature="3631:3673" ph="drop table i... " />
+            <marker date="1509710914392" expanded="true" signature="3675:3985" ph="CREATE TABLE... ods_warehouse_sum" />
+            <marker date="1509710914392" expanded="true" signature="4778:4870" ph="insert into ods.ods_warehouse_sum... " />
+            <marker date="1509710914392" expanded="true" signature="5323:5358" ph="select * fro... ods_warehouse_sum" />
           </folding>
         </state>
       </provider>
@@ -680,16 +678,16 @@
           <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="7" selection-end-column="115" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
-            <marker date="1509703956012" expanded="true" signature="516:835" ph="SELECT DISTI... *" />
-            <marker date="1509703956012" expanded="true" signature="554:677" ph="SELECT sw.*,... stg_warehouse" />
-            <marker date="1509703956012" expanded="true" signature="947:1270" ph="SELECT DISTI... *" />
-            <marker date="1509703956012" expanded="true" signature="985:1108" ph="SELECT sw.*,... stg_warehouse" />
-            <marker date="1509703956012" expanded="true" signature="1846:2121" ph="SELECT pm.br... stg_warehouse" />
-            <marker date="1509703956012" expanded="true" signature="2286:2556" ph="SELECT pm.mo... stg_warehouse" />
-            <marker date="1509703956012" expanded="true" signature="3511:3553" ph="drop table i... " />
-            <marker date="1509703956012" expanded="true" signature="3555:3847" ph="CREATE TABLE... ods_warehouse_sum" />
-            <marker date="1509703956012" expanded="true" signature="4604:4693" ph="insert into ods.ods_warehouse_sum... " />
-            <marker date="1509703956012" expanded="true" signature="5121:5156" ph="select * fro... ods_warehouse_sum" />
+            <marker date="1509710914392" expanded="true" signature="516:835" ph="SELECT DISTI... *" />
+            <marker date="1509710914392" expanded="true" signature="554:677" ph="SELECT sw.*,... stg_warehouse" />
+            <marker date="1509710914392" expanded="true" signature="947:1270" ph="SELECT DISTI... *" />
+            <marker date="1509710914392" expanded="true" signature="985:1108" ph="SELECT sw.*,... stg_warehouse" />
+            <marker date="1509710914392" expanded="true" signature="1891:2166" ph="SELECT pm.br... stg_warehouse" />
+            <marker date="1509710914392" expanded="true" signature="2331:2601" ph="SELECT pm.mo... stg_warehouse" />
+            <marker date="1509710914392" expanded="true" signature="3631:3673" ph="drop table i... " />
+            <marker date="1509710914392" expanded="true" signature="3675:3985" ph="CREATE TABLE... ods_warehouse_sum" />
+            <marker date="1509710914392" expanded="true" signature="4778:4870" ph="insert into ods.ods_warehouse_sum... " />
+            <marker date="1509710914392" expanded="true" signature="5323:5358" ph="select * fro... ods_warehouse_sum" />
           </folding>
         </state>
       </provider>
@@ -733,16 +731,16 @@
           <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="7" selection-end-column="115" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
-            <marker date="1509703956012" expanded="true" signature="516:835" ph="SELECT DISTI... *" />
-            <marker date="1509703956012" expanded="true" signature="554:677" ph="SELECT sw.*,... stg_warehouse" />
-            <marker date="1509703956012" expanded="true" signature="947:1270" ph="SELECT DISTI... *" />
-            <marker date="1509703956012" expanded="true" signature="985:1108" ph="SELECT sw.*,... stg_warehouse" />
-            <marker date="1509703956012" expanded="true" signature="1846:2121" ph="SELECT pm.br... stg_warehouse" />
-            <marker date="1509703956012" expanded="true" signature="2286:2556" ph="SELECT pm.mo... stg_warehouse" />
-            <marker date="1509703956012" expanded="true" signature="3511:3553" ph="drop table i... " />
-            <marker date="1509703956012" expanded="true" signature="3555:3847" ph="CREATE TABLE... ods_warehouse_sum" />
-            <marker date="1509703956012" expanded="true" signature="4604:4693" ph="insert into ods.ods_warehouse_sum... " />
-            <marker date="1509703956012" expanded="true" signature="5121:5156" ph="select * fro... ods_warehouse_sum" />
+            <marker date="1509710914392" expanded="true" signature="516:835" ph="SELECT DISTI... *" />
+            <marker date="1509710914392" expanded="true" signature="554:677" ph="SELECT sw.*,... stg_warehouse" />
+            <marker date="1509710914392" expanded="true" signature="947:1270" ph="SELECT DISTI... *" />
+            <marker date="1509710914392" expanded="true" signature="985:1108" ph="SELECT sw.*,... stg_warehouse" />
+            <marker date="1509710914392" expanded="true" signature="1891:2166" ph="SELECT pm.br... stg_warehouse" />
+            <marker date="1509710914392" expanded="true" signature="2331:2601" ph="SELECT pm.mo... stg_warehouse" />
+            <marker date="1509710914392" expanded="true" signature="3631:3673" ph="drop table i... " />
+            <marker date="1509710914392" expanded="true" signature="3675:3985" ph="CREATE TABLE... ods_warehouse_sum" />
+            <marker date="1509710914392" expanded="true" signature="4778:4870" ph="insert into ods.ods_warehouse_sum... " />
+            <marker date="1509710914392" expanded="true" signature="5323:5358" ph="select * fro... ods_warehouse_sum" />
           </folding>
         </state>
       </provider>
@@ -786,16 +784,16 @@
           <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="7" selection-end-column="115" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
-            <marker date="1509703956012" expanded="true" signature="516:835" ph="SELECT DISTI... *" />
-            <marker date="1509703956012" expanded="true" signature="554:677" ph="SELECT sw.*,... stg_warehouse" />
-            <marker date="1509703956012" expanded="true" signature="947:1270" ph="SELECT DISTI... *" />
-            <marker date="1509703956012" expanded="true" signature="985:1108" ph="SELECT sw.*,... stg_warehouse" />
-            <marker date="1509703956012" expanded="true" signature="1846:2121" ph="SELECT pm.br... stg_warehouse" />
-            <marker date="1509703956012" expanded="true" signature="2286:2556" ph="SELECT pm.mo... stg_warehouse" />
-            <marker date="1509703956012" expanded="true" signature="3511:3553" ph="drop table i... " />
-            <marker date="1509703956012" expanded="true" signature="3555:3847" ph="CREATE TABLE... ods_warehouse_sum" />
-            <marker date="1509703956012" expanded="true" signature="4604:4693" ph="insert into ods.ods_warehouse_sum... " />
-            <marker date="1509703956012" expanded="true" signature="5121:5156" ph="select * fro... ods_warehouse_sum" />
+            <marker date="1509710914392" expanded="true" signature="516:835" ph="SELECT DISTI... *" />
+            <marker date="1509710914392" expanded="true" signature="554:677" ph="SELECT sw.*,... stg_warehouse" />
+            <marker date="1509710914392" expanded="true" signature="947:1270" ph="SELECT DISTI... *" />
+            <marker date="1509710914392" expanded="true" signature="985:1108" ph="SELECT sw.*,... stg_warehouse" />
+            <marker date="1509710914392" expanded="true" signature="1891:2166" ph="SELECT pm.br... stg_warehouse" />
+            <marker date="1509710914392" expanded="true" signature="2331:2601" ph="SELECT pm.mo... stg_warehouse" />
+            <marker date="1509710914392" expanded="true" signature="3631:3673" ph="drop table i... " />
+            <marker date="1509710914392" expanded="true" signature="3675:3985" ph="CREATE TABLE... ods_warehouse_sum" />
+            <marker date="1509710914392" expanded="true" signature="4778:4870" ph="insert into ods.ods_warehouse_sum... " />
+            <marker date="1509710914392" expanded="true" signature="5323:5358" ph="select * fro... ods_warehouse_sum" />
           </folding>
         </state>
       </provider>
@@ -839,16 +837,16 @@
           <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="7" selection-end-column="115" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
-            <marker date="1509703956012" expanded="true" signature="516:835" ph="SELECT DISTI... *" />
-            <marker date="1509703956012" expanded="true" signature="554:677" ph="SELECT sw.*,... stg_warehouse" />
-            <marker date="1509703956012" expanded="true" signature="947:1270" ph="SELECT DISTI... *" />
-            <marker date="1509703956012" expanded="true" signature="985:1108" ph="SELECT sw.*,... stg_warehouse" />
-            <marker date="1509703956012" expanded="true" signature="1846:2121" ph="SELECT pm.br... stg_warehouse" />
-            <marker date="1509703956012" expanded="true" signature="2286:2556" ph="SELECT pm.mo... stg_warehouse" />
-            <marker date="1509703956012" expanded="true" signature="3511:3553" ph="drop table i... " />
-            <marker date="1509703956012" expanded="true" signature="3555:3847" ph="CREATE TABLE... ods_warehouse_sum" />
-            <marker date="1509703956012" expanded="true" signature="4604:4693" ph="insert into ods.ods_warehouse_sum... " />
-            <marker date="1509703956012" expanded="true" signature="5121:5156" ph="select * fro... ods_warehouse_sum" />
+            <marker date="1509710914392" expanded="true" signature="516:835" ph="SELECT DISTI... *" />
+            <marker date="1509710914392" expanded="true" signature="554:677" ph="SELECT sw.*,... stg_warehouse" />
+            <marker date="1509710914392" expanded="true" signature="947:1270" ph="SELECT DISTI... *" />
+            <marker date="1509710914392" expanded="true" signature="985:1108" ph="SELECT sw.*,... stg_warehouse" />
+            <marker date="1509710914392" expanded="true" signature="1891:2166" ph="SELECT pm.br... stg_warehouse" />
+            <marker date="1509710914392" expanded="true" signature="2331:2601" ph="SELECT pm.mo... stg_warehouse" />
+            <marker date="1509710914392" expanded="true" signature="3631:3673" ph="drop table i... " />
+            <marker date="1509710914392" expanded="true" signature="3675:3985" ph="CREATE TABLE... ods_warehouse_sum" />
+            <marker date="1509710914392" expanded="true" signature="4778:4870" ph="insert into ods.ods_warehouse_sum... " />
+            <marker date="1509710914392" expanded="true" signature="5323:5358" ph="select * fro... ods_warehouse_sum" />
           </folding>
         </state>
       </provider>
@@ -885,16 +883,16 @@
           <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="7" selection-end-column="115" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
-            <marker date="1509703956012" expanded="true" signature="516:835" ph="SELECT DISTI... *" />
-            <marker date="1509703956012" expanded="true" signature="554:677" ph="SELECT sw.*,... stg_warehouse" />
-            <marker date="1509703956012" expanded="true" signature="947:1270" ph="SELECT DISTI... *" />
-            <marker date="1509703956012" expanded="true" signature="985:1108" ph="SELECT sw.*,... stg_warehouse" />
-            <marker date="1509703956012" expanded="true" signature="1846:2121" ph="SELECT pm.br... stg_warehouse" />
-            <marker date="1509703956012" expanded="true" signature="2286:2556" ph="SELECT pm.mo... stg_warehouse" />
-            <marker date="1509703956012" expanded="true" signature="3511:3553" ph="drop table i... " />
-            <marker date="1509703956012" expanded="true" signature="3555:3847" ph="CREATE TABLE... ods_warehouse_sum" />
-            <marker date="1509703956012" expanded="true" signature="4604:4693" ph="insert into ods.ods_warehouse_sum... " />
-            <marker date="1509703956012" expanded="true" signature="5121:5156" ph="select * fro... ods_warehouse_sum" />
+            <marker date="1509710914392" expanded="true" signature="516:835" ph="SELECT DISTI... *" />
+            <marker date="1509710914392" expanded="true" signature="554:677" ph="SELECT sw.*,... stg_warehouse" />
+            <marker date="1509710914392" expanded="true" signature="947:1270" ph="SELECT DISTI... *" />
+            <marker date="1509710914392" expanded="true" signature="985:1108" ph="SELECT sw.*,... stg_warehouse" />
+            <marker date="1509710914392" expanded="true" signature="1891:2166" ph="SELECT pm.br... stg_warehouse" />
+            <marker date="1509710914392" expanded="true" signature="2331:2601" ph="SELECT pm.mo... stg_warehouse" />
+            <marker date="1509710914392" expanded="true" signature="3631:3673" ph="drop table i... " />
+            <marker date="1509710914392" expanded="true" signature="3675:3985" ph="CREATE TABLE... ods_warehouse_sum" />
+            <marker date="1509710914392" expanded="true" signature="4778:4870" ph="insert into ods.ods_warehouse_sum... " />
+            <marker date="1509710914392" expanded="true" signature="5323:5358" ph="select * fro... ods_warehouse_sum" />
           </folding>
         </state>
       </provider>
@@ -931,16 +929,16 @@
           <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="7" selection-end-column="115" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
-            <marker date="1509703956012" expanded="true" signature="516:835" ph="SELECT DISTI... *" />
-            <marker date="1509703956012" expanded="true" signature="554:677" ph="SELECT sw.*,... stg_warehouse" />
-            <marker date="1509703956012" expanded="true" signature="947:1270" ph="SELECT DISTI... *" />
-            <marker date="1509703956012" expanded="true" signature="985:1108" ph="SELECT sw.*,... stg_warehouse" />
-            <marker date="1509703956012" expanded="true" signature="1846:2121" ph="SELECT pm.br... stg_warehouse" />
-            <marker date="1509703956012" expanded="true" signature="2286:2556" ph="SELECT pm.mo... stg_warehouse" />
-            <marker date="1509703956012" expanded="true" signature="3511:3553" ph="drop table i... " />
-            <marker date="1509703956012" expanded="true" signature="3555:3847" ph="CREATE TABLE... ods_warehouse_sum" />
-            <marker date="1509703956012" expanded="true" signature="4604:4693" ph="insert into ods.ods_warehouse_sum... " />
-            <marker date="1509703956012" expanded="true" signature="5121:5156" ph="select * fro... ods_warehouse_sum" />
+            <marker date="1509710914392" expanded="true" signature="516:835" ph="SELECT DISTI... *" />
+            <marker date="1509710914392" expanded="true" signature="554:677" ph="SELECT sw.*,... stg_warehouse" />
+            <marker date="1509710914392" expanded="true" signature="947:1270" ph="SELECT DISTI... *" />
+            <marker date="1509710914392" expanded="true" signature="985:1108" ph="SELECT sw.*,... stg_warehouse" />
+            <marker date="1509710914392" expanded="true" signature="1891:2166" ph="SELECT pm.br... stg_warehouse" />
+            <marker date="1509710914392" expanded="true" signature="2331:2601" ph="SELECT pm.mo... stg_warehouse" />
+            <marker date="1509710914392" expanded="true" signature="3631:3673" ph="drop table i... " />
+            <marker date="1509710914392" expanded="true" signature="3675:3985" ph="CREATE TABLE... ods_warehouse_sum" />
+            <marker date="1509710914392" expanded="true" signature="4778:4870" ph="insert into ods.ods_warehouse_sum... " />
+            <marker date="1509710914392" expanded="true" signature="5323:5358" ph="select * fro... ods_warehouse_sum" />
           </folding>
         </state>
       </provider>
@@ -977,16 +975,16 @@
           <caret line="133" column="12" lean-forward="true" selection-start-line="133" selection-start-column="12" selection-end-line="133" selection-end-column="12" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
-            <marker date="1509703956012" expanded="true" signature="516:835" ph="SELECT DISTI... *" />
-            <marker date="1509703956012" expanded="true" signature="554:677" ph="SELECT sw.*,... stg_warehouse" />
-            <marker date="1509703956012" expanded="true" signature="947:1270" ph="SELECT DISTI... *" />
-            <marker date="1509703956012" expanded="true" signature="985:1108" ph="SELECT sw.*,... stg_warehouse" />
-            <marker date="1509703956012" expanded="true" signature="1846:2121" ph="SELECT pm.br... stg_warehouse" />
-            <marker date="1509703956012" expanded="true" signature="2286:2556" ph="SELECT pm.mo... stg_warehouse" />
-            <marker date="1509703956012" expanded="true" signature="3511:3553" ph="drop table i... " />
-            <marker date="1509703956012" expanded="true" signature="3555:3847" ph="CREATE TABLE... ods_warehouse_sum" />
-            <marker date="1509703956012" expanded="true" signature="4604:4693" ph="insert into ods.ods_warehouse_sum... " />
-            <marker date="1509703956012" expanded="true" signature="5121:5156" ph="select * fro... ods_warehouse_sum" />
+            <marker date="1509710914392" expanded="true" signature="516:835" ph="SELECT DISTI... *" />
+            <marker date="1509710914392" expanded="true" signature="554:677" ph="SELECT sw.*,... stg_warehouse" />
+            <marker date="1509710914392" expanded="true" signature="947:1270" ph="SELECT DISTI... *" />
+            <marker date="1509710914392" expanded="true" signature="985:1108" ph="SELECT sw.*,... stg_warehouse" />
+            <marker date="1509710914392" expanded="true" signature="1891:2166" ph="SELECT pm.br... stg_warehouse" />
+            <marker date="1509710914392" expanded="true" signature="2331:2601" ph="SELECT pm.mo... stg_warehouse" />
+            <marker date="1509710914392" expanded="true" signature="3631:3673" ph="drop table i... " />
+            <marker date="1509710914392" expanded="true" signature="3675:3985" ph="CREATE TABLE... ods_warehouse_sum" />
+            <marker date="1509710914392" expanded="true" signature="4778:4870" ph="insert into ods.ods_warehouse_sum... " />
+            <marker date="1509710914392" expanded="true" signature="5323:5358" ph="select * fro... ods_warehouse_sum" />
           </folding>
         </state>
       </provider>
@@ -1044,30 +1042,6 @@
             <marker date="1506392815822" expanded="true" signature="2969:3100" ph="SELECT DATE(... " />
             <marker date="1506392815822" expanded="true" signature="3191:3263" ph="SELECT pv,ip... boss_api_info" />
             <marker date="1506392815822" expanded="true" signature="3524:3617" ph="insert into ods.ods_daily_info... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dsale.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1377">
-          <caret line="54" column="23" lean-forward="false" selection-start-line="54" selection-start-column="23" selection-end-line="54" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-            <marker date="1509589493124" expanded="true" signature="467:1007" ph="SELECT pm.mo... product_id" />
-            <marker date="1509589493124" expanded="true" signature="467:1009" ph="SELECT pm.mo... product_id" />
-            <marker date="1509589493124" expanded="true" signature="513:894" ph="SELECT oo.`p... odi_order" />
-            <marker date="1509589493124" expanded="true" signature="1335:1609" ph="SELECT COUNT... odi_order" />
-            <marker date="1509589493124" expanded="true" signature="3297:3723" ph="SELECT p.mod... MIN" />
-            <marker date="1509589493124" expanded="true" signature="3341:3676" ph="SELECT MIN(p... pdi_product_track" />
-            <marker date="1509589493124" expanded="true" signature="3857:4330" ph="SELECT sp.mo... MIN" />
-            <marker date="1509589493124" expanded="true" signature="3902:4280" ph="SELECT MIN(s... stg_warehouse_switch" />
-            <marker date="1509589493124" expanded="true" signature="4986:5192" ph="SELECT pm.mo... stg_warehouse" />
-            <marker date="1509589493124" expanded="true" signature="5586:5871" ph="SELECT DISTI... *" />
-            <marker date="1509589493124" expanded="true" signature="5624:5747" ph="SELECT sw.*,... stg_warehouse" />
-            <marker date="1509589493124" expanded="true" signature="6231:6884" ph="SELECT bt.mo... model_name" />
-            <marker date="1509589493124" expanded="true" signature="6277:6836" ph="SELECT pm.mo... *" />
-            <marker date="1509589493124" expanded="true" signature="6520:6647" ph="SELECT sw.*,... stg_warehouse" />
           </folding>
         </state>
       </provider>
@@ -1173,31 +1147,55 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wh.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="5" column="51" lean-forward="false" selection-start-line="5" selection-start-column="51" selection-end-line="5" selection-end-column="51" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-            <marker date="1509703956012" expanded="true" signature="516:835" ph="SELECT DISTI... *" />
-            <marker date="1509703956012" expanded="true" signature="554:677" ph="SELECT sw.*,... stg_warehouse" />
-            <marker date="1509703956012" expanded="true" signature="947:1270" ph="SELECT DISTI... *" />
-            <marker date="1509703956012" expanded="true" signature="985:1108" ph="SELECT sw.*,... stg_warehouse" />
-            <marker date="1509703956012" expanded="true" signature="1846:2121" ph="SELECT pm.br... stg_warehouse" />
-            <marker date="1509703956012" expanded="true" signature="2286:2556" ph="SELECT pm.mo... stg_warehouse" />
-            <marker date="1509703956012" expanded="true" signature="3511:3553" ph="drop table i... " />
-            <marker date="1509703956012" expanded="true" signature="3555:3847" ph="CREATE TABLE... ods_warehouse_sum" />
-            <marker date="1509703956012" expanded="true" signature="4604:4693" ph="insert into ods.ods_warehouse_sum... " />
-            <marker date="1509703956012" expanded="true" signature="5121:5156" ph="select * fro... ods_warehouse_sum" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
           <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dsale.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="54" column="23" lean-forward="false" selection-start-line="54" selection-start-column="23" selection-end-line="54" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+            <marker date="1509589493124" expanded="true" signature="467:1007" ph="SELECT pm.mo... product_id" />
+            <marker date="1509589493124" expanded="true" signature="467:1009" ph="SELECT pm.mo... product_id" />
+            <marker date="1509589493124" expanded="true" signature="513:894" ph="SELECT oo.`p... odi_order" />
+            <marker date="1509589493124" expanded="true" signature="1335:1609" ph="SELECT COUNT... odi_order" />
+            <marker date="1509589493124" expanded="true" signature="3297:3723" ph="SELECT p.mod... MIN" />
+            <marker date="1509589493124" expanded="true" signature="3341:3676" ph="SELECT MIN(p... pdi_product_track" />
+            <marker date="1509589493124" expanded="true" signature="3857:4330" ph="SELECT sp.mo... MIN" />
+            <marker date="1509589493124" expanded="true" signature="3902:4280" ph="SELECT MIN(s... stg_warehouse_switch" />
+            <marker date="1509589493124" expanded="true" signature="4986:5192" ph="SELECT pm.mo... stg_warehouse" />
+            <marker date="1509589493124" expanded="true" signature="5586:5871" ph="SELECT DISTI... *" />
+            <marker date="1509589493124" expanded="true" signature="5624:5747" ph="SELECT sw.*,... stg_warehouse" />
+            <marker date="1509589493124" expanded="true" signature="6231:6884" ph="SELECT bt.mo... model_name" />
+            <marker date="1509589493124" expanded="true" signature="6277:6836" ph="SELECT pm.mo... *" />
+            <marker date="1509589493124" expanded="true" signature="6520:6647" ph="SELECT sw.*,... stg_warehouse" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wh.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="407">
+          <caret line="208" column="0" lean-forward="true" selection-start-line="208" selection-start-column="0" selection-end-line="208" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+            <marker date="1509710914392" expanded="true" signature="516:835" ph="SELECT DISTI... *" />
+            <marker date="1509710914392" expanded="true" signature="554:677" ph="SELECT sw.*,... stg_warehouse" />
+            <marker date="1509710914392" expanded="true" signature="947:1270" ph="SELECT DISTI... *" />
+            <marker date="1509710914392" expanded="true" signature="985:1108" ph="SELECT sw.*,... stg_warehouse" />
+            <marker date="1509710914392" expanded="true" signature="1891:2166" ph="SELECT pm.br... stg_warehouse" />
+            <marker date="1509710914392" expanded="true" signature="2331:2601" ph="SELECT pm.mo... stg_warehouse" />
+            <marker date="1509710914392" expanded="true" signature="3631:3673" ph="drop table i... " />
+            <marker date="1509710914392" expanded="true" signature="3675:3985" ph="CREATE TABLE... ods_warehouse_sum" />
+            <marker date="1509710914392" expanded="true" signature="4778:4870" ph="insert into ods.ods_warehouse_sum... " />
+            <marker date="1509710914392" expanded="true" signature="5323:5358" ph="select * fro... ods_warehouse_sum" />
+          </folding>
         </state>
       </provider>
     </entry>
