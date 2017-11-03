@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="4a99546f-643b-4833-b464-5e20828d8662" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wh.py" afterPath="$PROJECT_DIR$/wh.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -140,8 +139,8 @@
       <file leaf-file-name="wh.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wh.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="407">
-              <caret line="208" column="0" lean-forward="true" selection-start-line="208" selection-start-column="0" selection-end-line="208" selection-end-column="0" />
+            <state relative-caret-position="83">
+              <caret line="181" column="51" lean-forward="true" selection-start-line="181" selection-start-column="51" selection-end-line="181" selection-end-column="51" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
                 <marker date="1509710914392" expanded="true" signature="516:835" ph="SELECT DISTI... *" />
@@ -1181,8 +1180,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wh.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
-          <caret line="208" column="0" lean-forward="true" selection-start-line="208" selection-start-column="0" selection-end-line="208" selection-end-column="0" />
+        <state relative-caret-position="83">
+          <caret line="181" column="51" lean-forward="true" selection-start-line="181" selection-start-column="51" selection-end-line="181" selection-end-column="51" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
             <marker date="1509710914392" expanded="true" signature="516:835" ph="SELECT DISTI... *" />
