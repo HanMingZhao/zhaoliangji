@@ -17,7 +17,7 @@ if whnum not in warehousenums:
     print('wrong warehouse num')
     sys.exit(0)
 '''
-warehousenums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 11]
+warehousenums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12]
 
 src_con = db.connect(host='rm-bp13wnvyc2dh86ju1.mysql.rds.aliyuncs.com', user='panda_reader', passwd='zhaoliangji3503',
                    db='panda', charset='utf8')
