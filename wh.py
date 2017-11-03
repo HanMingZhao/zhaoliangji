@@ -150,7 +150,8 @@ for row in matrix2:
         continue
     dst_arg.append((row[0], int(row[1]), int(row[2]), int(row[3]), int(row[4]), int(row[5]), int(row[6]), int(row[7]),
                     int(row[8]), int(row[9]), int(row[10]), int(row[11]), int(row[1]) + int(row[2]) + int(row[3]) +
-                    int(row[4]) + int(row[5]) + int(row[6]) + int(row[7]) + int(row[8]) + int(row[9]) + int(row[10])))
+                    int(row[4]) + int(row[5]) + int(row[6]) + int(row[7]) + int(row[8]) + int(row[9]) + int(row[10]) +
+                    int(row[11])))
 
 insertsql = '''insert into ods.ods_warehouse_sum  VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s,%s,%s)'''
 
@@ -180,7 +181,7 @@ result = dst_cur.fetchall()
 for i, r in enumerate(result):
     for j, x in enumerate(r):
         sheet.write(i+1, j, int(x) if j > 0 else x)
-    sheet.write(i+1, len(r), int(r[11])/int(r[12]) if r[12] > 0 else int(r[11]))
+    sheet.write(i+1, len(r), int(r[11])/int(r[12]))
 sheetLength = len(sheet.rows)
 lastRow = len(result) - 1
 sheet.write(sheetLength, 0, '占比')
