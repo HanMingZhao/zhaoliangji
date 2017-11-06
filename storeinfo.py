@@ -68,9 +68,11 @@ for b in batteries:
 
 for wnum in warehouse:
     storagesql = '''
-    SELECT pm.`model_name`,sw.`key_props`,sw.`warehouse_num`, ppv.`pvs_id` FROM panda.`stg_warehouse` sw
+    SELECT pm.`model_name`,pp.`key_props`,sw.`warehouse_num`, ppv.`pvs_id` FROM panda.`stg_warehouse` sw
     LEFT JOIN panda.`pdi_model` pm
     ON pm.`model_id` =sw.`model_id`
+    LEFT JOIN panda.pdi_product pp 
+    ON pp.product_id = sw.product_id
     LEFT JOIN panda.`pdi_param_value` ppv
     ON sw.`product_id` = ppv.`product_id`
     WHERE sw.`warehouse_status`=1
@@ -91,6 +93,7 @@ for wnum in warehouse:
             if feature[0] == '11':
                 p.memory = md[feature[1]]
             if feature[0] == '12':
+                print(feature[1])
                 p.quality = qd[feature[1]]
                 print(qd[feature[1]])
         p.battery = bd[str(p.pvsid)]
