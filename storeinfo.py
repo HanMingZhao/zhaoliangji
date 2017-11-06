@@ -55,7 +55,6 @@ scur.execute(qualitysql)
 qualities = scur.fetchall()
 for q in qualities:
     qd[str(q[0])] = q[1]
-print(qd)
 batterysql = '''
 SELECT ppv.id,ppv.`p_values` FROM panda.`pdi_param_values` ppv
 WHERE ppv.`p_id`=12
@@ -93,11 +92,8 @@ for wnum in warehouse:
             if feature[0] == '11':
                 p.memory = md[feature[1]]
             if feature[0] == '12':
-                print(feature[1])
                 p.quality = qd[feature[1]]
-                print(qd[feature[1]])
         p.battery = bd[str(p.pvsid)]
-        print(p.version, p.memory, p.quality, p.battery)
         products.append(p)
 
     for prod in products:
@@ -146,5 +142,6 @@ for i, s in enumerate(yushangjia):
 path = conf.get('path', 'path')
 today = str(dt.datetime.today().date())
 wb.save(path + today + 'storeinfo.xls')
+
 scur.close()
 scon.close()
