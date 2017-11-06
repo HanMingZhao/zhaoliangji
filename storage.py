@@ -13,14 +13,14 @@ class Product:
 cf = configparser.ConfigParser()
 dbhost = cf.get('db', 'db_host')
 dbuser = cf.get('db', 'db_user')
-dbport = cf.get('db', 'db_port')
+dbport = cf.getint('db', 'db_port')
 dbpass = cf.get('db', 'db_pass')
 dbase = cf.get('db', 'db_db')
 scon = db.connect(host=dbhost, user=dbuser, passwd=dbpass, db=dbase, charset='utf8')
 scur = scon.cursor()
 
 today = str(datetime.today().date())
-
+path = cf.get('path', 'path')
 warehouse_num = [1, 2, 4, 8]
 warehouse_dict = {1: '分拾', 2: '检测', 4: '上架', 8: '预上架'}
 pset = set()
@@ -198,7 +198,7 @@ for wnum in warehouse_num:
             sheet.write(i + 1, 4, yushangjiagt15[product] if product in yushangjiagt15 else 0)
             sheet.write(i + 1, 5, yushangjiagt30[product] if product in yushangjiagt30 else 0)
 
-wbook.save(today + 'storage.xls')
+wbook.save(path + today + 'storage.xls')
 
 scur.close()
 scon.close()

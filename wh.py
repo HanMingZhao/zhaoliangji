@@ -9,7 +9,7 @@ warehouse_nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12]
 cf = configparser.ConfigParser()
 dbhost = cf.get('db', 'db_host')
 dbuser = cf.get('db', 'db_user')
-dbport = cf.get('db', 'db_port')
+dbport = cf.getint('db', 'db_port')
 dbpass = cf.get('db', 'db_pass')
 dbase = cf.get('db', 'db_db')
 src_con = db.connect(host=dbhost, user=dbuser, passwd=dbpass, db=dbase, charset='utf8')
