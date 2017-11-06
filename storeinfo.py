@@ -137,7 +137,7 @@ for i, s in enumerate(yushangjia):
     sheet2.write(i + 1, 1, m)
     sheet2.write(i + 1, 2, q)
     sheet2.write(i + 1, 3, b)
-    sheet2.write(i + 1, 4, shangjia[s])
+    sheet2.write(i + 1, 4, yushangjia[s])
 
 path = conf.get('path', 'path')
 today = str(dt.datetime.today().date())
