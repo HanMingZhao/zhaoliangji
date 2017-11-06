@@ -7,6 +7,7 @@ import configparser
 warehouse_nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12]
 
 cf = configparser.ConfigParser()
+cf.read('conf.conf')
 dbhost = cf.get('db', 'db_host')
 dbuser = cf.get('db', 'db_user')
 dbport = cf.getint('db', 'db_port')

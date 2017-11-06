@@ -5,6 +5,7 @@ import datetime as dt
 import configparser
 
 cf = configparser.ConfigParser()
+cf.read('conf.conf')
 dbhost = cf.get('db', 'db_host')
 dbuser = cf.get('db', 'db_user')
 dbport = cf.getint('db', 'db_port')
