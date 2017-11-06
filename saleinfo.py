@@ -101,7 +101,7 @@ for s in saleinfo:
             p.memory = md[feature[1]]
         if feature[0] == '12':
             p.quality = qd[feature[1]]
-    p.battery = bd[p.pvsid]
+    p.battery = bd[str(p.pvsid)]
     products.append(p)
 
 for prod in products:
