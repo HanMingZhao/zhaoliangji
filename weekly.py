@@ -9,6 +9,9 @@ scur = scon.cursor()
 workBook = xlwt.Workbook()
 today = str(dt.datetime.today().date())
 path = '/var/www/python3/'
+dateToday = dt.datetime.today()
+dateLastWeekDay = dateToday - dt.timedelta(7)
+dtformat = "%Y-%m-%d"
 
 versionsql = '''
 SELECT ppv.pvid,ppv.pv_name FROM panda.`pdi_prop_value` ppv
@@ -45,12 +48,12 @@ SELECT DATE(oo.`create_at`),COUNT(1) FROM panda.`odi_order` oo
 LEFT JOIN panda.`aci_user_info` aui
 ON oo.`user_id` = aui.`user_id`
 WHERE oo.`order_status` IN (1,2,4,5)
-AND oo.`create_at` > DATE(NOW())-7
-AND oo.`create_at` < DATE(NOW())
+AND oo.`create_at` > '{}'
+AND oo.`create_at` < '{}'
 AND aui.`from_shop` NOT IN ('Patica','猎趣','趣分期','中捷代购','钱到到','小卖家','趣先享','京东店铺','机密')
 GROUP BY DATE(oo.`create_at`)
 '''
-scur.execute(weekSaleSql)
+scur.execute(weekSaleSql.format(dateLastWeekDay.strftime(dtformat), dateToday.strftime(dtformat)))
 weekSales = scur.fetchall()
 sheet1 = workBook.add_sheet('周销量')
 sheet1.write(0, 0, '日期')
@@ -69,13 +72,13 @@ ON oo.`product_id` = pp.`product_id`
 LEFT JOIN panda.`pdi_model` pm
 ON pp.`model_id` = pm.model_id
 WHERE oo.`order_status` IN (1,2,4,5)
-AND oo.`create_at` > DATE(NOW())-7
-AND oo.`create_at` < DATE(NOW())
+AND oo.`create_at` > '{}'
+AND oo.`create_at` < '{}'
 AND aui.`from_shop` NOT IN ('Patica','猎趣','趣分期','中捷代购','钱到到','小卖家','趣先享','京东店铺','机密')
 GROUP BY pm.`model_name`
 ORDER BY `count` DESC
 '''
-scur.execute(versionSql)
+scur.execute(versionSql.format(dateLastWeekDay.strftime(dtformat), dateToday.strftime(dtformat)))
 versionSales = scur.fetchall()
 sheet2 = workBook.add_sheet('销售占比')
 sheet2.write(0, 0, '机型')
@@ -91,12 +94,12 @@ ON oo.`user_id` = aui.`user_id`
 LEFT JOIN panda.`pdi_product` pp
 ON oo.`product_id` = pp.`product_id`
 WHERE oo.`order_status` IN (1,2,4,5)
-AND oo.`create_at` > DATE(NOW())-7
-AND oo.`create_at` < DATE(NOW())
+AND oo.`create_at` > '{}'
+AND oo.`create_at` < '{}'
 {}
 AND aui.`from_shop` NOT IN ('Patica','猎趣','趣分期','中捷代购','钱到到','小卖家','趣先享','京东店铺','机密')
 '''
-scur.execute(featureSql.format(''))
+scur.execute(featureSql.format(dateLastWeekDay.strftime(dtformat), dateToday.strftime(dtformat), ''))
 properties = scur.fetchall()
 colorSales = {}
 memorySales = {}
@@ -136,8 +139,8 @@ ON oo.`user_id`=aui.`user_id`
 LEFT JOIN panda.`pdi_product` pp
 ON oo.`product_id` = pp.product_id
 WHERE oo.`order_status` IN (1,2,4,5)
-AND oo.`create_at`>DATE(NOW())-7
-AND oo.`create_at`<DATE(NOW())
+AND oo.`create_at`>'{}'
+AND oo.`create_at`<'{}'
 AND aui.`from_shop` NOT IN ('Patica','猎趣','趣分期','中捷代购','钱到到','小卖家','趣先享','京东店铺','机密')
 ) ooo 
 LEFT JOIN panda.`pdi_model` pm
@@ -151,7 +154,8 @@ condition = '''where pm.brand_name {} like '%iphone%'
 {} pm.brand_name {} like '%ipad%' 
 '''
 
-scur.execute(saleCountSql.format(condition.format('', 'or', '', 'or', ''), 'asc'))
+scur.execute(saleCountSql.format(dateLastWeekDay.strftime(dtformat), dateToday.strftime(dtformat),
+                                 condition.format('', 'or', '', 'or', ''), 'asc'))
 result = scur.fetchall()
 sheet3 = workBook.add_sheet('苹果龙虎榜')
 sheet3.write(0, 0, '机型')
@@ -160,7 +164,8 @@ for i, x in enumerate(result):
     sheet3.write(i+1, 0, x[1])
     sheet3.write(i+1, 1, x[2])
 
-scur.execute(saleCountSql.format(condition.format('not', 'and', 'not', 'and', 'not'), 'asc'))
+scur.execute(saleCountSql.format(dateLastWeekDay.strftime(dtformat), dateToday.strftime(dtformat),
+                                 condition.format('not', 'and', 'not', 'and', 'not'), 'asc'))
 result = scur.fetchall()
 sheet4 = workBook.add_sheet("安卓龙虎榜")
 sheet4.write(0, 0, '机型')
@@ -170,17 +175,20 @@ for i, x in enumerate(result):
     sheet4.write(i+1, 1, x[2])
 
 models = []
-scur.execute(saleCountSql.format(condition.format('', 'or', '', 'or', ''), 'desc limit 5'))
+scur.execute(saleCountSql.format(dateLastWeekDay.strftime(dtformat), dateToday.strftime(dtformat),
+                                 condition.format('', 'or', '', 'or', ''), 'desc limit 5'))
 result = scur.fetchall()
 for model in result:
     models.append(model[0])
-scur.execute(saleCountSql.format(condition.format('not', 'and', 'not', 'and', 'not'), 'desc limit 5'))
+scur.execute(saleCountSql.format(dateLastWeekDay.strftime(dtformat), dateToday.strftime(dtformat),
+                                 condition.format('not', 'and', 'not', 'and', 'not'), 'desc limit 5'))
 result = scur.fetchall()
 for model in result:
     models.append(model[0])
 for model in models:
     modelCondition = 'AND pp.model_id = {} '
-    scur.execute(featureSql.format(modelCondition.format(model)))
+    scur.execute(featureSql.format(dateLastWeekDay.strftime(dtformat), dateToday.strftime(dtformat),
+                                   modelCondition.format(model)))
     modelProperties = scur.fetchall()
     colorCount = {}
     memoryCount = {}
@@ -219,13 +227,13 @@ ON ppt.`product_id` = pp.`product_id`
 LEFT JOIN panda.`pdi_model` pm
 ON pp.`model_id` = pm.`model_id`
 WHERE ppt.`track_type` = 1
-AND ppt.`created_at` > DATE(NOW())-7
-AND ppt.`created_at` < DATE(NOW())
+AND ppt.`created_at` > '{}'
+AND ppt.`created_at` < '{}'
 GROUP BY ppt.id
 )p
 GROUP BY `time`
 '''
-scur.execute(groundingSql)
+scur.execute(groundingSql.format(dateLastWeekDay.strftime(dtformat), dateToday.strftime(dtformat)))
 result = scur.fetchall()
 sheet5 = workBook.add_sheet('上架')
 sheet5.write(0, 0, '日期')
