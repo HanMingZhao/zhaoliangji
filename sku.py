@@ -1,5 +1,6 @@
 import pymysql as db
 import numpy as np
+import configparser
 
 '''
 if len(sys.argv) > 1:
@@ -19,8 +20,13 @@ if whnum not in warehousenums:
 '''
 warehousenums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 11]
 
-src_con = db.connect(host='rm-bp13wnvyc2dh86ju1.mysql.rds.aliyuncs.com', user='panda_reader', passwd='zhaoliangji3503',
-                   db='panda', charset='utf8')
+cf = configparser.ConfigParser()
+dbhost = cf.get('db', 'db_host')
+dbuser = cf.get('db', 'db_user')
+dbport = cf.get('db', 'db_port')
+dbpass = cf.get('db', 'db_pass')
+dbase = cf.get('db', 'db_db')
+src_con = db.connect(host=dbhost, user=dbuser, passwd=dbpass, db=dbase, charset='utf8')
 dst_con = db.connect(host='114.215.176.190', user='root', passwd='huodao123', db='ods', port=33069, charset='utf8')
 
 src_cur = src_con.cursor()

@@ -2,12 +2,18 @@ import pymysql as db
 import xlwt
 import datetime
 import numpy as np
+import configparser
 
 today = str(datetime.datetime.now().date())
 path = '/var/www/python3/'
 
-scon = db.connect(host='rm-bp13wnvyc2dh86ju1.mysql.rds.aliyuncs.com', user='panda_reader', passwd='zhaoliangji3503',
-                  db='panda', charset='utf8')
+cf = configparser.ConfigParser()
+dbhost = cf.get('db', 'db_host')
+dbuser = cf.get('db', 'db_user')
+dbport = cf.get('db', 'db_port')
+dbpass = cf.get('db', 'db_pass')
+dbase = cf.get('db', 'db_db')
+scon = db.connect(host=dbhost, user=dbuser, passwd=dbpass, db=dbase, charset='utf8')
 scur = scon.cursor()
 
 condition = '''where pm.brand_name {} like '%iphone%'
