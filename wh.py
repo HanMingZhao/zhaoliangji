@@ -203,7 +203,7 @@ sheet.write(sheetLength, 9, int(result[lastRow][9])/int(result[lastRow][12]))
 sheet.write(sheetLength, 10, int(result[lastRow][10])/int(result[lastRow][12]))
 sheet.write(sheetLength, 11, int(result[lastRow][11])/int(result[lastRow][12]))
 
-path = '/var/www/python3/'
+path = cf.get('path', 'path')
 wb.save(path + str(dt.datetime.today().date()) + 'warehouse.xls')
 
 src_cur.close()

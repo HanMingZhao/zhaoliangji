@@ -14,7 +14,7 @@ scon = db.connect(host=dbhost, user=dbuser, passwd=dbpass, db=dbase, charset='ut
 scur = scon.cursor()
 workBook = xlwt.Workbook()
 today = str(dt.datetime.today().date())
-path = '/var/www/python3/'
+path = cf.get('path', 'path')
 dateToday = dt.datetime.today()
 dateLastWeekDay = dateToday - dt.timedelta(7)
 dtformat = "%Y-%m-%d"

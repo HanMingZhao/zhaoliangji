@@ -121,8 +121,8 @@ for i, product in enumerate(pset):
     sheet.write(i+1, 5, jiance[product] if product in jiance else 0)
     sheet.write(i+1, 6, shangjia[product] if product in shangjia else 0)
     sheet.write(i+1, 7, xlwt.Formula('SUM(e{}:g{})'.format(i+2, i+2)))
-
-wb.save(today + 'supply.xls')
+path = cf.get('path', 'path')
+wb.save(path + today + 'supply.xls')
 
 scur.close()
 scon.close()
