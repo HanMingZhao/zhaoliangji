@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4a99546f-643b-4833-b464-5e20828d8662" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saleinfo.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/storeinfo.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -83,7 +83,7 @@
       <file leaf-file-name="storage.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/storage.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1485">
+            <state relative-caret-position="-189">
               <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
               <folding>
                 <marker date="1509937601625" expanded="true" signature="941:1019" ph="SELECT ppv.p... pdi_prop_value" />
@@ -91,6 +91,41 @@
                 <marker date="1509937601625" expanded="true" signature="1343:1422" ph="SELECT ppv.p... pdi_prop_value" />
                 <marker date="1509937601625" expanded="true" signature="1607:2133" ph="SELECT pm.mo... *" />
                 <marker date="1509937601625" expanded="true" signature="1823:1950" ph="SELECT sw.*,... stg_warehouse" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="storeinfo.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/storeinfo.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="383">
+              <caret line="98" column="87" lean-forward="false" selection-start-line="98" selection-start-column="87" selection-end-line="98" selection-end-column="87" />
+              <folding>
+                <element signature="e#0#20#0" expanded="true" />
+                <marker date="1509965403261" expanded="true" signature="683:761" ph="SELECT ppv.p... pdi_prop_value" />
+                <marker date="1509965403261" expanded="true" signature="887:966" ph="SELECT ppv.p... pdi_prop_value" />
+                <marker date="1509965403261" expanded="true" signature="1090:1169" ph="SELECT ppv.p... pdi_prop_value" />
+                <marker date="1509965403261" expanded="true" signature="1298:1380" ph="SELECT ppv.i... pdi_param_values" />
+                <marker date="1509965403261" expanded="true" signature="1540:1883" ph="SELECT pm.`m... stg_warehouse" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="saleinfo.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/saleinfo.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-864">
+              <caret line="61" column="0" lean-forward="true" selection-start-line="61" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#20#0" expanded="true" />
+                <marker date="1509963137031" expanded="true" signature="576:654" ph="SELECT ppv.p... pdi_prop_value" />
+                <marker date="1509963137031" expanded="true" signature="779:858" ph="SELECT ppv.p... pdi_prop_value" />
+                <marker date="1509963137031" expanded="true" signature="978:1057" ph="SELECT ppv.p... pdi_prop_value" />
+                <marker date="1509963137031" expanded="true" signature="1181:1260" ph="SELECT ppv.p... pdi_prop_value" />
+                <marker date="1509963137031" expanded="true" signature="1389:1471" ph="SELECT ppv.i... pdi_param_values" />
+                <marker date="1509963137031" expanded="true" signature="1597:1972" ph="SELECT pm.`m... odi_order" />
               </folding>
             </state>
           </provider>
@@ -111,34 +146,6 @@
                 <marker date="1509937601642" expanded="true" signature="3045:3585" ph="create TABLE... if" />
                 <marker date="1509937601642" expanded="true" signature="3798:3891" ph="insert into ods.ods_aftersale_... " />
                 <marker date="1509937601642" expanded="true" signature="4623:4657" ph="select * fro... ods_aftersale_" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="configparser.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Anaconda3/Lib/configparser.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-6849">
-              <caret line="558" column="6" lean-forward="false" selection-start-line="558" selection-start-column="6" selection-end-line="558" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="saleinfo.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/saleinfo.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="407">
-              <caret line="134" column="0" lean-forward="true" selection-start-line="134" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#20#0" expanded="true" />
-                <marker date="1509962983004" expanded="true" signature="576:654" ph="SELECT ppv.p... pdi_prop_value" />
-                <marker date="1509962983004" expanded="true" signature="779:858" ph="SELECT ppv.p... pdi_prop_value" />
-                <marker date="1509962983004" expanded="true" signature="978:1057" ph="SELECT ppv.p... pdi_prop_value" />
-                <marker date="1509962983004" expanded="true" signature="1181:1260" ph="SELECT ppv.p... pdi_prop_value" />
-                <marker date="1509962983004" expanded="true" signature="1389:1471" ph="SELECT ppv.i... pdi_param_values" />
-                <marker date="1509962983004" expanded="true" signature="1597:1972" ph="SELECT pm.`m... odi_order" />
               </folding>
             </state>
           </provider>
@@ -183,8 +190,8 @@
       <file leaf-file-name="supply2.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/supply2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="113" column="36" lean-forward="true" selection-start-line="113" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
+            <state relative-caret-position="113">
+              <caret line="101" column="0" lean-forward="true" selection-start-line="69" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
                 <marker date="1509937601594" expanded="true" signature="648:726" ph="SELECT ppv.p... pdi_prop_value" />
@@ -244,10 +251,11 @@
         <option value="$PROJECT_DIR$/month.py" />
         <option value="$PROJECT_DIR$/sku.py" />
         <option value="$PROJECT_DIR$/storage.py" />
-        <option value="$PROJECT_DIR$/supply2.py" />
         <option value="$PROJECT_DIR$/weekly.py" />
         <option value="$PROJECT_DIR$/wh.py" />
         <option value="$PROJECT_DIR$/saleinfo.py" />
+        <option value="$PROJECT_DIR$/supply2.py" />
+        <option value="$PROJECT_DIR$/storeinfo.py" />
       </list>
     </option>
   </component>
@@ -367,8 +375,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1609808" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1609808" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32861805" sideWeight="0.50852877" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -376,7 +385,7 @@
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30576715" sideWeight="0.49573562" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3264418" sideWeight="0.4914712" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3264418" sideWeight="0.4914712" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -428,29 +437,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/sku.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3971">
-          <caret line="210" column="77" lean-forward="false" selection-start-line="210" selection-start-column="77" selection-end-line="210" selection-end-column="77" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-            <marker date="1509937601563" expanded="true" signature="939:1258" ph="SELECT DISTI... *" />
-            <marker date="1509937601563" expanded="true" signature="977:1100" ph="SELECT sw.*,... stg_warehouse" />
-            <marker date="1509937601563" expanded="true" signature="1370:1693" ph="SELECT DISTI... *" />
-            <marker date="1509937601563" expanded="true" signature="1408:1531" ph="SELECT sw.*,... stg_warehouse" />
-            <marker date="1509937601563" expanded="true" signature="2107:2793" ph="SELECT bt.mo... model_name" />
-            <marker date="1509937601563" expanded="true" signature="2152:2744" ph="SELECT pm.mo... *" />
-            <marker date="1509937601563" expanded="true" signature="2396:2523" ph="SELECT sw.*,... stg_warehouse" />
-            <marker date="1509937601563" expanded="true" signature="3812:4501" ph="SELECT bt.br... brand_name" />
-            <marker date="1509937601563" expanded="true" signature="3858:4453" ph="SELECT pm.br... *" />
-            <marker date="1509937601563" expanded="true" signature="4101:4228" ph="SELECT sw.*,... stg_warehouse" />
-            <marker date="1509937601563" expanded="true" signature="6244:6293" ph="drop table i... " />
-            <marker date="1509937601563" expanded="true" signature="6300:6598" ph="create TABLE... if" />
-            <marker date="1509937601563" expanded="true" signature="7208:7281" ph="insert into ods.ods_product_warehouse_... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wh.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="361">
@@ -1122,20 +1108,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/storage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1485">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding>
-            <marker date="1509937601625" expanded="true" signature="941:1019" ph="SELECT ppv.p... pdi_prop_value" />
-            <marker date="1509937601625" expanded="true" signature="1144:1223" ph="SELECT ppv.p... pdi_prop_value" />
-            <marker date="1509937601625" expanded="true" signature="1343:1422" ph="SELECT ppv.p... pdi_prop_value" />
-            <marker date="1509937601625" expanded="true" signature="1607:2133" ph="SELECT pm.mo... *" />
-            <marker date="1509937601625" expanded="true" signature="1823:1950" ph="SELECT sw.*,... stg_warehouse" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dsale.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-891">
@@ -1160,10 +1132,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/storage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-189">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding>
+            <marker date="1509937601625" expanded="true" signature="941:1019" ph="SELECT ppv.p... pdi_prop_value" />
+            <marker date="1509937601625" expanded="true" signature="1144:1223" ph="SELECT ppv.p... pdi_prop_value" />
+            <marker date="1509937601625" expanded="true" signature="1343:1422" ph="SELECT ppv.p... pdi_prop_value" />
+            <marker date="1509937601625" expanded="true" signature="1607:2133" ph="SELECT pm.mo... *" />
+            <marker date="1509937601625" expanded="true" signature="1823:1950" ph="SELECT sw.*,... stg_warehouse" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/saleinfo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-864">
+          <caret line="61" column="0" lean-forward="true" selection-start-line="61" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+            <marker date="1509963137031" expanded="true" signature="576:654" ph="SELECT ppv.p... pdi_prop_value" />
+            <marker date="1509963137031" expanded="true" signature="779:858" ph="SELECT ppv.p... pdi_prop_value" />
+            <marker date="1509963137031" expanded="true" signature="978:1057" ph="SELECT ppv.p... pdi_prop_value" />
+            <marker date="1509963137031" expanded="true" signature="1181:1260" ph="SELECT ppv.p... pdi_prop_value" />
+            <marker date="1509963137031" expanded="true" signature="1389:1471" ph="SELECT ppv.i... pdi_param_values" />
+            <marker date="1509963137031" expanded="true" signature="1597:1972" ph="SELECT pm.`m... odi_order" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/supply2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="113" column="36" lean-forward="true" selection-start-line="113" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
+        <state relative-caret-position="113">
+          <caret line="101" column="0" lean-forward="true" selection-start-line="69" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
             <marker date="1509937601594" expanded="true" signature="648:726" ph="SELECT ppv.p... pdi_prop_value" />
@@ -1174,18 +1176,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/saleinfo.py">
+    <entry file="file://$PROJECT_DIR$/storeinfo.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
-          <caret line="134" column="0" lean-forward="true" selection-start-line="134" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
+        <state relative-caret-position="383">
+          <caret line="98" column="87" lean-forward="false" selection-start-line="98" selection-start-column="87" selection-end-line="98" selection-end-column="87" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
-            <marker date="1509962983004" expanded="true" signature="576:654" ph="SELECT ppv.p... pdi_prop_value" />
-            <marker date="1509962983004" expanded="true" signature="779:858" ph="SELECT ppv.p... pdi_prop_value" />
-            <marker date="1509962983004" expanded="true" signature="978:1057" ph="SELECT ppv.p... pdi_prop_value" />
-            <marker date="1509962983004" expanded="true" signature="1181:1260" ph="SELECT ppv.p... pdi_prop_value" />
-            <marker date="1509962983004" expanded="true" signature="1389:1471" ph="SELECT ppv.i... pdi_param_values" />
-            <marker date="1509962983004" expanded="true" signature="1597:1972" ph="SELECT pm.`m... odi_order" />
+            <marker date="1509965403261" expanded="true" signature="683:761" ph="SELECT ppv.p... pdi_prop_value" />
+            <marker date="1509965403261" expanded="true" signature="887:966" ph="SELECT ppv.p... pdi_prop_value" />
+            <marker date="1509965403261" expanded="true" signature="1090:1169" ph="SELECT ppv.p... pdi_prop_value" />
+            <marker date="1509965403261" expanded="true" signature="1298:1380" ph="SELECT ppv.i... pdi_param_values" />
+            <marker date="1509965403261" expanded="true" signature="1540:1883" ph="SELECT pm.`m... stg_warehouse" />
           </folding>
         </state>
       </provider>
