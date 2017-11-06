@@ -93,6 +93,7 @@ for wnum in warehouse:
             if feature[0] == '12':
                 p.quality = qd[feature[1]]
         p.battery = bd[str(p.pvsid)]
+        print(p.version, p.memory, p.quality, p.battery)
         products.append(p)
 
     for prod in products:
