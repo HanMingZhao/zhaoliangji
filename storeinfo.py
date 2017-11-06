@@ -55,7 +55,7 @@ scur.execute(qualitysql)
 qualities = scur.fetchall()
 for q in qualities:
     qd[str(q[0])] = q[1]
-
+print(qd)
 batterysql = '''
 SELECT ppv.id,ppv.`p_values` FROM panda.`pdi_param_values` ppv
 WHERE ppv.`p_id`=12
@@ -92,6 +92,7 @@ for wnum in warehouse:
                 p.memory = md[feature[1]]
             if feature[0] == '12':
                 p.quality = qd[feature[1]]
+                print(qd[feature[1]])
         p.battery = bd[str(p.pvsid)]
         print(p.version, p.memory, p.quality, p.battery)
         products.append(p)
