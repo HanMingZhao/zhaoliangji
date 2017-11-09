@@ -88,8 +88,6 @@ try:
         pname = product.version + ':' + product.color + ':' + product.memory
         pset.add(pname)
 
-    plist = [x for x in pset]
-
     conditionlt1 = 'bt.times < 1 '
     conditionlt3 = 'bt.times > 1 and bt.times <3 '
     conditionlt7 = 'bt.times > 3 and bt.times <7 '
@@ -98,6 +96,8 @@ try:
     conditiongt30 = 'bt.times > 30 '
 
     for wnum in warehouse:
+        plist = [x for x in pset]
+
         oneday = np.zeros(len(plist), dtype=int)
         threeday = np.zeros(len(plist), dtype=int)
         sevenday = np.zeros(len(plist), dtype=int)
@@ -132,44 +132,31 @@ try:
             if number > 0:
                 result = scur.fetchone()
                 oneday[plist.index(prod)] = result[1]
-                if result[1] > 0:
-                    print(count_sql.format(wnum, v, c, m, conditionlt1), result[1])
 
             number = scur.execute(count_sql.format(wnum, v, c, m, conditionlt3))
             if number > 0:
                 result = scur.fetchone()
                 threeday[plist.index(prod)] = result[1]
-                if result[1] > 0:
-                    print(count_sql.format(wnum, v, c, m, conditionlt3), result[1])
 
             number = scur.execute(count_sql.format(wnum, v, c, m, conditionlt7))
             if number > 0:
                 result = scur.fetchone()
                 sevenday[plist.index(prod)] = result[1]
-                if result[1] > 0:
-                    print(count_sql.format(wnum, v, c, m, conditionlt7), result[1])
 
             number = scur.execute(count_sql.format(wnum, v, c, m, conditionlt15))
             if number > 0:
                 result = scur.fetchone()
                 fifteenday[plist.index(prod)] = result[1]
-                if result[1] > 0:
-                    print(count_sql.format(wnum, v, c, m, conditionlt15), result[1])
 
             number = scur.execute(count_sql.format(wnum, v, c, m, conditionlt30))
             if number > 0:
                 result = scur.fetchone()
                 thirtyday[plist.index(prod)] = result[1]
-                if result[1] > 0:
-                    print(count_sql.format(wnum, v, c, m, conditionlt30), result[1])
 
             number = scur.execute(count_sql.format(wnum, v, c, m, conditiongt30))
             if number > 0:
                 result = scur.fetchone()
                 outthirtyday[plist.index(prod)] = result[1]
-                if result[1] > 0:
-                    print(count_sql.format(wnum, v, c, m, conditiongt30), result[1])
-
 
         plist.insert(0, '周期')
         plist.append('总计')
@@ -196,37 +183,37 @@ try:
         matrix2 = np.matrix(matrix)
         matrix3 = matrix2.transpose()
         matrix4 = matrix3.tolist()
-        print(matrix4)
-        # tablesql = '''drop table if EXISTS ods.ods_product_warehouse_{} ;
-        # create TABLE if NOT EXISTS ods.ods_product_warehouse_{}
-        # ( `sku` VARCHAR(32),
-        # `小于1天内` SMALLINT(4),
-        # `小于3天内` SMALLINT(4),
-        # `小于7天内` SMALLINT(4),
-        # `小于15天内` SMALLINT(4),
-        # `小于30天内` SMALLINT(4),
-        # `大于30天` SMALLINT(4),
-        # `总计` SMALLINT(4)
-        # )
-        # ENGINE=MYISAM CHARSET=utf8;
-        # '''
-        # dcur.execute(tablesql.format(wnum, wnum))
-        # dcon.commit()
-        #
-        # dst_arg = []
-        # for row in matrix4:
-        #     if row[0] == '周期':
-        #         continue
-        #     if row[0] == '总计' and int(row[1]) == 0 and int(row[2]) == 0 and int(row[3]) == 0 and int(row[4]) == 0 \
-        #             and int(row[5]) == 0 and int(row[6]) == 0:
-        #         continue
-        #     dst_arg.append((str(row[0]), int(row[1]), int(row[2]), int(row[3]), int(row[4]), int(row[5]), int(row[6]),
-        #                     int(row[1]) + int(row[2]) + int(row[3]) + int(row[4]) + int(row[5]) + int(row[6])))
-        #
-        # insert = '''
-        # insert into ods.ods_product_warehouse_{} VALUES (%s,%s,%s,%s,%s,%s,%s,%s)'''
-        # dcur.executemany(insert.format(wnum), dst_arg)
-        # dcon.commit()
+
+        tablesql = '''drop table if EXISTS ods.ods_product_warehouse_{} ;
+        create TABLE if NOT EXISTS ods.ods_product_warehouse_{}
+        ( `sku` VARCHAR(32),
+        `小于1天内` SMALLINT(4),
+        `小于3天内` SMALLINT(4),
+        `小于7天内` SMALLINT(4),
+        `小于15天内` SMALLINT(4),
+        `小于30天内` SMALLINT(4),
+        `大于30天` SMALLINT(4),
+        `总计` SMALLINT(4)
+        )
+        ENGINE=MYISAM CHARSET=utf8;
+        '''
+        dcur.execute(tablesql.format(wnum, wnum))
+        dcon.commit()
+
+        dst_arg = []
+        for row in matrix4:
+            if row[0] == '周期':
+                continue
+            if row[0] == '总计' and int(row[1]) == 0 and int(row[2]) == 0 and int(row[3]) == 0 and int(row[4]) == 0 \
+                    and int(row[5]) == 0 and int(row[6]) == 0:
+                continue
+            dst_arg.append((str(row[0]), int(row[1]), int(row[2]), int(row[3]), int(row[4]), int(row[5]), int(row[6]),
+                            int(row[1]) + int(row[2]) + int(row[3]) + int(row[4]) + int(row[5]) + int(row[6])))
+
+        insert = '''
+        insert into ods.ods_product_warehouse_{} VALUES (%s,%s,%s,%s,%s,%s,%s,%s)'''
+        dcur.executemany(insert.format(wnum), dst_arg)
+        dcon.commit()
 finally:
     dcur.close()
     dcon.close()
