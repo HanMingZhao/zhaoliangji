@@ -105,10 +105,6 @@ try:
         outthirtyday = np.zeros(len(plist), dtype=int)
 
         for prod in plist:
-            try:
-                v, c, m = prod.split(':')
-            except:
-                print(prod)
             v, c, m = prod.split(':')
 
             count_sql = '''
@@ -216,6 +212,9 @@ try:
         insert into ods.ods_product_warehouse_{} VALUES (%s,%s,%s,%s,%s,%s,%s,%s)'''
         dcur.executemany(insert.format(wnum), dst_arg)
         dcon.commit()
+
+        del plist[0]
+        plist.pop()
 finally:
     dcur.close()
     dcon.close()
