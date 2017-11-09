@@ -19,6 +19,7 @@ dbpass = cf.get('db', 'db_pass')
 dbase = cf.get('db', 'db_db')
 scon = db.connect(host=dbhost, user=dbuser, passwd=dbpass, db=dbase, charset='utf8')
 scur = scon.cursor()
+wb = xlwt.Workbook()
 
 dst_host = cf.get('test', 'host')
 dst_user = cf.get('test', 'user')
@@ -214,6 +215,38 @@ try:
         insert into ods.ods_product_warehouse_{} VALUES (%s,%s,%s,%s,%s,%s,%s,%s)'''
         dcur.executemany(insert.format(wnum), dst_arg)
         dcon.commit()
+
+        read_sql = '''
+        select * from ods.ods_product_warehouse_{}
+        '''
+        dcur.execute(read_sql.format(wnum))
+        result = dcur.fetchall()
+        sheet = wb.add_sheet(warehouse[wnum])
+        sheet.write(0, 0, '型号')
+        sheet.write(0, 1, '颜色')
+        sheet.write(0, 2, '内存')
+        sheet.write(0, 3, '小于1天内')
+        sheet.write(0, 4, '小于3天内')
+        sheet.write(0, 5, '小于7天内')
+        sheet.write(0, 6, '小于15天内')
+        sheet.write(0, 7, '小于30天内')
+        sheet.write(0, 8, '大于30天')
+        for i, r in enumerate(result):
+            if r[0] == '总计':
+                sheet.write(i+1, 0, r[0])
+            else:
+                v, c, m = r[0].split(':')
+                sheet.write(i+1, 0, v)
+                sheet.write(i+1, 1, c)
+                sheet.write(i+1, 2, m)
+            sheet.write(i+1, 3, r[1])
+            sheet.write(i+1, 4, r[2])
+            sheet.write(i+1, 5, r[3])
+            sheet.write(i+1, 6, r[4])
+            sheet.write(i+1, 7, r[5])
+            sheet.write(i+1, 8, r[6])
+    path = cf.get('path', 'path')
+    wb.save(path + str(dt.datetime.today()) + '.xls')
 finally:
     dcur.close()
     dcon.close()
