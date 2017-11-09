@@ -246,7 +246,7 @@ try:
             sheet.write(i+1, 7, r[5])
             sheet.write(i+1, 8, r[6])
     path = cf.get('path', 'path')
-    wb.save(path + str(dt.datetime.now().date()) + '.xls')
+    wb.save(path + str(dt.datetime.now().date()) + 'featuresku.xls')
 finally:
     dcur.close()
     dcon.close()
