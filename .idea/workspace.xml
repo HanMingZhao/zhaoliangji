@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4a99546f-643b-4833-b464-5e20828d8662" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/featuresku.py" afterPath="$PROJECT_DIR$/featuresku.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -44,20 +45,20 @@
       <file leaf-file-name="featuresku.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/featuresku.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1594">
-              <caret line="176" column="31" lean-forward="true" selection-start-line="176" selection-start-column="31" selection-end-line="176" selection-end-column="31" />
+            <state relative-caret-position="519">
+              <caret line="183" column="21" lean-forward="false" selection-start-line="183" selection-start-column="21" selection-end-line="183" selection-end-column="21" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
-                <marker date="1510208179795" expanded="true" signature="988:1070" ph="SELECT ppv.p... pdi_prop_value" />
-                <marker date="1510208179795" expanded="true" signature="1227:1310" ph="SELECT ppv.p... pdi_prop_value" />
-                <marker date="1510208179795" expanded="true" signature="1462:1545" ph="SELECT ppv.p... pdi_prop_value" />
-                <marker date="1510208179795" expanded="true" signature="1699:1948" ph="SELECT pm.`m... stg_warehouse" />
-                <marker date="1510208179795" expanded="true" signature="3271:4048" ph="SELECT bt.mo... model_name" />
-                <marker date="1510208179795" expanded="true" signature="3340:4003" ph="SELECT psw.m... *" />
-                <marker date="1510208179795" expanded="true" signature="3474:3981" ph="SELECT sw.*,... stg_warehouse" />
-                <marker date="1510208179795" expanded="true" signature="6152:6201" ph="drop table i... " />
-                <marker date="1510208179795" expanded="true" signature="6212:6550" ph="create TABLE... if" />
-                <marker date="1510208179795" expanded="true" signature="7208:7281" ph="insert into ods.ods_product_warehouse_... " />
+                <marker date="1510208791894" expanded="true" signature="988:1070" ph="SELECT ppv.p... pdi_prop_value" />
+                <marker date="1510208791894" expanded="true" signature="1227:1310" ph="SELECT ppv.p... pdi_prop_value" />
+                <marker date="1510208791894" expanded="true" signature="1462:1545" ph="SELECT ppv.p... pdi_prop_value" />
+                <marker date="1510208791894" expanded="true" signature="1699:1948" ph="SELECT pm.`m... stg_warehouse" />
+                <marker date="1510208791894" expanded="true" signature="3270:4047" ph="SELECT bt.mo... model_name" />
+                <marker date="1510208791894" expanded="true" signature="3339:4002" ph="SELECT psw.m... *" />
+                <marker date="1510208791894" expanded="true" signature="3473:3980" ph="SELECT sw.*,... stg_warehouse" />
+                <marker date="1510208791894" expanded="true" signature="6175:6224" ph="drop table i... " />
+                <marker date="1510208791894" expanded="true" signature="6237:6587" ph="create TABLE... if" />
+                <marker date="1510208791894" expanded="true" signature="7290:7363" ph="insert into ods.ods_product_warehouse_... " />
               </folding>
             </state>
           </provider>
@@ -1156,20 +1157,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/featuresku.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1594">
-          <caret line="176" column="31" lean-forward="true" selection-start-line="176" selection-start-column="31" selection-end-line="176" selection-end-column="31" />
+        <state relative-caret-position="519">
+          <caret line="183" column="21" lean-forward="false" selection-start-line="183" selection-start-column="21" selection-end-line="183" selection-end-column="21" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
-            <marker date="1510208179795" expanded="true" signature="988:1070" ph="SELECT ppv.p... pdi_prop_value" />
-            <marker date="1510208179795" expanded="true" signature="1227:1310" ph="SELECT ppv.p... pdi_prop_value" />
-            <marker date="1510208179795" expanded="true" signature="1462:1545" ph="SELECT ppv.p... pdi_prop_value" />
-            <marker date="1510208179795" expanded="true" signature="1699:1948" ph="SELECT pm.`m... stg_warehouse" />
-            <marker date="1510208179795" expanded="true" signature="3271:4048" ph="SELECT bt.mo... model_name" />
-            <marker date="1510208179795" expanded="true" signature="3340:4003" ph="SELECT psw.m... *" />
-            <marker date="1510208179795" expanded="true" signature="3474:3981" ph="SELECT sw.*,... stg_warehouse" />
-            <marker date="1510208179795" expanded="true" signature="6152:6201" ph="drop table i... " />
-            <marker date="1510208179795" expanded="true" signature="6212:6550" ph="create TABLE... if" />
-            <marker date="1510208179795" expanded="true" signature="7208:7281" ph="insert into ods.ods_product_warehouse_... " />
+            <marker date="1510208791894" expanded="true" signature="988:1070" ph="SELECT ppv.p... pdi_prop_value" />
+            <marker date="1510208791894" expanded="true" signature="1227:1310" ph="SELECT ppv.p... pdi_prop_value" />
+            <marker date="1510208791894" expanded="true" signature="1462:1545" ph="SELECT ppv.p... pdi_prop_value" />
+            <marker date="1510208791894" expanded="true" signature="1699:1948" ph="SELECT pm.`m... stg_warehouse" />
+            <marker date="1510208791894" expanded="true" signature="3270:4047" ph="SELECT bt.mo... model_name" />
+            <marker date="1510208791894" expanded="true" signature="3339:4002" ph="SELECT psw.m... *" />
+            <marker date="1510208791894" expanded="true" signature="3473:3980" ph="SELECT sw.*,... stg_warehouse" />
+            <marker date="1510208791894" expanded="true" signature="6175:6224" ph="drop table i... " />
+            <marker date="1510208791894" expanded="true" signature="6237:6587" ph="create TABLE... if" />
+            <marker date="1510208791894" expanded="true" signature="7290:7363" ph="insert into ods.ods_product_warehouse_... " />
           </folding>
         </state>
       </provider>
