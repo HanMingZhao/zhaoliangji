@@ -79,11 +79,11 @@ try:
         for feature in props:
             f = feature.split(':')
             if f[0] == '5':
-                product.version = f[1]
+                product.version = vd[f[1]]
             if f[0] == '10':
-                product.color = f[1]
+                product.color = cd[f[1]]
             if f[0] == '11':
-                product.memory = f[1]
+                product.memory = md[f[1]]
         pname = product.version + ':' + product.color + ':' + product.memory
         pset.add(pname)
 
