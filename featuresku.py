@@ -3,6 +3,9 @@ import xlwt
 import numpy as np
 import datetime as dt
 import configparser
+import time
+
+starttime = time.time()
 
 
 class Product:
@@ -231,20 +234,22 @@ try:
         sheet.write(0, 6, '小于15天内')
         sheet.write(0, 7, '小于30天内')
         sheet.write(0, 8, '大于30天')
+        sheet.write(0, 9, '总计')
         for i, r in enumerate(result):
             if r[0] == '总计':
-                sheet.write(i+1, 0, r[0])
+                continue
             else:
                 v, c, m = r[0].split(':')
                 sheet.write(i+1, 0, v)
                 sheet.write(i+1, 1, c)
                 sheet.write(i+1, 2, m)
-            sheet.write(i+1, 3, r[1])
-            sheet.write(i+1, 4, r[2])
-            sheet.write(i+1, 5, r[3])
-            sheet.write(i+1, 6, r[4])
-            sheet.write(i+1, 7, r[5])
-            sheet.write(i+1, 8, r[6])
+                sheet.write(i+1, 3, r[1])
+                sheet.write(i+1, 4, r[2])
+                sheet.write(i+1, 5, r[3])
+                sheet.write(i+1, 6, r[4])
+                sheet.write(i+1, 7, r[5])
+                sheet.write(i+1, 8, r[6])
+                sheet.write(i+1, 9, r[7])
     path = cf.get('path', 'path')
     wb.save(path + str(dt.datetime.now().date()) + 'featuresku.xls')
 finally:
@@ -252,3 +257,6 @@ finally:
     dcon.close()
     scur.close()
     scon.close()
+
+endtime = time.time()
+print(starttime-endtime, 's')
