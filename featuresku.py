@@ -106,9 +106,9 @@ try:
 
         for prod in plist:
             try:
-                prod.split(':')
+                v, c, m = prod.split(':')
             except:
-                prod
+                print(prod)
             v, c, m = prod.split(':')
 
             count_sql = '''
