@@ -196,8 +196,8 @@ for whnum in warehousenums:
     matrix3 = matrix2.transpose()
     matrix4 = matrix3.tolist()
 
-    tablesql = '''drop table if EXISTS ods.ods_product_warehouse_{} ;
-    create TABLE if NOT EXISTS ods.ods_product_warehouse_{} 
+    tablesql = '''drop table if EXISTS ods.ods_product_ez_warehouse_{} ;
+    create TABLE if NOT EXISTS ods.ods_product_ez_warehouse_{} 
     ( `sku` VARCHAR(32), 
     `小于1天内` SMALLINT(4), 
     `小于3天内` SMALLINT(4), 
@@ -223,7 +223,7 @@ for whnum in warehousenums:
                         int(row[1]) + int(row[2]) + int(row[3]) + int(row[4]) + int(row[5]) + int(row[6])))
 
     insert = '''
-    insert into ods.ods_product_warehouse_{} VALUES (%s,%s,%s,%s,%s,%s,%s,%s)'''
+    insert into ods.ods_product_ez_warehouse_{} VALUES (%s,%s,%s,%s,%s,%s,%s,%s)'''
     dst_cur.executemany(insert.format(whnum), dst_arg)
     dst_con.commit()
 
@@ -238,7 +238,7 @@ for whnum in warehousenums:
     sheet.write(0, 7, '总计')
 
     read_sql = '''
-    select * from ods.ods_product_warehouse_{}
+    select * from ods.ods_product_ez_warehouse_{}
     '''
     dst_cur.execute(read_sql.format(whnum))
     result = dst_cur.fetchall()
