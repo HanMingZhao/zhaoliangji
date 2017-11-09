@@ -18,7 +18,7 @@ if whnum not in warehousenums:
     print('wrong warehouse num')
     sys.exit(0)
 '''
-warehousenums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 11]
+warehousenums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12]
 
 cf = configparser.ConfigParser()
 cf.read('conf.conf')
