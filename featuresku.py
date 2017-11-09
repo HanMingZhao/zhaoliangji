@@ -74,7 +74,7 @@ result = scur.fetchall()
 pset = set()
 for r in result:
     product = Product(r[0], r[1])
-    if r[2] is None:
+    if product.props is None:
         print(r[3])
     else:
         props = product.props.split(';')
