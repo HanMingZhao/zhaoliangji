@@ -127,41 +127,47 @@ try:
                 )bt
                 WHERE {}
             '''
-            print(count_sql.format(wnum, v, c, m, conditionlt1))
             number = scur.execute(count_sql.format(wnum, v, c, m, conditionlt1))
             if number > 0:
                 result = scur.fetchone()
                 oneday[plist.index(prod)] = result[1]
+                if result[1] > 0:
+                    print(count_sql.format(wnum, v, c, m, conditionlt1), result[1])
             print('小于1天内', number)
-            print(count_sql.format(wnum, v, c, m, conditionlt3))
             number = scur.execute(count_sql.format(wnum, v, c, m, conditionlt3))
             if number > 0:
                 result = scur.fetchone()
                 threeday[plist.index(prod)] = result[1]
+                if result[1] > 0:
+                    print(count_sql.format(wnum, v, c, m, conditionlt3), result[1])
             print('小于3天内', number)
-            print(count_sql.format(wnum, v, c, m, conditionlt7))
             number = scur.execute(count_sql.format(wnum, v, c, m, conditionlt7))
             if number > 0:
                 result = scur.fetchone()
                 sevenday[plist.index(prod)] = result[1]
+                if result[1] > 0:
+                    print(count_sql.format(wnum, v, c, m, conditionlt7), result[1])
             print('小于7天内', number)
-            print(count_sql.format(wnum, v, c, m, conditionlt15))
             number = scur.execute(count_sql.format(wnum, v, c, m, conditionlt15))
             if number > 0:
                 result = scur.fetchone()
                 fifteenday[plist.index(prod)] = result[1]
+                if result[1] > 0:
+                    print(count_sql.format(wnum, v, c, m, conditionlt15), result[1])
             print('小于15天内', number)
-            print(count_sql.format(wnum, v, c, m, conditionlt30))
             number = scur.execute(count_sql.format(wnum, v, c, m, conditionlt30))
             if number > 0:
                 result = scur.fetchone()
                 thirtyday[plist.index(prod)] = result[1]
+                if result[1] > 0:
+                    print(count_sql.format(wnum, v, c, m, conditionlt30), result[1])
             print('小于30天内', number)
-            print(count_sql.format(wnum, v, c, m, conditiongt30))
             number = scur.execute(count_sql.format(wnum, v, c, m, conditiongt30))
             if number > 0:
                 result = scur.fetchone()
                 outthirtyday[plist.index(prod)] = result[1]
+                if result[1] > 0:
+                    print(count_sql.format(wnum, v, c, m, conditiongt30), result[1])
                 print(prod, plist.index(prod), outthirtyday[plist.index(prod)])
             print('大于30天', number)
 
