@@ -133,27 +133,27 @@ try:
                 result = scur.fetchone()
                 oneday[plist.index(prod)] = result[1]
 
-            number = scur.execute(count_sql.format(wnum, v, c, m, conditionlt3))
+            number = scur.execute(count_sql.format(wnum, v, cnum[0], mnum[0], conditionlt3))
             if number > 0:
                 result = scur.fetchone()
                 threeday[plist.index(prod)] = result[1]
 
-            number = scur.execute(count_sql.format(wnum, v, c, m, conditionlt7))
+            number = scur.execute(count_sql.format(wnum, v, cnum[0], mnum[0], conditionlt7))
             if number > 0:
                 result = scur.fetchone()
                 sevenday[plist.index(prod)] = result[1]
 
-            number = scur.execute(count_sql.format(wnum, v, c, m, conditionlt15))
+            number = scur.execute(count_sql.format(wnum, v, cnum[0], mnum[0], conditionlt15))
             if number > 0:
                 result = scur.fetchone()
                 fifteenday[plist.index(prod)] = result[1]
 
-            number = scur.execute(count_sql.format(wnum, v, c, m, conditionlt30))
+            number = scur.execute(count_sql.format(wnum, v, cnum[0], mnum[0], conditionlt30))
             if number > 0:
                 result = scur.fetchone()
                 thirtyday[plist.index(prod)] = result[1]
 
-            number = scur.execute(count_sql.format(wnum, v, c, m, conditiongt30))
+            number = scur.execute(count_sql.format(wnum, v, cnum[0], mnum[0], conditiongt30))
             if number > 0:
                 result = scur.fetchone()
                 outthirtyday[plist.index(prod)] = result[1]
