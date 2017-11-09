@@ -205,8 +205,8 @@ try:
         for row in matrix4:
             if row[0] == '周期':
                 continue
-            if row[0] == '总计' and int(row[1]) == 0 and int(row[2]) == 0 and int(row[3]) == 0 and int(row[4]) == 0 \
-                    and int(row[5]) == 0 and int(row[6]) == 0:
+            if int(row[1]) == 0 and int(row[2]) == 0 and int(row[3]) == 0 and int(row[4]) == 0 and int(row[5]) == 0 \
+                    and int(row[6]) == 0:
                 continue
             dst_arg.append((str(row[0]), int(row[1]), int(row[2]), int(row[3]), int(row[4]), int(row[5]), int(row[6]),
                             int(row[1]) + int(row[2]) + int(row[3]) + int(row[4]) + int(row[5]) + int(row[6])))
