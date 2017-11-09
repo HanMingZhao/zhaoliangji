@@ -62,7 +62,7 @@ for m in memorys:
     md[str(m[0])] = m[1]
 
 prop_sql = '''
-SELECT pm.`model_name`,pp.key_props,sw.product_id FROM panda.`stg_warehouse` sw
+SELECT pm.`model_name`,sw.key_props FROM panda.`stg_warehouse` sw
 LEFT JOIN panda.`pdi_model` pm
 ON sw.`model_id` = pm.`model_id`
 LEFT JOIN panda.`pdi_product` pp
@@ -74,20 +74,17 @@ result = scur.fetchall()
 pset = set()
 for r in result:
     product = Product(r[0], r[1])
-    if product.props is None:
-        print(r[3])
-    else:
-        props = product.props.split(';')
-        for feature in props:
-            f = feature.split(':')
-            if f[0] == '5':
-                product.version = f[1]
-            if f[0] == '10':
-                product.color = f[1]
-            if f[0] == '11':
-                product.memory = f[1]
-        pname = product.version + ':' + product.color + ':' + product.memory
-        pset.add(pname)
+    props = product.props.split(';')
+    for feature in props:
+        f = feature.split(':')
+        if f[0] == '5':
+            product.version = f[1]
+        if f[0] == '10':
+            product.color = f[1]
+        if f[0] == '11':
+            product.memory = f[1]
+    pname = product.version + ':' + product.color + ':' + product.memory
+    pset.add(pname)
 
 plist = [x for x in pset]
 
