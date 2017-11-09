@@ -250,6 +250,7 @@ try:
                 sheet.write(i+1, 7, r[5])
                 sheet.write(i+1, 8, r[6])
                 sheet.write(i+1, 9, r[7])
+        print('runtime: ', time.time()-starttime)
     path = cf.get('path', 'path')
     wb.save(path + str(dt.datetime.now().date()) + 'featuresku.xls')
 finally:
