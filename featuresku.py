@@ -168,7 +168,6 @@ try:
                 outthirtyday[plist.index(prod)] = result[1]
                 if result[1] > 0:
                     print(count_sql.format(wnum, v, c, m, conditiongt30), result[1])
-                print(prod, plist.index(prod), outthirtyday[plist.index(prod)])
             print('大于30天', number)
 
         plist.insert(0, '周期')
