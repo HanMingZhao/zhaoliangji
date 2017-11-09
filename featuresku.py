@@ -28,8 +28,9 @@ dst_db = cf.get('test', 'db')
 dcon = db.connect(host=dst_host, user=dst_user, passwd=dst_pass, db=dst_db, port=dst_port, charset='utf8')
 dcur = dcon.cursor()
 
-warehouse = {1: '分拾', 2: '检测', 3: '市场', 4: '上架', 5: '维修', 6: '报废', 7: 'B端', 8: '预上架', 9: '外包维修',
-             11: '京东', 12: '待卖'}
+# warehouse = {1: '分拾', 2: '检测', 3: '市场', 4: '上架', 5: '维修', 6: '报废', 7: 'B端', 8: '预上架', 9: '外包维修',
+#              11: '京东', 12: '待卖'}
+warehouse = {1: '分拾'}
 
 try:
     versionsql = '''
@@ -161,6 +162,7 @@ try:
             if number > 0:
                 result = scur.fetchone()
                 outthirtyday[plist.index(prod)] = result[1]
+                print(prod, plist.index(prod), outthirtyday[plist.index(prod)])
             print('大于30天', number)
 
         plist.insert(0, '周期')
