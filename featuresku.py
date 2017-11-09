@@ -6,9 +6,9 @@ import configparser
 
 
 class Product:
-    def __init__(self, name, key_props):
+    def __init__(self, name, props):
         self.name = name
-        self.key_props = key_props
+        self.props = props
 
 cf = configparser.ConfigParser()
 cf.read('conf.conf')
@@ -74,7 +74,7 @@ result = scur.fetchall()
 pset = set()
 for r in result:
     product = Product(r[0], r[1])
-    props = product.key_props.split(';')
+    props = product.props.split(';')
     for feature in props:
         f = feature.split(':')
         if f[0] == '5':
