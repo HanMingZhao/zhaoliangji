@@ -1,7 +1,9 @@
 import pymysql as db
 import numpy as np
 import configparser
-
+import xlwt
+import datetime as dt
+import time
 '''
 if len(sys.argv) > 1:
     try:
@@ -18,8 +20,11 @@ if whnum not in warehousenums:
     print('wrong warehouse num')
     sys.exit(0)
 '''
-warehousenums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12]
+starttime = time.time()
+warehousenums = {1: '分拾', 2: '检测', 3: '市场', 4: '上架', 5: '维修', 6: '报废', 7: 'B端', 8: '预上架', 9: '外包维修',
+                 11: '京东', 12: '待卖'}
 
+wb = xlwt.Workbook()
 cf = configparser.ConfigParser()
 cf.read('conf.conf')
 dbhost = cf.get('db', 'db_host')
@@ -222,9 +227,40 @@ for whnum in warehousenums:
     dst_cur.executemany(insert.format(whnum), dst_arg)
     dst_con.commit()
 
+    sheet = wb.add_sheet(warehousenums[whnum])
+    sheet.write(0, 0, 'sku')
+    sheet.write(0, 1, '小于1天内')
+    sheet.write(0, 2, '小于3天内')
+    sheet.write(0, 3, '小于7天内')
+    sheet.write(0, 4, '小于15天内')
+    sheet.write(0, 5, '小于30天内')
+    sheet.write(0, 6, '大于30天')
+    sheet.write(0, 7, '总计')
+
+    read_sql = '''
+    select * from ods.ods_product_warehouse_{}
+    '''
+    dst_cur.execute(read_sql.format(whnum))
+    result = dst_cur.fetchall()
+    for i, r in enumerate(result):
+        sheet.write(i+1, 0, r[0])
+        sheet.write(i+1, 1, r[1])
+        sheet.write(i+1, 2, r[2])
+        sheet.write(i+1, 3, r[3])
+        sheet.write(i+1, 4, r[4])
+        sheet.write(i+1, 5, r[5])
+        sheet.write(i+1, 6, r[6])
+        sheet.write(i+1, 7, r[7])
+
+path = cf.get('path', 'path')
+today = str(dt.datetime.now().date())
+wb.save(path + today + 'sku.xls')
+
 src_cur.close()
 src_con.close()
 dst_cur.close()
 dst_con.close()
 
+endtime = time.time()
+print('runtime: ' + (endtime - starttime))
 print('done！\n'*5)
