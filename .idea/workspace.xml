@@ -45,20 +45,20 @@
       <file leaf-file-name="featuresku.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/featuresku.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="102" column="47" lean-forward="true" selection-start-line="102" selection-start-column="47" selection-end-line="102" selection-end-column="47" />
+            <state relative-caret-position="400">
+              <caret line="76" column="10" lean-forward="false" selection-start-line="76" selection-start-column="10" selection-end-line="76" selection-end-column="10" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
-                <marker date="1510206552726" expanded="true" signature="975:1053" ph="SELECT ppv.p... pdi_prop_value" />
-                <marker date="1510206552726" expanded="true" signature="1178:1257" ph="SELECT ppv.p... pdi_prop_value" />
-                <marker date="1510206552726" expanded="true" signature="1377:1456" ph="SELECT ppv.p... pdi_prop_value" />
-                <marker date="1510206552726" expanded="true" signature="1578:1807" ph="SELECT pm.`m... stg_warehouse" />
-                <marker date="1510206552726" expanded="true" signature="2978:3691" ph="SELECT bt.mo... model_name" />
-                <marker date="1510206552726" expanded="true" signature="3039:3654" ph="SELECT psw.m... *" />
-                <marker date="1510206552726" expanded="true" signature="3165:3636" ph="SELECT sw.*,... stg_warehouse" />
-                <marker date="1510206552726" expanded="true" signature="5595:5644" ph="drop table i... " />
-                <marker date="1510206552726" expanded="true" signature="5651:5949" ph="create TABLE... if" />
-                <marker date="1510206552726" expanded="true" signature="6551:6624" ph="insert into ods.ods_product_warehouse_... " />
+                <marker date="1510206842431" expanded="true" signature="975:1053" ph="SELECT ppv.p... pdi_prop_value" />
+                <marker date="1510206842431" expanded="true" signature="1178:1257" ph="SELECT ppv.p... pdi_prop_value" />
+                <marker date="1510206842431" expanded="true" signature="1377:1456" ph="SELECT ppv.p... pdi_prop_value" />
+                <marker date="1510206842431" expanded="true" signature="1578:1821" ph="SELECT pm.`m... stg_warehouse" />
+                <marker date="1510206842431" expanded="true" signature="3014:3727" ph="SELECT bt.mo... model_name" />
+                <marker date="1510206842431" expanded="true" signature="3075:3690" ph="SELECT psw.m... *" />
+                <marker date="1510206842431" expanded="true" signature="3201:3672" ph="SELECT sw.*,... stg_warehouse" />
+                <marker date="1510206842431" expanded="true" signature="5631:5680" ph="drop table i... " />
+                <marker date="1510206842431" expanded="true" signature="5687:5985" ph="create TABLE... if" />
+                <marker date="1510206842431" expanded="true" signature="6587:6660" ph="insert into ods.ods_product_warehouse_... " />
               </folding>
             </state>
           </provider>
@@ -120,8 +120,8 @@
       <file leaf-file-name="storeinfo.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/storeinfo.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="279">
-              <caret line="98" column="24" lean-forward="false" selection-start-line="98" selection-start-column="16" selection-end-line="98" selection-end-column="24" />
+            <state relative-caret-position="800">
+              <caret line="86" column="34" lean-forward="false" selection-start-line="86" selection-start-column="29" selection-end-line="86" selection-end-column="34" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
                 <marker date="1510194092901" expanded="true" signature="683:761" ph="SELECT ppv.p... pdi_prop_value" />
@@ -1062,40 +1062,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/daily.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-8">
-          <caret line="4" column="20" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding>
-            <marker date="1509937601578" expanded="true" signature="537:766" ph="SELECT DATE(... " />
-            <marker date="1509937601578" expanded="true" signature="889:1204" ph="SELECT DATE(... " />
-            <marker date="1509937601578" expanded="true" signature="1324:1567" ph="SELECT DATE(... " />
-            <marker date="1509937601578" expanded="true" signature="1672:2001" ph="SELECT DATE(... " />
-            <marker date="1509937601578" expanded="true" signature="2140:2334" ph="SELECT COUNT... odi_finance_refund_record" />
-            <marker date="1509937601578" expanded="true" signature="2434:2638" ph="SELECT SUM(o... odi_finance_refund_record" />
-            <marker date="1509937601578" expanded="true" signature="2743:2968" ph="select date(... " />
-            <marker date="1509937601578" expanded="true" signature="3129:3260" ph="SELECT DATE(... " />
-            <marker date="1509937601578" expanded="true" signature="3351:3423" ph="SELECT pv,ip... boss_api_info" />
-            <marker date="1509937601578" expanded="true" signature="3684:3777" ph="insert into ods.ods_daily_info... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/storeinfo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="98" column="24" lean-forward="false" selection-start-line="98" selection-start-column="16" selection-end-line="98" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-            <marker date="1510194092901" expanded="true" signature="683:761" ph="SELECT ppv.p... pdi_prop_value" />
-            <marker date="1510194092901" expanded="true" signature="887:966" ph="SELECT ppv.p... pdi_prop_value" />
-            <marker date="1510194092901" expanded="true" signature="1090:1169" ph="SELECT ppv.p... pdi_prop_value" />
-            <marker date="1510194092901" expanded="true" signature="1297:1379" ph="SELECT ppv.i... pdi_param_values" />
-            <marker date="1510194092901" expanded="true" signature="1539:1955" ph="SELECT pm.`m... stg_warehouse" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wh.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1358">
@@ -1155,22 +1121,56 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/featuresku.py">
+    <entry file="file://$PROJECT_DIR$/daily.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="102" column="47" lean-forward="true" selection-start-line="102" selection-start-column="47" selection-end-line="102" selection-end-column="47" />
+        <state relative-caret-position="-8">
+          <caret line="4" column="20" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding>
+            <marker date="1509937601578" expanded="true" signature="537:766" ph="SELECT DATE(... " />
+            <marker date="1509937601578" expanded="true" signature="889:1204" ph="SELECT DATE(... " />
+            <marker date="1509937601578" expanded="true" signature="1324:1567" ph="SELECT DATE(... " />
+            <marker date="1509937601578" expanded="true" signature="1672:2001" ph="SELECT DATE(... " />
+            <marker date="1509937601578" expanded="true" signature="2140:2334" ph="SELECT COUNT... odi_finance_refund_record" />
+            <marker date="1509937601578" expanded="true" signature="2434:2638" ph="SELECT SUM(o... odi_finance_refund_record" />
+            <marker date="1509937601578" expanded="true" signature="2743:2968" ph="select date(... " />
+            <marker date="1509937601578" expanded="true" signature="3129:3260" ph="SELECT DATE(... " />
+            <marker date="1509937601578" expanded="true" signature="3351:3423" ph="SELECT pv,ip... boss_api_info" />
+            <marker date="1509937601578" expanded="true" signature="3684:3777" ph="insert into ods.ods_daily_info... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/storeinfo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="800">
+          <caret line="86" column="34" lean-forward="false" selection-start-line="86" selection-start-column="29" selection-end-line="86" selection-end-column="34" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
-            <marker date="1510206552726" expanded="true" signature="975:1053" ph="SELECT ppv.p... pdi_prop_value" />
-            <marker date="1510206552726" expanded="true" signature="1178:1257" ph="SELECT ppv.p... pdi_prop_value" />
-            <marker date="1510206552726" expanded="true" signature="1377:1456" ph="SELECT ppv.p... pdi_prop_value" />
-            <marker date="1510206552726" expanded="true" signature="1578:1807" ph="SELECT pm.`m... stg_warehouse" />
-            <marker date="1510206552726" expanded="true" signature="2978:3691" ph="SELECT bt.mo... model_name" />
-            <marker date="1510206552726" expanded="true" signature="3039:3654" ph="SELECT psw.m... *" />
-            <marker date="1510206552726" expanded="true" signature="3165:3636" ph="SELECT sw.*,... stg_warehouse" />
-            <marker date="1510206552726" expanded="true" signature="5595:5644" ph="drop table i... " />
-            <marker date="1510206552726" expanded="true" signature="5651:5949" ph="create TABLE... if" />
-            <marker date="1510206552726" expanded="true" signature="6551:6624" ph="insert into ods.ods_product_warehouse_... " />
+            <marker date="1510194092901" expanded="true" signature="683:761" ph="SELECT ppv.p... pdi_prop_value" />
+            <marker date="1510194092901" expanded="true" signature="887:966" ph="SELECT ppv.p... pdi_prop_value" />
+            <marker date="1510194092901" expanded="true" signature="1090:1169" ph="SELECT ppv.p... pdi_prop_value" />
+            <marker date="1510194092901" expanded="true" signature="1297:1379" ph="SELECT ppv.i... pdi_param_values" />
+            <marker date="1510194092901" expanded="true" signature="1539:1955" ph="SELECT pm.`m... stg_warehouse" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/featuresku.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="76" column="10" lean-forward="false" selection-start-line="76" selection-start-column="10" selection-end-line="76" selection-end-column="10" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+            <marker date="1510206842431" expanded="true" signature="975:1053" ph="SELECT ppv.p... pdi_prop_value" />
+            <marker date="1510206842431" expanded="true" signature="1178:1257" ph="SELECT ppv.p... pdi_prop_value" />
+            <marker date="1510206842431" expanded="true" signature="1377:1456" ph="SELECT ppv.p... pdi_prop_value" />
+            <marker date="1510206842431" expanded="true" signature="1578:1821" ph="SELECT pm.`m... stg_warehouse" />
+            <marker date="1510206842431" expanded="true" signature="3014:3727" ph="SELECT bt.mo... model_name" />
+            <marker date="1510206842431" expanded="true" signature="3075:3690" ph="SELECT psw.m... *" />
+            <marker date="1510206842431" expanded="true" signature="3201:3672" ph="SELECT sw.*,... stg_warehouse" />
+            <marker date="1510206842431" expanded="true" signature="5631:5680" ph="drop table i... " />
+            <marker date="1510206842431" expanded="true" signature="5687:5985" ph="create TABLE... if" />
+            <marker date="1510206842431" expanded="true" signature="6587:6660" ph="insert into ods.ods_product_warehouse_... " />
           </folding>
         </state>
       </provider>
