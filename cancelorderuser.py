@@ -14,6 +14,10 @@ scur = scon.cursor()
 
 wb = xlwt.Workbook()
 
+style = xlwt.XFStyle()
+style.num_format_str = 'YYYY-MM-DD h:mm:ss'
+# Other options: D-MMM-YY, D-MMM, MMM-YY, h:mm, h:mm:ss, h:mm, h:mm:ss, M/D/YY h:mm, mm:ss, [h]:mm:ss, mm:ss.0
+
 for i in range(6):
     querysql = '''
     SELECT tbt.user_id `用户id`,tbt.count `下单次数`,tbt.create_at `最后下单时间`, tbt.contacts `联系人`,tbt.phone `联系电话` FROM 
@@ -47,7 +51,7 @@ for i in range(6):
     for j, r in enumerate(result):
         sheet.write(j+1, 0, r[0])
         sheet.write(j+1, 1, r[1])
-        sheet.write(j+1, 2, r[2])
+        sheet.write(j+1, 2, r[2], style)
         sheet.write(j+1, 3, r[3])
         sheet.write(j+1, 4, r[4])
 
