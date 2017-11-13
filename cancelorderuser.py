@@ -51,7 +51,7 @@ for i in range(6):
     for j, r in enumerate(result):
         sheet.write(j+1, 0, r[0])
         sheet.write(j+1, 1, r[1])
-        sheet.write(j+1, 2, r[2], style)
+        sheet.write(j+1, 2, str(r[2]))
         sheet.write(j+1, 3, r[3])
         sheet.write(j+1, 4, r[4])
 
