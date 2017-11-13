@@ -32,10 +32,10 @@ for i in range(6):
     GROUP BY bt.user_id
     )tbt
     WHERE tbt.count>3
-    limit {},210
+    limit {},213
     '''
     page = i + 1
-    limit = 210 * (page - 1) + 1
+    limit = 213 * (page - 1) + 1
     scur.execute(querysql.format(limit))
     result = scur.fetchall()
     sheet = wb.add_sheet(str(page))
