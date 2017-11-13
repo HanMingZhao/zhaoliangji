@@ -38,7 +38,7 @@ for i in range(6):
     limit = 210 * (page - 1) + 1
     scur.execute(querysql.format(limit))
     result = scur.fetchall()
-    sheet = wb.add_sheet(page)
+    sheet = wb.add_sheet(str(page))
     sheet.write(0, 0, '用户id')
     sheet.write(0, 1, '下单次数')
     sheet.write(0, 2, '最后下单时间')
