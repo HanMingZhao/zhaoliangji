@@ -55,6 +55,9 @@ for i in range(6):
         sheet.write(j+1, 3, r[4])
         sheet.write(j+1, 4, str(r[2]))
 
+    phone_col = sheet.col(3)
+    phone_col.width = 256 * 15
+
 path = cf.get('path', 'path')
 wb.save(path + 'cancelorder.xls')
 
