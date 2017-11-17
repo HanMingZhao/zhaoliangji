@@ -126,7 +126,7 @@ try:
                 ON sw.`product_id` = pp.`product_id`
                 WHERE sw.`warehouse_status` = 1
                 AND sw.`warehouse_num` = {}
-                AND pm.`key_props` LIKE '%5:{}%'
+                AND pp.`key_props` LIKE '%5:{}%'
                 AND pp.`key_props` LIKE '%10:{}%'
                 AND pp.`key_props` LIKE '%11:{}%'
                 ) psw
