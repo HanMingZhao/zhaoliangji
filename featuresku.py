@@ -111,6 +111,7 @@ try:
 
         for prod in pset:
             v, c, m = prod.split(':')
+            vnum = [x[0] for x in vd.items() if v in x[1]]
             cnum = [x[0] for x in cd.items() if c in x[1]]
             mnum = [x[0] for x in md.items() if m in x[1]]
             count_sql = '''
@@ -125,39 +126,39 @@ try:
                 ON sw.`product_id` = pp.`product_id`
                 WHERE sw.`warehouse_status` = 1
                 AND sw.`warehouse_num` = {}
-                AND pm.`model_name` LIKE '%{}%'
+                AND pm.`key_props` LIKE '%5:{}%'
                 AND pp.`key_props` LIKE '%10:{}%'
                 AND pp.`key_props` LIKE '%11:{}%'
                 ) psw
                 )bt
                 WHERE {}
             '''
-            number = scur.execute(count_sql.format(wnum, v, cnum[0], mnum[0], conditionlt1))
+            number = scur.execute(count_sql.format(wnum, vnum, cnum[0], mnum[0], conditionlt1))
             if number > 0:
                 result = scur.fetchone()
                 oneday[plist.index(prod)] = result[1]
 
-            number = scur.execute(count_sql.format(wnum, v, cnum[0], mnum[0], conditionlt3))
+            number = scur.execute(count_sql.format(wnum, vnum, cnum[0], mnum[0], conditionlt3))
             if number > 0:
                 result = scur.fetchone()
                 threeday[plist.index(prod)] = result[1]
 
-            number = scur.execute(count_sql.format(wnum, v, cnum[0], mnum[0], conditionlt7))
+            number = scur.execute(count_sql.format(wnum, vnum, cnum[0], mnum[0], conditionlt7))
             if number > 0:
                 result = scur.fetchone()
                 sevenday[plist.index(prod)] = result[1]
 
-            number = scur.execute(count_sql.format(wnum, v, cnum[0], mnum[0], conditionlt15))
+            number = scur.execute(count_sql.format(wnum, vnum, cnum[0], mnum[0], conditionlt15))
             if number > 0:
                 result = scur.fetchone()
                 fifteenday[plist.index(prod)] = result[1]
 
-            number = scur.execute(count_sql.format(wnum, v, cnum[0], mnum[0], conditionlt30))
+            number = scur.execute(count_sql.format(wnum, vnum, cnum[0], mnum[0], conditionlt30))
             if number > 0:
                 result = scur.fetchone()
                 thirtyday[plist.index(prod)] = result[1]
 
-            number = scur.execute(count_sql.format(wnum, v, cnum[0], mnum[0], conditiongt30))
+            number = scur.execute(count_sql.format(wnum, vnum, cnum[0], mnum[0], conditiongt30))
             if number > 0:
                 result = scur.fetchone()
                 outthirtyday[plist.index(prod)] = result[1]
