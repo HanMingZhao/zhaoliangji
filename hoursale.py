@@ -27,7 +27,7 @@ for i in range(8):
 sheet = wb.add_sheet('sheet1')
 sheet.write(0, 0, '日期')
 for i in range(24):
-    sheet.write(0, i+1, i+1)
+    sheet.write(0, i+1, i+1+'点')
 for i, day in enumerate(days):
     query_sql = '''
     SELECT DATE(oo.`create_at`),HOUR(oo.`create_at`),COUNT(1) FROM panda.`odi_order` oo

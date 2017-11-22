@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4a99546f-643b-4833-b464-5e20828d8662" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hoursale.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -46,7 +45,7 @@
       <file leaf-file-name="featuresku.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/featuresku.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
+            <state relative-caret-position="-5737">
               <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="24" selection-end-column="20" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
@@ -69,11 +68,11 @@
       <file leaf-file-name="hoursale.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/hoursale.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="538">
-              <caret line="37" column="4" lean-forward="false" selection-start-line="37" selection-start-column="4" selection-end-line="37" selection-end-column="4" />
+            <state relative-caret-position="644">
+              <caret line="54" column="44" lean-forward="false" selection-start-line="54" selection-start-column="44" selection-end-line="54" selection-end-column="44" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
-                <marker date="1511330531177" expanded="true" signature="655:896" ph="SELECT DATE(... " />
+                <marker date="1511331170863" expanded="true" signature="792:1031" ph="SELECT DATE(... " />
               </folding>
             </state>
           </provider>
@@ -279,17 +278,16 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17377399" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32861805" sideWeight="0.50852877" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30576715" sideWeight="0.49573562" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30576715" sideWeight="0.49573562" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32535365" sideWeight="0.4914712" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32535365" sideWeight="0.4914712" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -672,23 +670,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/featuresku.py">
+    <entry file="file://$PROJECT_DIR$/weekly.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="24" selection-end-column="20" />
+        <state relative-caret-position="7875">
+          <caret line="363" column="38" lean-forward="false" selection-start-line="363" selection-start-column="34" selection-end-line="363" selection-end-column="38" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
-            <marker date="1510889434213" expanded="true" signature="1069:1151" ph="SELECT ppv.p... pdi_prop_value" />
-            <marker date="1510889434213" expanded="true" signature="1308:1391" ph="SELECT ppv.p... pdi_prop_value" />
-            <marker date="1510889434213" expanded="true" signature="1543:1626" ph="SELECT ppv.p... pdi_prop_value" />
-            <marker date="1510889434213" expanded="true" signature="1780:2029" ph="SELECT pm.`m... stg_warehouse" />
-            <marker date="1510889434213" expanded="true" signature="3531:4309" ph="SELECT bt.mo... model_name" />
-            <marker date="1510889434213" expanded="true" signature="3600:4264" ph="SELECT psw.m... *" />
-            <marker date="1510889434213" expanded="true" signature="3734:4242" ph="SELECT sw.*,... stg_warehouse" />
-            <marker date="1510889434213" expanded="true" signature="6521:6570" ph="drop table i... " />
-            <marker date="1510889434213" expanded="true" signature="6581:6911" ph="create TABLE... if" />
-            <marker date="1510889434213" expanded="true" signature="7549:7622" ph="insert into ods.ods_product_warehouse_... " />
-            <marker date="1510889434213" expanded="true" signature="7735:7777" ph="select * fro... ods_product_warehouse_" />
           </folding>
         </state>
       </provider>
@@ -717,23 +704,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/weekly.py">
+    <entry file="file://$PROJECT_DIR$/featuresku.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7875">
-          <caret line="363" column="38" lean-forward="false" selection-start-line="363" selection-start-column="34" selection-end-line="363" selection-end-column="38" />
+        <state relative-caret-position="-5737">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="24" selection-end-column="20" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
+            <marker date="1510889434213" expanded="true" signature="1069:1151" ph="SELECT ppv.p... pdi_prop_value" />
+            <marker date="1510889434213" expanded="true" signature="1308:1391" ph="SELECT ppv.p... pdi_prop_value" />
+            <marker date="1510889434213" expanded="true" signature="1543:1626" ph="SELECT ppv.p... pdi_prop_value" />
+            <marker date="1510889434213" expanded="true" signature="1780:2029" ph="SELECT pm.`m... stg_warehouse" />
+            <marker date="1510889434213" expanded="true" signature="3531:4309" ph="SELECT bt.mo... model_name" />
+            <marker date="1510889434213" expanded="true" signature="3600:4264" ph="SELECT psw.m... *" />
+            <marker date="1510889434213" expanded="true" signature="3734:4242" ph="SELECT sw.*,... stg_warehouse" />
+            <marker date="1510889434213" expanded="true" signature="6521:6570" ph="drop table i... " />
+            <marker date="1510889434213" expanded="true" signature="6581:6911" ph="create TABLE... if" />
+            <marker date="1510889434213" expanded="true" signature="7549:7622" ph="insert into ods.ods_product_warehouse_... " />
+            <marker date="1510889434213" expanded="true" signature="7735:7777" ph="select * fro... ods_product_warehouse_" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/hoursale.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="538">
-          <caret line="37" column="4" lean-forward="false" selection-start-line="37" selection-start-column="4" selection-end-line="37" selection-end-column="4" />
+        <state relative-caret-position="644">
+          <caret line="54" column="44" lean-forward="false" selection-start-line="54" selection-start-column="44" selection-end-line="54" selection-end-column="44" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
-            <marker date="1511330531177" expanded="true" signature="655:896" ph="SELECT DATE(... " />
+            <marker date="1511331170863" expanded="true" signature="792:1031" ph="SELECT DATE(... " />
           </folding>
         </state>
       </provider>
