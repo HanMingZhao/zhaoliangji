@@ -95,11 +95,12 @@ rowBottom = 6 + modelCount * 2
 sheet.write_merge(7, rowBottom, 0, 0, 'B')
 sheet.write_merge(7, rowBottom, 1, 1, '型号销售额')
 for i, r in enumerate(result):
-    sheet.write_merge(i+7, i+8, 2, 2, r[0])
-    sheet.write(i+7, 3, '销售额')
-    sheet.write(i+8, 3, '销售量')
-    sheet.write(i+7, 4, r[2])
-    sheet.write(i+8, 4, r[1])
+    x = i+1
+    sheet.write_merge(x+7, x+8, 2, 2, r[0])
+    sheet.write(x+7, 3, '销售额')
+    sheet.write(x+8, 3, '销售量')
+    sheet.write(x+7, 4, r[2])
+    sheet.write(x+8, 4, r[1])
 
 path = cf.get('path', 'path')
 wb.save(path + today.strftime(dateFormat) + 'pct.xls')
