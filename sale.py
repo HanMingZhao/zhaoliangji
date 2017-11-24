@@ -74,6 +74,33 @@ sheet.write(5, 4, transaction + '%')
 sheet.write_merge(6, 6, 2, 3, '客单价')
 sheet.write(6, 4, pct)
 
+modelCountSql = '''
+SELECT pm.model_name,COUNT(1) `count`,SUM(oo.`total_amount`) `amount` FROM panda.`odi_order` oo
+LEFT JOIN panda.`pdi_product` pp
+ON oo.`product_id` = pp.product_id
+LEFT JOIN panda.`pdi_model` pm
+ON pp.model_id = pm.model_id
+LEFT JOIN panda.`aci_user_info` aui
+ON aui.user_id = oo.`user_id`
+WHERE oo.`order_status` IN (1,2,4,5)
+AND oo.`pay_at` > '{}'
+AND oo.`pay_at` < '{}'
+AND aui.`from_shop` NOT IN ('Patica','猎趣','趣分期','中捷代购','钱到到','小卖家','趣先享','京东店铺','机密')
+GROUP BY pm.model_id
+ORDER BY `count` DESC
+'''
+modelCount = scur.execute(modelCountSql.format(yesterday.strftime(dateFormat), today.strftime(dateFormat)))
+result = scur.fetchall()
+rowBottom = 6 + modelCount * 2
+sheet.write_merge(7, rowBottom, 0, 0, 'B')
+sheet.write_merge(7, rowBottom, 1, 1, '型号销售额')
+for i, r in enumerate(result):
+    sheet.write_merge(i+7, i+8, 2, 2, r[0])
+    sheet.write(i+7, 3, '销售额')
+    sheet.write(i+8, 3, '销售量')
+    sheet.write(i+7, 4, r[2])
+    sheet.write(i+8, 4, r[1])
+
 path = cf.get('path', 'path')
 wb.save(path + today.strftime(dateFormat) + 'pct.xls')
 
