@@ -92,9 +92,9 @@ ORDER BY `count` DESC
 modelCount = scur.execute(modelCountSql.format(yesterday.strftime(dateFormat), today.strftime(dateFormat)))
 result = scur.fetchall()
 rowBottom = 6 + modelCount * 2
-sheet.write_merge(7, 0, 'B')
+sheet.write(7, 0, 'B')
 sheet.merge(7, rowBottom, 0, 0)
-sheet.write_merge(7, 1, '型号销售额')
+sheet.write(7, 1, '型号销售额')
 sheet.merge(7, rowBottom, 1, 1)
 for i, r in enumerate(result):
     x = i*2
