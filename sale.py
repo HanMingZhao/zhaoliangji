@@ -4,6 +4,7 @@ import time
 import datetime
 import xlwt
 import configparser
+import decimal
 
 cf = configparser.ConfigParser()
 cf.read('conf.conf')
@@ -49,7 +50,7 @@ scur.execute(uvSql.format(yesterday.strftime(dateFormat)))
 result = scur.fetchone()
 uv = result[0]
 
-pct = float('%.2f' % (saleAmount / saleCount))
+pct = decimal.Decimal('%.2f' % (saleAmount / saleCount))
 transaction = '%.2f' % (saleAmount / uv / pct * 100)
 
 sheet.write(0, 0, '重要级')
