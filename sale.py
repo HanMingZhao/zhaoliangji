@@ -15,9 +15,17 @@ dbpass = cf.get('db', 'db_pass')
 dbase = cf.get('db', 'db_db')
 scon = db.connect(host=dbhost, user=dbuser, passwd=dbpass, db=dbase, charset='utf8')
 scur = scon.cursor()
+
 wb = xlwt.Workbook()
 sheet = wb.add_sheet('sheet')
+alignment = xlwt.Alignment()
+alignment.horz = alignment.HORZ_CENTER
+alignment.vert = alignment.VERT_CENTER
+style = xlwt.XFStyle()
+style.alignment = alignment
+
 startTime = time.time()
+
 today = datetime.datetime.today()
 dateFormat = '%Y-%m-%d'
 tomorrow = today + datetime.timedelta(1)
@@ -92,10 +100,8 @@ ORDER BY `count` DESC
 modelCount = scur.execute(modelCountSql.format(yesterday.strftime(dateFormat), today.strftime(dateFormat)))
 result = scur.fetchall()
 rowBottom = 6 + modelCount * 2
-sheet.write(7, 0, 'B')
-sheet.merge(7, rowBottom, 0, 0)
-sheet.write(7, 1, '型号销售额')
-sheet.merge(7, rowBottom, 1, 1)
+sheet.write_merge(7, rowBottom, 0, 0, 'B', style)
+sheet.write_merge(7, rowBottom, 1, 1, '型号销售额', style)
 for i, r in enumerate(result):
     x = i*2
     sheet.write_merge(x+7, x+8, 2, 2, r[0])
