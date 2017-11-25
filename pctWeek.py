@@ -111,6 +111,29 @@ for i, day in enumerate(days):
         sheet.write(5, i+4, transaction+'%')
         sheet.write(6, i+4, pct)
 
+        modelCountSql = '''
+        SELECT pm.model_name,COUNT(1) `count`,SUM(oo.`total_amount`) `amount` FROM panda.`odi_order` oo
+        LEFT JOIN panda.`pdi_product` pp
+        ON oo.`product_id` = pp.product_id
+        LEFT JOIN panda.`pdi_model` pm
+        ON pp.model_id = pm.model_id
+        LEFT JOIN panda.`aci_user_info` aui
+        ON aui.user_id = oo.`user_id`
+        WHERE oo.`order_status` IN (1,2,4,5)
+        AND oo.`order_type` in (1,2) 
+        AND oo.`pay_at` > '{}'
+        AND oo.`pay_at` < '{}'
+        GROUP BY pm.model_id
+        '''
+        scur.execute(modelCountSql.format(day.strftime(dateFormat), end.strftime(dateFormat)))
+        countAndAmounts = scur.fetchall()
+
+        for c in countAndAmounts:
+            index = models.index(c[0])
+            rowIndex = index*2
+            sheet.write(rowIndex+7, i+4, c[2])
+            sheet.write(rowIndex+8, i+4, c[1])
+
 path = cf.get('path', 'path')
 wb.save(path + today.strftime(dateFormat) + 'weekpct.xls')
 
