@@ -138,11 +138,17 @@ for i, day in enumerate(month):
     for c in countAndAmounts:
         index = models.index(c[0])
         rowIndex = index*2
-        sheet.write(rowIndex+7, i+4, c[2])
-        sheet.write(rowIndex+8, i+4, c[1])
+        try:
+            sheet.write(rowIndex+7, i+4, c[2])
+            sheet.write(rowIndex+8, i+4, c[1])
+        except:
+            print(c[0], c[2], c[1])
+
+    print('runtime...', time.time()-startTime)
 
 path = cf.get('path', 'path')
-wb.save(path + today.strftime(dateFormat) + 'weekpct.xls')
+wb.save(path + today.strftime(dateFormat) + 'monthpct.xls')
 
 scur.close()
 scon.close()
+print('overtime...', time.time()-startTime)
