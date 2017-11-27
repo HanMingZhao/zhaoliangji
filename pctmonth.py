@@ -142,7 +142,7 @@ for i, day in enumerate(month):
             sheet.write(rowIndex+7, i+4, c[2])
             sheet.write(rowIndex+8, i+4, c[1])
         except:
-            print(c[0], c[2], c[1])
+            print(day.strftime(dateFormat), c[0], c[2], c[1])
 
     print('runtime...', time.time()-startTime)
 
