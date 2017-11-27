@@ -50,7 +50,7 @@ AND oo.pay_at < '{}'
 GROUP BY pm.`model_name`
 order by pm.model_name
 '''
-scur.execute(modelsSql.format(month[0].strftime(dateFormat), month[-1].strftime(dateFormat)))
+scur.execute(modelsSql.format(month[0].strftime(dateFormat), (month[-1]+datetime.timedelta(1)).strftime(dateFormat)))
 result = scur.fetchall()
 
 models = [r[0] for r in result]
