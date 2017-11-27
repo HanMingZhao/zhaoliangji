@@ -26,7 +26,7 @@ style.alignment = alignment
 startTime = time.time()
 today = datetime.datetime.today()
 dateFormat = '%Y-%m-%d'
-weekdays = {1: '一', 2: '二', 3: '三', 4: '四', 5: '五', 6: '六', 7: '七'}
+weekdays = {1: '一', 2: '二', 3: '三', 4: '四', 5: '五', 6: '六', 7: '日'}
 
 modelsSql = '''
 SELECT pm.`model_name` FROM panda.odi_order oo
@@ -38,6 +38,7 @@ WHERE oo.order_status IN (1,2,4,5)
 AND oo.order_type IN (1,2)
 AND oo.pay_at > '2017-11-17'
 GROUP BY pm.`model_name`
+order by pm.model_name
 '''
 scur.execute(modelsSql)
 result = scur.fetchall()

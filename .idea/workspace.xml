@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4a99546f-643b-4833-b464-5e20828d8662" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pctWeek.py" afterPath="$PROJECT_DIR$/pctWeek.py" />
-    </list>
+    <list default="true" id="4a99546f-643b-4833-b464-5e20828d8662" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -84,14 +81,14 @@
       <file leaf-file-name="pctWeek.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pctWeek.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="594">
-              <caret line="106" column="44" lean-forward="true" selection-start-line="106" selection-start-column="44" selection-end-line="106" selection-end-column="44" />
+            <state relative-caret-position="-350">
+              <caret line="28" column="65" lean-forward="false" selection-start-line="28" selection-start-column="64" selection-end-line="28" selection-end-column="65" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
-                <marker date="1511748729418" expanded="true" signature="732:1028" ph="SELECT pm.`m... odi_order" />
-                <marker date="1511748729418" expanded="true" signature="2074:2337" ph="SELECT {} FR... " />
-                <marker date="1511748729418" expanded="true" signature="2780:2858" ph="select ip fr... boss_api_info" />
-                <marker date="1511748729418" expanded="true" signature="3444:3955" ph="SELECT pm.mo... odi_order" />
+                <marker date="1511775392381" expanded="true" signature="800:1096" ph="SELECT pm.`m... odi_order" />
+                <marker date="1511775392381" expanded="true" signature="2142:2405" ph="SELECT {} FR... " />
+                <marker date="1511775392381" expanded="true" signature="2848:2926" ph="select ip fr... boss_api_info" />
+                <marker date="1511775392381" expanded="true" signature="3520:4031" ph="SELECT pm.mo... odi_order" />
               </folding>
             </state>
           </provider>
@@ -359,10 +356,10 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32861805" sideWeight="0.50852877" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30576715" sideWeight="0.49573562" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30576715" sideWeight="0.49573562" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32535365" sideWeight="0.4914712" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32535365" sideWeight="0.4914712" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -810,14 +807,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pctWeek.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="106" column="44" lean-forward="true" selection-start-line="106" selection-start-column="44" selection-end-line="106" selection-end-column="44" />
+        <state relative-caret-position="-350">
+          <caret line="28" column="65" lean-forward="false" selection-start-line="28" selection-start-column="64" selection-end-line="28" selection-end-column="65" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
-            <marker date="1511748729418" expanded="true" signature="732:1028" ph="SELECT pm.`m... odi_order" />
-            <marker date="1511748729418" expanded="true" signature="2074:2337" ph="SELECT {} FR... " />
-            <marker date="1511748729418" expanded="true" signature="2780:2858" ph="select ip fr... boss_api_info" />
-            <marker date="1511748729418" expanded="true" signature="3444:3955" ph="SELECT pm.mo... odi_order" />
+            <marker date="1511775392381" expanded="true" signature="800:1096" ph="SELECT pm.`m... odi_order" />
+            <marker date="1511775392381" expanded="true" signature="2142:2405" ph="SELECT {} FR... " />
+            <marker date="1511775392381" expanded="true" signature="2848:2926" ph="select ip fr... boss_api_info" />
+            <marker date="1511775392381" expanded="true" signature="3520:4031" ph="SELECT pm.mo... odi_order" />
           </folding>
         </state>
       </provider>
