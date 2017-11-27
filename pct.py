@@ -1,5 +1,4 @@
 import pymysql as db
-import numpy as np
 import time
 import datetime
 import xlwt
@@ -59,7 +58,7 @@ result = scur.fetchone()
 uv = result[0]
 
 pct = decimal.Decimal('%.2f' % (saleAmount / saleCount))
-transaction = '%.2f' % (saleAmount / uv / pct * 100)
+transaction = '%.2f' % (saleAmount / uv / pct * 100 if uv > 0 else 0)
 
 sheet.write(0, 0, '重要级')
 sheet.write(0, 1, '项目')

@@ -36,11 +36,12 @@ LEFT JOIN panda.`pdi_model` pm
 ON pp.`model_id` = pm.`model_id`
 WHERE oo.order_status IN (1,2,4,5)
 AND oo.order_type IN (1,2)
-AND oo.pay_at > '2017-11-17'
+AND oo.pay_at > '{}'
 GROUP BY pm.`model_name`
 order by pm.model_name
 '''
-scur.execute(modelsSql)
+lastWeek = today - datetime.timedelta(7)
+scur.execute(modelsSql.format(lastWeek.strftime(dateFormat)))
 result = scur.fetchall()
 
 models = [r[0] for r in result]
@@ -103,7 +104,7 @@ for i, day in enumerate(days):
         uv = result[0]
 
         pct = decimal.Decimal('%.2f' % (saleAmount / saleCount))
-        transaction = '%.2f' % (saleAmount / uv / pct * 100)
+        transaction = '%.2f' % (saleAmount / uv / pct * 100 if uv > 0 else 0)
 
         sheet.write(0, i+4, day.strftime(dateFormat))
         sheet.write(1, i+4, weekdays[day.isoweekday()])
