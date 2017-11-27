@@ -130,7 +130,7 @@ for i, day in enumerate(month):
     AND oo.`order_type` in (1,2) 
     AND oo.`pay_at` > '{}'
     AND oo.`pay_at` < '{}'
-    GROUP BY pm.model_id
+    GROUP BY pm.model_name
     '''
     scur.execute(modelCountSql.format(day.strftime(dateFormat), end.strftime(dateFormat)))
     countAndAmounts = scur.fetchall()
@@ -144,7 +144,7 @@ for i, day in enumerate(month):
         except:
             print(day.strftime(dateFormat), c[0], c[2], c[1])
 
-    print('runtime...', time.time()-startTime)
+    print('runtime...', day.strftime(dateFormat), time.time()-startTime)
 
 path = cf.get('path', 'path')
 wb.save(path + today.strftime(dateFormat) + 'monthpct.xls')

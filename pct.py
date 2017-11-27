@@ -93,7 +93,7 @@ WHERE oo.`order_status` IN (1,2,4,5)
 AND oo.`pay_at` > '{}'
 AND oo.`pay_at` < '{}'
 AND aui.`from_shop` NOT IN ('Patica','猎趣','趣分期','中捷代购','钱到到','小卖家','趣先享','京东店铺','机密')
-GROUP BY pm.model_id
+GROUP BY pm.model_name
 ORDER BY `count` DESC
 '''
 modelCount = scur.execute(modelCountSql.format(yesterday.strftime(dateFormat), today.strftime(dateFormat)))

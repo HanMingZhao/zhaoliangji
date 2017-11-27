@@ -126,7 +126,7 @@ for i, day in enumerate(days):
         AND oo.`order_type` in (1,2) 
         AND oo.`pay_at` > '{}'
         AND oo.`pay_at` < '{}'
-        GROUP BY pm.model_id
+        GROUP BY pm.model_name
         '''
         scur.execute(modelCountSql.format(day.strftime(dateFormat), end.strftime(dateFormat)))
         countAndAmounts = scur.fetchall()
