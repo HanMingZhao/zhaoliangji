@@ -4,6 +4,7 @@ import configparser
 import xlwt
 import time
 
+
 class Product:
     def __init__(self, model, props):
         self.model = model
@@ -89,7 +90,6 @@ for wnum in warehousenums:
         else:
             sku[name] = 1
 
-    wb = xlwt.Workbook()
     sheet = wb.add_sheet(warehousenums[wnum])
     sheet.write(0, 0, '型号')
     sheet.write(0, 1, '内存')
