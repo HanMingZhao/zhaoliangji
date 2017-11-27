@@ -26,6 +26,7 @@ style.alignment = alignment
 startTime = time.time()
 today = datetime.datetime.today()
 dateFormat = '%Y-%m-%d'
+weekdays = {1: '一', 2: '二', 3: '三', 4: '四', 5: '五', 6: '六', 7: '七'}
 
 modelsSql = '''
 SELECT pm.`model_name` FROM panda.odi_order oo
@@ -104,7 +105,7 @@ for i, day in enumerate(days):
         transaction = '%.2f' % (saleAmount / uv / pct * 100)
 
         sheet.write(0, i+4, day.strftime(dateFormat))
-        sheet.write(1, i+4, day.strftime('%A'))
+        sheet.write(1, i+4, weekdays[day.isoweekday()])
         sheet.write(2, i+4, saleAmount)
         sheet.write(3, i+4, saleCount)
         sheet.write(4, i+4, uv)
