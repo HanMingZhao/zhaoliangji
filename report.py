@@ -46,14 +46,15 @@ scur.execute(daySaleSql.format(first.strftime(dateFormat), today.strftime(dateFo
 result = scur.fetchall()
 saleSum = 0
 for i, r in enumerate(result):
-    sheet.write(i+1, 0, str(r[0]))
+    date = r[0]
+    sheet.write(i+1, 0, str(date))
     sheet.write(i+1, 1, r[1])
     saleSum += r[1]
 row = len(sheet.rows)
 target = cf.getint('db', 'target')
 sheet.write(row, 0, '总计')
 sheet.write(row, 1, saleSum)
-sheet.write(row, 2, '距离目标还差 {} 台'.format(int(target/2)-saleSum))
+sheet.write(row, 2, '距离目标还差 {} 台'.format(target-saleSum))
 
 path = cf.get('path', 'path')
 wb.save(path+'day.xls')
