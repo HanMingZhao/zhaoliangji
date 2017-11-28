@@ -33,7 +33,7 @@ ON oo.`product_id` = pp.product_id
 WHERE oo.`order_status` IN (1,2,4,5)
 AND oo.`create_at`>DATE(NOW())-1
 AND oo.`create_at`<DATE(NOW())
-AND aui.`from_shop` NOT IN ('Patica','猎趣','趣分期','中捷代购','钱到到','小卖家','趣先享','京东店铺','机密')
+AND oo.order_type in (1,2)
 ) ooo 
 LEFT JOIN panda.`pdi_model` pm
 ON ooo.model_id = pm.model_id 
