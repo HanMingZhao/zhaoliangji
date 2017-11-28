@@ -22,7 +22,7 @@ dateFormat = '%Y-%m-%d'
 
 wb = xlwt.Workbook()
 style = xlwt.XFStyle()
-style.num_format_str = dateFormat
+style.num_format_str = '%Y-%m-%d'
 today = datetime.datetime.today()
 yesterday = today-datetime.timedelta(1)
 month = today.month
@@ -54,7 +54,7 @@ row = len(sheet.rows)
 target = cf.getint('db', 'target')
 sheet.write(row, 0, '总计')
 sheet.write(row, 1, saleSum)
-sheet.write(row, 2, '距离目标还差 {} 台'.format(target/2-saleSum))
+sheet.write(row, 2, '距离目标还差 {} 台'.format(int(target/2)-saleSum))
 
 path = cf.get('path', 'path')
 wb.save(path+'day.xls')
