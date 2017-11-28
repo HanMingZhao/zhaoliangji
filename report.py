@@ -21,8 +21,7 @@ scur = scon.cursor()
 dateFormat = '%Y-%m-%d'
 
 wb = xlwt.Workbook()
-style = xlwt.XFStyle()
-style.num_format_str = '%Y-%m-%d'
+
 today = datetime.datetime.today()
 yesterday = today-datetime.timedelta(1)
 month = today.month
@@ -47,7 +46,7 @@ scur.execute(daySaleSql.format(first.strftime(dateFormat), today.strftime(dateFo
 result = scur.fetchall()
 saleSum = 0
 for i, r in enumerate(result):
-    sheet.write(i+1, 0, r[0], style)
+    sheet.write(i+1, 0, str(r[0]))
     sheet.write(i+1, 1, r[1])
     saleSum += r[1]
 row = len(sheet.rows)
