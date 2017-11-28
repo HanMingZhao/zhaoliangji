@@ -18,12 +18,16 @@ dbase = cf.get('db', 'db_db')
 scon = db.connect(host=dbhost, user=dbuser, passwd=dbpass, db=dbase, charset='utf8')
 scur = scon.cursor()
 
+dateFormat = '%Y-%m-%d'
+
 wb = xlwt.Workbook()
+style = xlwt.XFStyle()
+style.num_format_str = dateFormat
 today = datetime.datetime.today()
 yesterday = today-datetime.timedelta(1)
 month = today.month
 year = today.year
-dateFormat = '%Y-%m-%d'
+
 first = datetime.datetime.strptime(str(year)+'-'+str(month)+'-'+str(1), dateFormat)
 
 print('日销量...', time.time()-stime)
@@ -43,14 +47,14 @@ scur.execute(daySaleSql.format(first.strftime(dateFormat), today.strftime(dateFo
 result = scur.fetchall()
 saleSum = 0
 for i, r in enumerate(result):
-    sheet.write(i+1, 0, r[0])
+    sheet.write(i+1, 0, r[0], style)
     sheet.write(i+1, 1, r[1])
     saleSum += r[1]
 row = len(sheet.rows)
 target = cf.getint('db', 'target')
 sheet.write(row, 0, '总计')
 sheet.write(row, 1, saleSum)
-sheet.write(row, 2, '距离目标还差 {} 台'.format(target-saleSum))
+sheet.write(row, 2, '距离目标还差 {} 台'.format(target/2-saleSum))
 
 path = cf.get('path', 'path')
 wb.save(path+'day.xls')
