@@ -37,7 +37,7 @@ on oo.`user_id` = aui.`user_id`
 where oo.`order_status` in (1,2,4,5)
 and oo.`pay_at` > '{}'
 and oo.`pay_at` < '{}'
-AND aui.`from_shop` NOT IN ('Patica','猎趣','趣分期','中捷代购','钱到到','小卖家','趣先享','京东店铺','机密')
+AND oo.order_type in (1,2)
 '''
 count = 'COUNT(1)'
 scur.execute(saleQuerySql.format(count, yesterday.strftime(dateFormat), today.strftime(dateFormat)))
@@ -92,7 +92,7 @@ ON aui.user_id = oo.`user_id`
 WHERE oo.`order_status` IN (1,2,4,5)
 AND oo.`pay_at` > '{}'
 AND oo.`pay_at` < '{}'
-AND aui.`from_shop` NOT IN ('Patica','猎趣','趣分期','中捷代购','钱到到','小卖家','趣先享','京东店铺','机密')
+AND oo.order_type in (1,2)
 GROUP BY pm.model_name
 ORDER BY `count` DESC
 '''
