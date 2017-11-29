@@ -63,7 +63,7 @@ scur.execute(modelSql)
 result = scur.fetchall()
 products = []
 for r in result:
-    if r is not None:
+    if r[0] is not None:
         p = Product(r[0], r[1])
         properties = p.props.split(';')
         for f in properties:
