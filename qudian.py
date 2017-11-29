@@ -63,17 +63,18 @@ scur.execute(modelSql)
 result = scur.fetchall()
 products = []
 for r in result:
-    p = Product(r[0], r[1])
-    properties = p.props.split(';')
-    for f in properties:
-        feature = f.split(':')
-        if feature[0] == '5':
-            p.version = vd[feature[1]]
-        if feature[0] == '10':
-            p.color = cd[feature[1]]
-        if feature[0] == '11':
-            p.memory = md[feature[1]]
-    products.append(p)
+    if r is not None:
+        p = Product(r[0], r[1])
+        properties = p.props.split(';')
+        for f in properties:
+            feature = f.split(':')
+            if feature[0] == '5':
+                p.version = vd[feature[1]]
+            if feature[0] == '10':
+                p.color = cd[feature[1]]
+            if feature[0] == '11':
+                p.memory = md[feature[1]]
+        products.append(p)
 
 sku = {}
 for prod in products:

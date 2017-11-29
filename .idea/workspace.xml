@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4a99546f-643b-4833-b464-5e20828d8662" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/qudian.py" afterPath="$PROJECT_DIR$/qudian.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -78,12 +79,12 @@
       <file leaf-file-name="qudian.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/qudian.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="319">
-              <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+            <state relative-caret-position="294">
+              <caret line="17" column="34" lean-forward="false" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
-                <marker date="1511933421506" expanded="true" signature="690:913" ph="SELECT pm.`m... odi_order" />
-                <marker date="1511933421506" expanded="true" signature="933:1012" ph="SELECT ppv.p... pdi_prop_value" />
+                <marker date="1511933474629" expanded="true" signature="716:939" ph="SELECT pm.`m... odi_order" />
+                <marker date="1511933474629" expanded="true" signature="959:1038" ph="SELECT ppv.p... pdi_prop_value" />
               </folding>
             </state>
           </provider>
@@ -854,12 +855,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/qudian.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+        <state relative-caret-position="294">
+          <caret line="17" column="34" lean-forward="false" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
-            <marker date="1511933421506" expanded="true" signature="690:913" ph="SELECT pm.`m... odi_order" />
-            <marker date="1511933421506" expanded="true" signature="933:1012" ph="SELECT ppv.p... pdi_prop_value" />
+            <marker date="1511933474629" expanded="true" signature="716:939" ph="SELECT pm.`m... odi_order" />
+            <marker date="1511933474629" expanded="true" signature="959:1038" ph="SELECT ppv.p... pdi_prop_value" />
           </folding>
         </state>
       </provider>
