@@ -59,11 +59,17 @@ def write_sheet2(sql_result, sheety, idx):
     return number
 
 
+def sheet_head(sheety, idx):
+    sheety.write(0, idx, '型号')
+    sheety.write(0, idx+1, '内存')
+    sheety.write(0, idx+2, '颜色')
+    sheety.write(0, idx+3, '总库存')
+
 stime = time.time()
 
 cf = configparser.ConfigParser()
 cf.read(os.path.dirname(__file__) + '/conf.conf')
-option = 'test'
+option = 'db'
 dbhost = cf.get(option, 'host')
 dbuser = cf.get(option, 'user')
 dbport = cf.getint(option, 'port')
@@ -105,8 +111,8 @@ dateFormat = '%Y-%m-%d'
 
 wb = xlwt.Workbook()
 
-today = datetime.datetime.strptime('2016-11-28', dateFormat)
-#today = datetime.datetime.today()
+#today = datetime.datetime.strptime('2016-11-24', dateFormat)
+today = datetime.datetime.today()
 yesterday = today-datetime.timedelta(1)
 month = today.month
 year = today.year
@@ -193,14 +199,8 @@ sheet.write(len(result)+1, 12, refundsum)
 
 print('单品销量。。。', time.time()-stime)
 sheet = wb.add_sheet('单品')
-sheet.write(0, 0, '日销机型')
-sheet.write(0, 1, '内存')
-sheet.write(0, 2, '颜色')
-sheet.write(0, 3, '数量')
-sheet.write(0, 7, '月销机型')
-sheet.write(0, 8, '内存')
-sheet.write(0, 9, '颜色')
-sheet.write(0, 10, '数量')
+sheet_head(sheet, 0)
+sheet_head(sheet, 7)
 
 modelSaleSql = '''
 SELECT pm.model_name,pp.`key_props` FROM panda.`odi_order` oo
@@ -226,10 +226,122 @@ write_sheet1(monthCount, sheet, 7)
 
 print('上架机型。。。', time.time())
 groundSql = '''
-
+SELECT pm.`model_name`,pp.`key_props` FROM panda.`pdi_product_track` ppt 
+LEFT JOIN panda.`pdi_product` pp
+ON ppt.`product_id` = pp.`product_id`
+LEFT JOIN panda.`pdi_model` pm
+ON pp.`model_id` = pm.`model_id`
+WHERE ppt.`track_type` = 1
+AND ppt.`product_status` !=3
+AND ppt.`created_at` > '{}'
+AND ppt.`created_at` < '{}'
+GROUP BY ppt.id
 '''
+scur.execute(groundSql.format(yesterday.strftime(dateFormat), today.strftime(dateFormat)))
+result = scur.fetchall()
+sku = product_count(result)
 
-#path = cf.get('path', 'path')
+sheet = wb.add_sheet('上架')
+sheet_head(sheet, 0)
+write_sheet1(sku, sheet, 0)
+
+print('预上架...', time.time()-stime)
+pregroundSql = '''
+SELECT pm.`model_name`,pp.`key_props` FROM panda.`stg_warehouse_switch` sws 
+LEFT JOIN panda.`pdi_product` pp
+ON sws.product_id = pp.product_id
+LEFT JOIN panda.`pdi_model` pm
+ON pp.`model_id` = pm.`model_id`
+WHERE sws.`switch_status` =2
+AND sws.`dst_warehouse` = 8
+AND sws.`check_time`> '{}'
+AND sws.`check_time`< '{}'
+GROUP BY sws.`dst_warehouse`,sws.imei
+'''
+scur.execute(pregroundSql.format(yesterday.strftime(dateFormat), today.strftime(dateFormat)))
+result = scur.fetchall()
+presku = product_count(result)
+
+sheet_head(sheet, 7)
+
+write_sheet1(presku, sheet, 7)
+
+print('总库存。。。', time.time()-stime)
+storeSql = '''
+SELECT pm.`model_name`,sw.`key_props` FROM panda.`stg_warehouse` sw
+LEFT JOIN panda.`pdi_model` pm
+ON pm.`model_id` = sw.`model_id`
+WHERE sw.`warehouse_status`=1
+{}
+'''
+scur.execute(storeSql.format(''))
+result = scur.fetchall()
+storagesku = product_count(result)
+sheet = wb.add_sheet('总库存')
+sheet_head(sheet, 0)
+write_sheet1(storagesku, sheet, 0)
+
+condition = 'and sw.warehouse_num = {} '
+print('上架库。。。', time.time()-stime)
+scur.execute(storeSql.format(condition.format(4)))
+result = scur.fetchall()
+storagesku = product_count(result)
+sheet = wb.add_sheet('上架库')
+sheet_head(sheet, 0)
+write_sheet1(storagesku, sheet, 0)
+
+print('预上架库', time.time()-stime)
+scur.execute(storeSql.format(condition.format(8)))
+result = scur.fetchall()
+storagesku = product_count(result)
+sheet.write(0, 7, '型号')
+sheet.write(0, 8, '内存')
+sheet.write(0, 9, '颜色')
+sheet.write(0, 10, '总库存')
+write_sheet1(storagesku, sheet, 7)
+
+print('B端库...', time.time()-stime)
+scur.execute(storeSql.format(condition.format(7)))
+result = scur.fetchall()
+storagesku = product_count(result)
+sheet = wb.add_sheet('B端')
+sheet_head(sheet, 0)
+write_sheet1(storagesku, sheet, 0)
+
+print('库存周转15天。。。', time.time()-stime)
+print('上架库15天。。。', time.time()-stime)
+roundSql = '''
+SELECT pm.model_name,sw.key_props FROM panda.`stg_warehouse` sw
+LEFT JOIN panda.`pdi_model` pm
+ON sw.model_id = pm.model_id
+WHERE sw.`warehouse_status` = 1
+AND sw.warehouse_num = {}
+AND (NOW()-sw.change_time)/60/60/24>15
+'''
+scur.execute(roundSql.format(4))
+result = scur.fetchall()
+roundsku = product_count(result)
+sheet = wb.add_sheet('上架大于15天')
+sheet_head(sheet, 0)
+write_sheet1(roundsku, sheet, 0)
+
+print('预上架库15天。。。', time.time()-stime)
+scur.execute(roundSql.format(8))
+result = scur.fetchall()
+roundsku = product_count(result)
+sheet_head(sheet, 7)
+write_sheet1(roundsku, sheet, 7)
+
+print('B端库15天。。。', time.time()-stime)
+scur.execute(roundSql.format(7))
+result = scur.fetchall()
+roundsku = product_count(result)
+sheet = wb.add_sheet('B端大于15天')
+sheet_head(sheet, 0)
+write_sheet1(roundsku, sheet, 0)
+
+
+path = cf.get('path', 'path')
 wb.save('day.xls')
 scur.close()
 scon.close()
