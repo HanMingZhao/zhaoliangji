@@ -117,7 +117,8 @@ today = datetime.datetime.today()
 yesterday = today-datetime.timedelta(1)
 month = today.month
 year = today.year
-
+if today.day == 1:
+    month -= 1
 first = datetime.datetime.strptime(str(year)+'-'+str(month)+'-'+str(1), dateFormat)
 
 print('日销量...', time.time()-stime)
@@ -360,7 +361,7 @@ for r in result:
     daySale[int(r[0])] = r[1]
 row = 1
 for d in daySale:
-    sheet.write(row, 0, str(row)+'点')
+    sheet.write(row, 0, str(row-1)+'点')
     sheet.write(row, 1, d)
     row += 1
 
