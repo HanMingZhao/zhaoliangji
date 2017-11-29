@@ -198,9 +198,8 @@ for i, r in enumerate(result):
 sheet.write(len(result)+1, 12, refundsum)
 
 print('单品销量。。。', time.time()-stime)
-sheet = wb.add_sheet('单品')
+sheet = wb.add_sheet('日销')
 sheet_head(sheet, 0)
-sheet_head(sheet, 7)
 
 modelSaleSql = '''
 SELECT pm.model_name,pp.`key_props` FROM panda.`odi_order` oo
@@ -219,10 +218,12 @@ result = scur.fetchall()
 dayCount = product_count(result)
 write_sheet1(dayCount, sheet, 0)
 
+sheet = wb.add_sheet('月销')
+sheet_head(sheet, 0)
 scur.execute(modelSaleSql.format(first.strftime(dateFormat), today.strftime(dateFormat)))
 result = scur.fetchall()
 monthCount = product_count(result)
-write_sheet1(monthCount, sheet, 7)
+write_sheet1(monthCount, sheet, 0)
 
 print('上架机型。。。', time.time())
 groundSql = '''
@@ -241,7 +242,7 @@ scur.execute(groundSql.format(yesterday.strftime(dateFormat), today.strftime(dat
 result = scur.fetchall()
 sku = product_count(result)
 
-sheet = wb.add_sheet('上架')
+sheet = wb.add_sheet('上架量')
 sheet_head(sheet, 0)
 write_sheet1(sku, sheet, 0)
 
@@ -262,9 +263,9 @@ scur.execute(pregroundSql.format(yesterday.strftime(dateFormat), today.strftime(
 result = scur.fetchall()
 presku = product_count(result)
 
-sheet_head(sheet, 7)
-
-write_sheet1(presku, sheet, 7)
+sheet = wb.add_sheet('预上架量')
+sheet_head(sheet, 0)
+write_sheet1(presku, sheet, 0)
 
 print('总库存。。。', time.time()-stime)
 storeSql = '''
@@ -294,11 +295,9 @@ print('预上架库', time.time()-stime)
 scur.execute(storeSql.format(condition.format(8)))
 result = scur.fetchall()
 storagesku = product_count(result)
-sheet.write(0, 7, '型号')
-sheet.write(0, 8, '内存')
-sheet.write(0, 9, '颜色')
-sheet.write(0, 10, '总库存')
-write_sheet1(storagesku, sheet, 7)
+sheet = wb.add_sheet('预上架库')
+sheet_head(sheet, 0)
+write_sheet1(storagesku, sheet, 0)
 
 print('B端库...', time.time()-stime)
 scur.execute(storeSql.format(condition.format(7)))
@@ -329,8 +328,9 @@ print('预上架库15天。。。', time.time()-stime)
 scur.execute(roundSql.format(8))
 result = scur.fetchall()
 roundsku = product_count(result)
-sheet_head(sheet, 7)
-write_sheet1(roundsku, sheet, 7)
+sheet = wb.add_sheet('预上架大于15天')
+sheet_head(sheet, 0)
+write_sheet1(roundsku, sheet, 0)
 
 print('B端库15天。。。', time.time()-stime)
 scur.execute(roundSql.format(7))
@@ -339,6 +339,24 @@ roundsku = product_count(result)
 sheet = wb.add_sheet('B端大于15天')
 sheet_head(sheet, 0)
 write_sheet1(roundsku, sheet, 0)
+
+print('购买时间段。。。', time.time()-stime)
+saleTimeSql = '''
+SELECT HOUR(oo.pay_at),COUNT(1) FROM panda.`odi_order` oo
+WHERE oo.`order_status` IN (1,2,4,5)
+AND oo.`order_type` IN (1,2)
+AND oo.`pay_at` > '{}'
+AND oo.`pay_at` < '{}'
+GROUP BY HOUR(oo.`pay_at`)
+'''
+scur.execute(saleTimeSql.format(yesterday.strftime(dateFormat), today.strftime(dateFormat)))
+result = scur.fetchall()
+sheet = wb.add_sheet('购买时间段')
+sheet.write(0, 0, '时间')
+sheet.write(0, 1, '数量')
+for i, r in enumerate(result):
+    sheet.write(i+1, 0, str(r[0])+'点')
+    sheet.write(i+1, 1, r[1])
 
 
 path = cf.get('path', 'path')
