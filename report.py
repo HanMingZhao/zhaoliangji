@@ -4,6 +4,7 @@ import datetime
 import configparser
 import time
 import os
+import numpy as np
 
 
 class Product:
@@ -354,9 +355,14 @@ result = scur.fetchall()
 sheet = wb.add_sheet('购买时间段')
 sheet.write(0, 0, '时间')
 sheet.write(0, 1, '数量')
-for i, r in enumerate(result):
-    sheet.write(i+1, 0, str(r[0])+'点')
-    sheet.write(i+1, 1, r[1])
+daySale = np.zeros(24)
+for r in result:
+    daySale[int(r[0])] = r[1]
+row = 1
+for d in daySale:
+    sheet.write(row, 0, str(row)+'点')
+    sheet.write(row, 1, d)
+    row += 1
 
 
 path = cf.get('path', 'path')
