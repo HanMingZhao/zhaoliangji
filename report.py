@@ -67,7 +67,7 @@ stime = time.time()
 
 cf = configparser.ConfigParser()
 cf.read(os.path.dirname(__file__) + '/conf.conf')
-option = 'test'
+option = 'db'
 dbhost = cf.get(option, 'host')
 dbuser = cf.get(option, 'user')
 dbport = cf.getint(option, 'port')
@@ -109,7 +109,8 @@ dateFormat = '%Y-%m-%d'
 
 wb = xlwt.Workbook()
 
-today = datetime.datetime.strptime('2016-11-28', dateFormat)
+#today = datetime.datetime.strptime('2016-11-28', dateFormat)
+today = datetime.datetime.today()
 yesterday = today-datetime.timedelta(1)
 month = today.month
 year = today.year
