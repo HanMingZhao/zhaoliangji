@@ -16,7 +16,7 @@ class Product:
 
 cf = configparser.ConfigParser()
 cf.read('/conf.conf')
-option = db
+option = 'db'
 dbhost = cf.get(option, 'host')
 dbuser = cf.get(option, 'user')
 dbport = cf.getint(option, 'port')
