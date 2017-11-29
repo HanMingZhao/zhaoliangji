@@ -15,7 +15,7 @@ class Product:
         self.props = props
 
 cf = configparser.ConfigParser()
-cf.read('/conf.conf')
+cf.read(os.path.dirname(__file__)+'/conf.conf')
 option = 'db'
 dbhost = cf.get(option, 'host')
 dbuser = cf.get(option, 'user')
