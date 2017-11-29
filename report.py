@@ -46,20 +46,16 @@ def write_sheet1(count_dict, sheety, idx):
         sheety.write(n+1, idx+3, count_dict[obj])
 
 
-def write_sheet2(sql_result, sheety, idx, tag=1):
+def write_sheet2(sql_result, sheety, idx):
     number = 0
     for n, sr in enumerate(sql_result):
         srdate = sr[0]
         sheety.write(n+1, idx, str(srdate))
         sheety.write(n+1, idx+1, sr[1])
         number += sr[1]
-    row = len(sheety.rows)
-    if tag != 1:
-        sheety.write(row-tag, idx, '总计')
-        sheety.write(row-tag, idx+1, number)
-    else:
-        sheety.write(row, idx, '总计')
-        sheety.write(row, idx + 1, number)
+    row = len(sql_result)+1
+    sheety.write(row, idx, '总计')
+    sheety.write(row, idx+1, number)
     return number
 
 
@@ -67,7 +63,7 @@ stime = time.time()
 
 cf = configparser.ConfigParser()
 cf.read(os.path.dirname(__file__) + '/conf.conf')
-option = 'db'
+option = 'test'
 dbhost = cf.get(option, 'host')
 dbuser = cf.get(option, 'user')
 dbport = cf.getint(option, 'port')
@@ -109,8 +105,8 @@ dateFormat = '%Y-%m-%d'
 
 wb = xlwt.Workbook()
 
-#today = datetime.datetime.strptime('2016-11-28', dateFormat)
-today = datetime.datetime.today()
+today = datetime.datetime.strptime('2016-11-28', dateFormat)
+#today = datetime.datetime.today()
 yesterday = today-datetime.timedelta(1)
 month = today.month
 year = today.year
@@ -159,7 +155,7 @@ GROUP BY t.date
 '''
 scur.execute(cancelOrderSql.format(first.strftime(dateFormat), today.strftime(dateFormat), first.strftime(dateFormat)))
 result = scur.fetchall()
-write_sheet2(result, sheet, 5, 2)
+write_sheet2(result, sheet, 5)
 
 print('退货数...', time.time()-stime)
 aftersaleSql = '''
@@ -185,9 +181,15 @@ result = scur.fetchall()
 sheet.write(0, 10, '日期')
 sheet.write(0, 11, '申请退货')
 sheet.write(0, 12, '完成退货')
-write_sheet2(result, sheet, 10, 2)
+write_sheet2(result, sheet, 10)
+refundsum = 0
 for i, r in enumerate(result):
-    sheet.write(i+1, 12, r[2])
+    if r[2] is None:
+        sheet.write(i + 1, 12, 0)
+    else:
+        sheet.write(i + 1, 12, r[2])
+        refundsum += r[2]
+sheet.write(len(result)+1, 12, refundsum)
 
 print('单品销量。。。', time.time()-stime)
 sheet = wb.add_sheet('单品')
@@ -222,7 +224,10 @@ result = scur.fetchall()
 monthCount = product_count(result)
 write_sheet1(monthCount, sheet, 7)
 
+print('上架机型。。。', time.time())
+groundSql = '''
 
+'''
 
 #path = cf.get('path', 'path')
 wb.save('day.xls')
