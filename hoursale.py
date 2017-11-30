@@ -8,11 +8,11 @@ import numpy as np
 start_time = time.time()
 cf = configparser.ConfigParser()
 cf.read('conf.conf')
-dbhost = cf.get('db', 'db_host')
-dbuser = cf.get('db', 'db_user')
-dbport = cf.getint('db', 'db_port')
-dbpass = cf.get('db', 'db_pass')
-dbase = cf.get('db', 'db_db')
+dbhost = cf.get('db', 'host')
+dbuser = cf.get('db', 'user')
+dbport = cf.getint('db', 'port')
+dbpass = cf.get('db', 'pass')
+dbase = cf.get('db', 'db')
 scon = db.connect(host=dbhost, user=dbuser, passwd=dbpass, db=dbase, charset='utf8')
 scur = scon.cursor()
 wb = xlwt.Workbook()
@@ -20,7 +20,7 @@ wb = xlwt.Workbook()
 date_format = '%Y-%m-%d'
 today = datetime.datetime.today()
 days = [today]
-for i in range(8):
+for i in range(31):
     day = today - datetime.timedelta(i+1)
     days.insert(0, day)
 

@@ -365,6 +365,32 @@ for d in daySale:
     sheet.write(row, 1, d)
     row += 1
 
+print('pv...', time.time()-stime)
+sheet = wb.add_sheet('pv')
+pvSql = '''
+SELECT bai.`created_at`,bai.`pv`,bai.`ip`,bai.`register` FROM panda.`boss_api_info` bai
+WHERE bai.`created_at` < '{}'
+AND bai.`created_at` > '{}'
+ORDER BY bai.`created_at` ASC
+'''
+scur.execute(pvSql.format(first.strftime(dateFormat), today.strftime(dateFormat)))
+result = scur.fetchall()
+sheet.write(0, 0, '日期')
+sheet.write(0, 1, 'pv')
+sheet.write(0, 2, 'uv')
+sheet.write(0, 3, '注册')
+sheet.write(0, 4, '新增')
+sheet.write(0, 5, 'ios新增')
+sheet.write(0, 6, 'android新增')
+sheet.write(0, 7, '日活')
+sheet.write(0, 8, 'ios日活')
+sheet.write(0, 9, 'android日活')
+for i, r in enumerate(result):
+    sheet.write(i+1, 0, r[0])
+    sheet.write(i+1, 1, r[1])
+    sheet.write(i+1, 2, r[2])
+    sheet.write(i+1, 3, r[3])
+
 
 path = cf.get('path', 'path')
 wb.save('day.xls')
