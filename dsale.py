@@ -85,7 +85,8 @@ sheet1.write(0, 6, '环比')
 sheet1.write(1, 5, '%.2f%%' % ((lastCount - lastWeek)/lastWeek * 100))
 sheet1.write(1, 6, '%.2f%%' % ((lastCount - beforeLast)/beforeLast * 100))
 
-scur.execute(lastSales.format(condition.format(yesterday.strftime(dateFormat), today.strftime(dateFormat), '', 'or', '', 'or', ''), 'asc'))
+scur.execute(lastSales.format(yesterday.strftime(dateFormat), today.strftime(dateFormat),
+                              condition.format('', 'or', '', 'or', ''), 'asc'))
 result = scur.fetchall()
 sheet2 = workBook.add_sheet('苹果龙虎榜')
 sheet2.write(0, 0, '机型')
@@ -94,7 +95,8 @@ for i, x in enumerate(result):
     sheet2.write(i+1, 0, x[0])
     sheet2.write(i+1, 1, x[1])
 
-scur.execute(lastSales.format(condition.format(yesterday.strftime(dateFormat), today.strftime(dateFormat), 'not', 'and', 'not', 'and', 'not'), 'asc'))
+scur.execute(lastSales.format(yesterday.strftime(dateFormat), today.strftime(dateFormat),
+                              condition.format('not', 'and', 'not', 'and', 'not'), 'asc'))
 result = scur.fetchall()
 sheet3 = workBook.add_sheet("安卓龙虎榜")
 sheet3.write(0, 0, '机型')
