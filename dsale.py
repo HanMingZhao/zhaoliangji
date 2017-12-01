@@ -301,7 +301,7 @@ matrix4.reverse()
 for i, r in enumerate(matrix4[0]):
     sheet6.write(1, i, r)
 
-workBook.save(path + wbTitle.format(today))
+workBook.save(path + wbTitle.format(today.strftime(dateFormat)))
 
 scur.close()
 scon.close()
