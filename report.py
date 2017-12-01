@@ -369,8 +369,8 @@ print('pv...', time.time()-stime)
 sheet = wb.add_sheet('pv')
 pvSql = '''
 SELECT bai.`created_at`,bai.`pv`,bai.`ip`,bai.`register` FROM panda.`boss_api_info` bai
-WHERE bai.`created_at` < '{}'
-AND bai.`created_at` > '{}'
+WHERE bai.`created_at` > '{}'
+AND bai.`created_at` < '{}'
 ORDER BY bai.`created_at` ASC
 '''
 scur.execute(pvSql.format(first.strftime(dateFormat), today.strftime(dateFormat)))
