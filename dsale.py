@@ -51,7 +51,7 @@ wbTitle = '{}sale.xls'
 workBook = xlwt.Workbook()
 sheet1 = workBook.add_sheet('总销量')
 sheet1.write(0, 0, '机型')
-sheet1.write(0, 1, today + '销量')
+sheet1.write(0, 1, today.strftime(dateFormat) + '销量')
 for i, x in enumerate(result):
     sheet1.write(i+1, 0, x[0])
     sheet1.write(i+1, 1, x[1])
