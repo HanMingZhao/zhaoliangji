@@ -26,7 +26,7 @@ wb = xlwt.Workbook()
 
 dst_host = cf.get('test', 'host')
 dst_user = cf.get('test', 'user')
-dst_pass = cf.get('test', 'passwd')
+dst_pass = cf.get('test', 'pass')
 dst_port = cf.getint('test', 'port')
 dst_db = cf.get('test', 'db')
 dcon = db.connect(host=dst_host, user=dst_user, passwd=dst_pass, db=dst_db, port=dst_port, charset='utf8')
