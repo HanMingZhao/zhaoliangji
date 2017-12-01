@@ -4,7 +4,9 @@ import datetime
 import numpy as np
 import configparser
 
-today = str(datetime.datetime.now().date())
+today = datetime.datetime.today()
+dateFormat = '%Y-%m-%d'
+yesterday = today - datetime.timedelta(1)
 
 cf = configparser.ConfigParser()
 cf.read('conf.conf')
@@ -31,8 +33,8 @@ ON oo.`user_id`=aui.`user_id`
 LEFT JOIN panda.`pdi_product` pp
 ON oo.`product_id` = pp.product_id
 WHERE oo.`order_status` IN (1,2,4,5)
-AND oo.`create_at`>DATE(NOW())-1
-AND oo.`create_at`<DATE(NOW())
+AND oo.`create_at`>'{}'
+AND oo.`create_at`<'{}'
 AND oo.order_type in (1,2)
 ) ooo 
 LEFT JOIN panda.`pdi_model` pm
@@ -42,7 +44,7 @@ GROUP BY pm.model_name
 ORDER BY `count` {}
 '''
 
-scur.execute(lastSales.format('', 'desc'))
+scur.execute(lastSales.format(yesterday.strftime(dateFormat), today.strftime(dateFormat), '', 'desc'))
 result = scur.fetchall()
 
 wbTitle = '{}sale.xls'
@@ -83,7 +85,7 @@ sheet1.write(0, 6, '环比')
 sheet1.write(1, 5, '%.2f%%' % ((lastCount - lastWeek)/lastWeek * 100))
 sheet1.write(1, 6, '%.2f%%' % ((lastCount - beforeLast)/beforeLast * 100))
 
-scur.execute(lastSales.format(condition.format('', 'or', '', 'or', ''), 'asc'))
+scur.execute(lastSales.format(condition.format(yesterday.strftime(dateFormat), today.strftime(dateFormat), '', 'or', '', 'or', ''), 'asc'))
 result = scur.fetchall()
 sheet2 = workBook.add_sheet('苹果龙虎榜')
 sheet2.write(0, 0, '机型')
@@ -92,7 +94,7 @@ for i, x in enumerate(result):
     sheet2.write(i+1, 0, x[0])
     sheet2.write(i+1, 1, x[1])
 
-scur.execute(lastSales.format(condition.format('not', 'and', 'not', 'and', 'not'), 'asc'))
+scur.execute(lastSales.format(condition.format(yesterday.strftime(dateFormat), today.strftime(dateFormat), 'not', 'and', 'not', 'and', 'not'), 'asc'))
 result = scur.fetchall()
 sheet3 = workBook.add_sheet("安卓龙虎榜")
 sheet3.write(0, 0, '机型')
@@ -109,8 +111,8 @@ ON ppt.`product_id` = pp.`product_id`
 LEFT JOIN panda.`pdi_model` pm
 ON pp.`model_id` = pm.`model_id`
 WHERE ppt.`track_type` = 1
-AND ppt.`created_at` > DATE(NOW())-1
-AND ppt.`created_at` < DATE(NOW())
+AND ppt.`created_at` > '{}'
+AND ppt.`created_at` < '{}'
 GROUP BY ppt.id
 )p
 GROUP BY p.model_name
@@ -118,7 +120,7 @@ ORDER BY `count` DESC
 '''
 
 modelSet = set()
-scur.execute(grounding)
+scur.execute(grounding.format(yesterday.strftime(dateFormat), today.strftime(dateFormat)))
 gresult = scur.fetchall()
 for r in gresult:
     modelSet.add(r[0])
@@ -132,14 +134,14 @@ LEFT JOIN panda.`pdi_model` pm
 ON pp.`model_id` = pm.`model_id`
 WHERE sws.`switch_status` =2
 AND sws.`dst_warehouse` = 8
-AND sws.`check_time`> DATE(NOW())-1
-AND sws.`check_time`< DATE(NOW())
+AND sws.`check_time`> '{}'
+AND sws.`check_time`< '{}'
 GROUP BY sws.`dst_warehouse`,sws.imei
 ) sp
 GROUP BY sp.model_name
 ORDER BY `count` DESC
 '''
-scur.execute(pregrounding)
+scur.execute(pregrounding.format(yesterday.strftime(dateFormat), today.strftime(dateFormat)))
 pregresult = scur.fetchall()
 for r in pregresult:
     modelSet.add(r[0])
