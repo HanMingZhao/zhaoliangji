@@ -8,11 +8,11 @@ warehouse_nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12]
 
 cf = configparser.ConfigParser()
 cf.read('conf.conf')
-dbhost = cf.get('db', 'db_host')
-dbuser = cf.get('db', 'db_user')
-dbport = cf.getint('db', 'db_port')
-dbpass = cf.get('db', 'db_pass')
-dbase = cf.get('db', 'db_db')
+dbhost = cf.get('db', 'host')
+dbuser = cf.get('db', 'user')
+dbport = cf.getint('db', 'port')
+dbpass = cf.get('db', 'pass')
+dbase = cf.get('db', 'db')
 src_con = db.connect(host=dbhost, user=dbuser, passwd=dbpass, db=dbase, charset='utf8')
 dst_con = db.connect(host='114.215.176.190', user='root', passwd='huodao123', db='ods', port=33069, charset='utf8')
 
