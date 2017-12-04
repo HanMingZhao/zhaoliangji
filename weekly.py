@@ -57,7 +57,7 @@ ON oo.`user_id` = aui.`user_id`
 WHERE oo.`order_status` IN (1,2,4,5)
 AND oo.`create_at` > '{}'
 AND oo.`create_at` < '{}'
-AND aui.`from_shop` NOT IN ('Patica','猎趣','趣分期','中捷代购','钱到到','小卖家','趣先享','京东店铺','机密')
+AND oo.order_type in (1,2)
 GROUP BY DATE(oo.`create_at`)
 '''
 scur.execute(weekSaleSql.format(dateLastWeekDay.strftime(dtformat), dateToday.strftime(dtformat)))
@@ -81,7 +81,7 @@ ON pp.`model_id` = pm.model_id
 WHERE oo.`order_status` IN (1,2,4,5)
 AND oo.`create_at` > '{}'
 AND oo.`create_at` < '{}'
-AND aui.`from_shop` NOT IN ('Patica','猎趣','趣分期','中捷代购','钱到到','小卖家','趣先享','京东店铺','机密')
+AND oo.order_type in (1,2)
 GROUP BY pm.`model_name`
 ORDER BY `count` DESC
 '''
@@ -104,7 +104,7 @@ WHERE oo.`order_status` IN (1,2,4,5)
 AND oo.`create_at` > '{}'
 AND oo.`create_at` < '{}'
 {}
-AND aui.`from_shop` NOT IN ('Patica','猎趣','趣分期','中捷代购','钱到到','小卖家','趣先享','京东店铺','机密')
+AND oo.order_type in (1,2)
 '''
 scur.execute(featureSql.format(dateLastWeekDay.strftime(dtformat), dateToday.strftime(dtformat), ''))
 properties = scur.fetchall()
@@ -148,7 +148,7 @@ ON oo.`product_id` = pp.product_id
 WHERE oo.`order_status` IN (1,2,4,5)
 AND oo.`create_at`>'{}'
 AND oo.`create_at`<'{}'
-AND aui.`from_shop` NOT IN ('Patica','猎趣','趣分期','中捷代购','钱到到','小卖家','趣先享','京东店铺','机密')
+AND oo.order_type in (1,2)
 ) ooo 
 LEFT JOIN panda.`pdi_model` pm
 ON ooo.model_id = pm.model_id 
