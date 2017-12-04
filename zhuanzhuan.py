@@ -99,9 +99,9 @@ SELECT AVG(pp.`price`) FROM panda.`pdi_product` pp
 LEFT JOIN panda.`pdi_model` pm
 ON pp.`model_id` = pm.`model_id` 
 WHERE pp.`status` = 1
-AND pp.`key_props` LIKE '%12:25%'
-AND pp.`key_props` LIKE '%5:{}%'
-AND pp.`key_props` LIKE '%11:{}%'
+AND pp.`key_props` LIKE '%12:25;%'
+AND pp.`key_props` LIKE '%5:{};%'
+AND pp.`key_props` LIKE '%11:{};%'
 '''
 
 sheet = wb.add_sheet('价格对比')
