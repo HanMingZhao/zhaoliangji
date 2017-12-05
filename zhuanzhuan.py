@@ -3,6 +3,7 @@ import xlwt
 import time
 import config as cf
 import pymysql as db
+import datetime
 start = time.time()
 
 trans = {'iPhone SE': 114,
@@ -143,6 +144,6 @@ for tr in trans:
                     print(len(sheet.rows))
 
 print('overtime...', time.time())
-wb.save('zhuanzhuan.xls')
+wb.save(cf.path+datetime.datetime.today().strftime(cf.date_format)+'zhuanzhuan.xls')
 scur.close()
 scon.close()

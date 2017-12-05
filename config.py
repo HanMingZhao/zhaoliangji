@@ -9,3 +9,7 @@ test = {'host': '114.215.176.190',
         'pass': 'huodao123',
         'port': 33069,
         'db': 'panda'}
+
+path = '/var/www/python/'
+
+date_format = '%Y-%m-%d'
