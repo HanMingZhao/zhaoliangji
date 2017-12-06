@@ -1,7 +1,7 @@
 import pymysql as db
 import xlwt
 import datetime
-import configparser
+import config as cf
 import time
 import os
 import numpy as np
@@ -16,7 +16,7 @@ class Product:
 def product_count(sql_results):
     productlst = []
     for sr in sql_results:
-        if sr[0] != None:
+        if sr[0] is not None:
             p = Product(sr[0], sr[1])
             properties = p.props.split(';')
             for f in properties:
@@ -68,14 +68,12 @@ def sheet_head(sheety, idx):
 
 stime = time.time()
 
-cf = configparser.ConfigParser()
-cf.read(os.path.dirname(__file__) + '/conf.conf')
-option = 'db'
-dbhost = cf.get(option, 'host')
-dbuser = cf.get(option, 'user')
-dbport = cf.getint(option, 'port')
-dbpass = cf.get(option, 'pass')
-dbase = cf.get(option, 'db')
+option = cf.product
+dbhost = option['host']
+dbuser = option['user']
+dbport = option['port']
+dbpass = option['pass']
+dbase = option['db']
 # dbhost = test['host']
 # dbuser = test['user']
 # dbpass = test['pass']
