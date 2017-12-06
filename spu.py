@@ -10,7 +10,7 @@ sheet = workbook.add_sheet('sheet')
 
 # cf = conf.test
 cf = conf.product
-src_con = db.connect(host=cf['host'], user=cf['user'], passwd=cf['pass'], port=cf['port'], db=cf['db'])
+src_con = db.connect(host=cf['host'], user=cf['user'], passwd=cf['pass'], port=cf['port'], db=cf['db'], charset='utf8')
 src_cur = src_con.cursor()
 
 properties_sql = '''
@@ -40,12 +40,14 @@ sheet.write(0, 0, '型号')
 sheet.write(0, 1, '内存')
 sheet.write(0, 2, '颜色')
 sheet.write(0, 3, '成色')
+sheet.write(0, 4, '数量')
 for i, p in enumerate(product_dict):
     pv, pm, pc, pr = p.split(':')
     sheet.write(i+1, 0, pv)
     sheet.write(i+1, 1, pm)
     sheet.write(i+1, 2, pc)
     sheet.write(i+1, 3, pr)
+    sheet.write(i+1, 4, product_dict[p])
 
 workbook.save(conf.path + conf.today.strftime(conf.date_format) + 'spu.xls')
 

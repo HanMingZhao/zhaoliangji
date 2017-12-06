@@ -1,3 +1,4 @@
+# -*- coding:utf-8 -*-
 import datetime as dt
 
 product = {'host': 'rm-m5etsh5q078zz937i.mysql.rds.aliyuncs.com',
