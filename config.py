@@ -53,8 +53,11 @@ def product_count(sql_results, version_dict, memory_dict, color_dict, rate_dict)
                     if feature[0] == '12':
                         p.rate = rate_dict[feature[1]]
                 product_list.append(p)
-    product_set = set()
+    product_dict = {}
     for prod in product_list:
         name = prod.version + ':' + prod.memory + ':' + prod.color + ':' + prod.rate
-        product_set.add(name)
-    return product_set
+        if name in product_dict:
+            product_dict[name] = product_dict[name] + 1
+        else:
+            product_dict[name] = 1
+    return product_dict
