@@ -1,5 +1,6 @@
 # -*- coding:utf-8 -*-
 import datetime as dt
+import collections
 
 product = {'host': 'rm-m5etsh5q078zz937i.mysql.rds.aliyuncs.com',
            'user': 'zlj_reader',
@@ -14,6 +15,8 @@ test = {'host': '114.215.176.190',
         'db': 'panda'}
 
 path = '/var/www/python/'
+
+charset = 'utf8'
 
 date_format = '%Y-%m-%d'
 
@@ -45,20 +48,25 @@ def product_count(sql_results, version_dict, memory_dict, color_dict, rate_dict)
             if '12:' in p.props:
                 for f in properties:
                     feature = f.split(':')
-                    if feature[0] == '5':
+                    if feature[0] == '5' and version_dict is not None:
                         p.version = version_dict[feature[1]]
-                    if feature[0] == '10':
+                    if feature[0] == '10' and color_dict is not None:
                         p.color = color_dict[feature[1]]
-                    if feature[0] == '11':
+                    if feature[0] == '11' and memory_dict is not None:
                         p.memory = memory_dict[feature[1]]
-                    if feature[0] == '12':
+                    if feature[0] == '12' and rate_dict is not None:
                         p.rate = rate_dict[feature[1]]
                 product_list.append(p)
-    product_dict = {}
+    product_dict = collections.OrderedDict()
     for prod in product_list:
-        name = prod.version + ':' + prod.memory + ':' + prod.color + ':' + prod.rate
+        name = prod.version + ':' + prod.memory if hasattr(prod, 'memory') else '' + ':' + prod.color \
+            if hasattr(prod, 'color') else '' + ':' + prod.rate if hasattr(prod, 'rate') else ''
         if name in product_dict:
             product_dict[name] = product_dict[name] + 1
         else:
             product_dict[name] = 1
     return product_dict
+
+version_memory_dict = {4: {21, 23, 24}, 5: {21, 22, 23}, 14: {21, 22, 23, 24}, 15: {21, 22, 23, 24}, 16: {21, 23, 24},
+                       114: {21, 22, 23, 24}, 127: {22, 24, 128}, 129: {22, 24, 128}, 525: {23, 128}, 544: {23, 128},
+                       618: {23, 128}}
