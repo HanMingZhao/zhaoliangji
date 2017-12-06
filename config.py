@@ -35,7 +35,7 @@ def properties_dict(db_cursor, sql, prop_id):
     return dic
 
 
-def product_count(sql_results, version_dict, memory_dict, rate_dict):
+def product_count(sql_results, version_dict, memory_dict, color_dict, rate_dict):
     product_list = []
     for sr in sql_results:
         if sr[0] is not None:
@@ -46,6 +46,8 @@ def product_count(sql_results, version_dict, memory_dict, rate_dict):
                     feature = f.split(':')
                     if feature[0] == '5':
                         p.version = version_dict[feature[1]]
+                    if feature[0] == '10':
+                        p.color = color_dict[feature[1]]
                     if feature[0] == '11':
                         p.memory = memory_dict[feature[1]]
                     if feature[0] == '12':
@@ -53,6 +55,6 @@ def product_count(sql_results, version_dict, memory_dict, rate_dict):
                 product_list.append(p)
     product_set = set()
     for prod in product_list:
-        name = prod.version + ':' + prod.memory + ':' + prod.rate
+        name = prod.version + ':' + prod.memory + ':' + prod.color + ':' + prod.rate
         product_set.add(name)
     return product_set

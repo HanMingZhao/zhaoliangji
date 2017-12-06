@@ -15,6 +15,8 @@ WHERE ppv.pnid = {}
 '''
 version_dict = conf.properties_dict(src_cur, properties_sql, 5)
 
+color_dict = conf.properties_dict(src_cur, properties_sql, 10)
+
 memory_dict = conf.properties_dict(src_cur, properties_sql, 11)
 
 rate_dict = conf.properties_dict(src_cur, properties_sql, 12)
@@ -28,7 +30,7 @@ AND sw.`warehouse_status` =1
 '''
 src_cur.execute(products_sql)
 products_result = src_cur.fetchall()
-products_set = conf.product_count(products_result, version_dict, memory_dict, rate_dict)
+products_set = conf.product_count(products_result, version_dict, memory_dict, color_dict, rate_dict)
 print(len(products_set))
 
 src_cur.close()
