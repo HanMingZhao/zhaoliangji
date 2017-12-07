@@ -25,13 +25,17 @@ memory_dict = conf.properties_dict(src_cur, properties_sql, 11)
 
 rate_dict = conf.properties_dict(src_cur, properties_sql, 12)
 
+# products_sql = '''
+# SELECT pp.key_props FROM panda.`pdi_product` pp
+# LEFT JOIN panda.`stg_warehouse` sw
+# ON sw.imei=pp.tag
+# WHERE pp.status =1
+# AND sw.`warehouse_status` =1
+# '''
 products_sql = '''
 SELECT pp.key_props FROM panda.`pdi_product` pp
-LEFT JOIN panda.`stg_warehouse` sw
-ON sw.imei=pp.tag
-WHERE pp.status =1
-AND sw.`warehouse_status` =1
 '''
+
 src_cur.execute(products_sql)
 products_result = src_cur.fetchall()
 product_dict = conf.product_count(products_result, version_dict, memory_dict, color_dict, rate_dict)
