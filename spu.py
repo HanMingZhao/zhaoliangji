@@ -7,8 +7,8 @@ start_time = time.time()
 
 workbook = xlwt.Workbook()
 
-cf = conf.test
-# cf = conf.product
+# cf = conf.test
+cf = conf.product
 src_con = db.connect(host=cf['host'], user=cf['user'], passwd=cf['pass'], port=cf['port'], db=cf['db'], charset='utf8')
 src_cur = src_con.cursor()
 
