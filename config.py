@@ -50,19 +50,18 @@ def product_count(sql_results, version_dict, memory_dict, color_dict, rate_dict)
             if '12:' in p.props:
                 for f in properties:
                     feature = f.split(':')
-                    if feature[0] == '5' and version_dict is not None:
+                    if feature[0] == '5':
                         p.version = version_dict[feature[1]]
-                    if feature[0] == '10' and color_dict is not None:
+                    if feature[0] == '10':
                         p.color = color_dict[feature[1]]
-                    if feature[0] == '11' and memory_dict is not None:
+                    if feature[0] == '11':
                         p.memory = memory_dict[feature[1]]
-                    if feature[0] == '12' and rate_dict is not None:
+                    if feature[0] == '12':
                         p.rate = rate_dict[feature[1]]
                 product_list.append(p)
     product_dict = collections.OrderedDict()
     for prod in product_list:
-        name = prod.version + ':' + prod.memory if hasattr(prod, 'memory') else '' + ':' + prod.color \
-            if hasattr(prod, 'color') else '' + ':' + prod.rate if hasattr(prod, 'rate') else ''
+        name = prod.version + ':' + prod.memory + ':' + prod.color + ':' + prod.rate
         if name in product_dict:
             product_dict[name] = product_dict[name] + 1
         else:
