@@ -29,6 +29,7 @@ SELECT pp.key_props FROM panda.pdi_product pp
 LEFT JOIN panda.pdi_model pm 
 ON pp.model_id = pm.model_id 
 WHERE pm.model_name NOT LIKE '%iphone%'
+and pp.type_id = 1
 '''
 
 src_cur.execute(products_sql)
