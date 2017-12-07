@@ -6,7 +6,6 @@ import xlwt
 start_time = time.time()
 
 workbook = xlwt.Workbook()
-sheet = workbook.add_sheet('sheet')
 
 # cf = conf.test
 cf = conf.product
@@ -26,32 +25,50 @@ memory_dict = conf.properties_dict(src_cur, properties_sql, 11)
 rate_dict = conf.properties_dict(src_cur, properties_sql, 12)
 
 products_sql = '''
-SELECT pp.key_props FROM panda.`pdi_product` pp
-LEFT JOIN panda.`stg_warehouse` sw
-ON sw.imei=pp.tag
-left join panda.pdi_model pm
-on pp.model_id = pm.model_id
-WHERE pp.status =1
-AND sw.`warehouse_status` =1
-and pm.model_name not like '%iphone%'
+SELECT COUNT(1) FROM panda.pdi_product pp 
+LEFT JOIN panda.pdi_model pm 
+ON pp.model_id = pm.model_id 
+WHERE pm.model_name NOT LIKE '%iphone%'
 '''
 
 src_cur.execute(products_sql)
 products_result = src_cur.fetchall()
 product_dict = conf.product_count(products_result, version_dict, memory_dict, color_dict, rate_dict)
 
+version_color_dict = conf.version_color_dict
+version_memory_dict = conf.version_memory_dict
+sheet = workbook.add_sheet('iphone')
 sheet.write(0, 0, '型号')
 sheet.write(0, 1, '内存')
 sheet.write(0, 2, '颜色')
 sheet.write(0, 3, '成色')
 sheet.write(0, 4, '数量')
-for i, p in enumerate(product_dict):
-    pv, pm, pc, pr = p.split(':')
-    sheet.write(i+1, 0, pv)
-    sheet.write(i+1, 1, pm)
-    sheet.write(i+1, 2, pc)
-    sheet.write(i+1, 3, pr)
-    sheet.write(i+1, 4, product_dict[p])
+for rate in rate_dict:
+    for version in version_color_dict:
+        for color in version_color_dict[version]:
+            for memory in version_memory_dict[version]:
+                row = len(sheet.rows)
+                sheet.write(row, 0, version)
+                sheet.write(row, 1, memory)
+                sheet.write(row, 2, color)
+                sheet.write(row, 3, rate)
+                sheet.write(row, 4, 1)
+
+sheet = workbook.add_sheet('android')
+sheet.write(0, 0, '型号')
+sheet.write(0, 1, '内存')
+sheet.write(0, 2, '颜色')
+sheet.write(0, 3, '成色')
+sheet.write(0, 4, '数量')
+for rate in rate_dict:
+    for p in product_dict:
+        pv, pm, pc = p.split(':')
+        row = len(sheet.rows)
+        sheet.write(row, 0, pv)
+        sheet.write(row, 1, pm)
+        sheet.write(row, 2, pc)
+        sheet.write(row, 3, rate)
+        sheet.write(row, 4, product_dict[p])
 
 workbook.save(conf.path + conf.today.strftime(conf.date_format) + 'spu.xls')
 
