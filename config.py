@@ -58,8 +58,7 @@ def product_count(sql_results, version_dict, memory_dict, color_dict, rate_dict)
                         p.memory = memory_dict[feature[1]]
                     if feature[0] == '12' and rate_dict is not None:
                         p.rate = rate_dict[feature[1]]
-                if hasattr(p, 'version') and hasattr(p, 'memory') and hasattr(p, 'color') and hasattr(p, 'rate'):
-                    product_list.append(p)
+                product_list.append(p)
     product_dict = collections.OrderedDict()
     for prod in product_list:
         name = prod.version + ':' + prod.memory if hasattr(prod, 'memory') else '' + ':' + prod.color \

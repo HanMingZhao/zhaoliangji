@@ -34,6 +34,10 @@ rate_dict = conf.properties_dict(src_cur, properties_sql, 12)
 # '''
 products_sql = '''
 SELECT pp.key_props FROM panda.`pdi_product` pp
+where pp.key_props like '%5:%'
+and pp.key_props like '%12:%'
+and pp.key_props like '%11:%'
+and pp.key_props like '%10:%'
 '''
 
 src_cur.execute(products_sql)
