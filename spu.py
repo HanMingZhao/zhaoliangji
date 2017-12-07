@@ -25,7 +25,7 @@ memory_dict = conf.properties_dict(src_cur, properties_sql, 11)
 rate_dict = conf.properties_dict(src_cur, properties_sql, 12)
 
 products_sql = '''
-SELECT COUNT(1) FROM panda.pdi_product pp 
+SELECT pp.key_props FROM panda.pdi_product pp 
 LEFT JOIN panda.pdi_model pm 
 ON pp.model_id = pm.model_id 
 WHERE pm.model_name NOT LIKE '%iphone%'
