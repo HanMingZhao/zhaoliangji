@@ -70,7 +70,7 @@ for rate in rate_dict:
         sheet.write(row, 3, rate_dict[rate])
         sheet.write(row, 4, product_dict[p])
 
-workbook.save(conf.today.strftime(conf.date_format) + 'spu.xls')
+workbook.save(conf.path + conf.today.strftime(conf.date_format) + 'spu.xls')
 
 src_cur.close()
 src_con.close()
