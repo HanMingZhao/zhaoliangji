@@ -135,7 +135,7 @@ GROUP BY DATE(oo.`pay_at`)
 scur.execute(daySaleSql.format(first.strftime(dateFormat), today.strftime(dateFormat)))
 result = scur.fetchall()
 saleSum = write_sheet2(result, sheet, 0)
-target = cf.getint(option, 'target')
+target = cf.target
 sheet.write(len(sheet.rows), 0, '距离目标还差 {} 台'.format(target-saleSum))
 
 print('取消订单数...', time.time()-stime)
@@ -390,7 +390,7 @@ for i, r in enumerate(result):
     sheet.write(i+1, 3, r[3])
 
 
-path = cf.get('path', 'path')
+path = cf.path
 wb.save('day.xls')
 scur.close()
 scon.close()

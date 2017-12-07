@@ -14,6 +14,8 @@ test = {'host': '114.215.176.190',
         'port': 33069,
         'db': 'panda'}
 
+target = 5500
+
 path = '/var/www/python/'
 
 charset = 'utf8'
