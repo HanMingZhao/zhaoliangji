@@ -7,8 +7,8 @@ start_time = time.time()
 
 workbook = xlwt.Workbook()
 
-# cf = conf.test
-cf = conf.product
+cf = conf.test
+# cf = conf.product
 src_con = db.connect(host=cf['host'], user=cf['user'], passwd=cf['pass'], port=cf['port'], db=cf['db'], charset='utf8')
 src_cur = src_con.cursor()
 
@@ -48,10 +48,10 @@ for rate in rate_dict:
         for color in version_color_dict[version]:
             for memory in version_memory_dict[version]:
                 row = len(sheet.rows)
-                sheet.write(row, 0, version)
-                sheet.write(row, 1, memory)
-                sheet.write(row, 2, color)
-                sheet.write(row, 3, rate)
+                sheet.write(row, 0, version_dict[str(version)])
+                sheet.write(row, 1, memory_dict[str(memory)])
+                sheet.write(row, 2, color_dict[str(color)])
+                sheet.write(row, 3, rate_dict[rate])
                 sheet.write(row, 4, 1)
 
 sheet = workbook.add_sheet('android')
@@ -67,10 +67,10 @@ for rate in rate_dict:
         sheet.write(row, 0, pv)
         sheet.write(row, 1, pm)
         sheet.write(row, 2, pc)
-        sheet.write(row, 3, rate)
+        sheet.write(row, 3, rate_dict[rate])
         sheet.write(row, 4, product_dict[p])
 
-workbook.save(conf.path + conf.today.strftime(conf.date_format) + 'spu.xls')
+workbook.save(conf.today.strftime(conf.date_format) + 'spu.xls')
 
 src_cur.close()
 src_con.close()
