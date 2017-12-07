@@ -25,19 +25,15 @@ memory_dict = conf.properties_dict(src_cur, properties_sql, 11)
 
 rate_dict = conf.properties_dict(src_cur, properties_sql, 12)
 
-# products_sql = '''
-# SELECT pp.key_props FROM panda.`pdi_product` pp
-# LEFT JOIN panda.`stg_warehouse` sw
-# ON sw.imei=pp.tag
-# WHERE pp.status =1
-# AND sw.`warehouse_status` =1
-# '''
 products_sql = '''
 SELECT pp.key_props FROM panda.`pdi_product` pp
-where pp.key_props like '%5:%'
-and pp.key_props like '%12:%'
-and pp.key_props like '%11:%'
-and pp.key_props like '%10:%'
+LEFT JOIN panda.`stg_warehouse` sw
+ON sw.imei=pp.tag
+left join panda.pdi_model pm
+on pp.model_id = pm.model_id
+WHERE pp.status =1
+AND sw.`warehouse_status` =1
+and pm.model_name not like '%iphone%'
 '''
 
 src_cur.execute(products_sql)
