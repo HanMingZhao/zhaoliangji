@@ -4,7 +4,7 @@ import xlwt
 import datetime as dt
 import configparser
 
-warehouse_nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12]
+warehouse_nums = [1, 2, 3, 4, 5, 6, 7, 12]
 
 cf = configparser.ConfigParser()
 cf.read('conf.conf')
@@ -58,11 +58,8 @@ w4 = np.zeros(len(sku), dtype=int)
 w5 = np.zeros(len(sku), dtype=int)
 w6 = np.zeros(len(sku), dtype=int)
 w7 = np.zeros(len(sku), dtype=int)
-w8 = np.zeros(len(sku), dtype=int)
-w9 = np.zeros(len(sku), dtype=int)
-w11 = np.zeros(len(sku), dtype=int)
 w12 = np.zeros(len(sku), dtype=int)
-wdict = {1: w1, 2: w2, 3: w3, 4: w4, 5: w5, 6: w6, 7: w7, 8: w8, 9: w9, 11: w11, 12: w12}
+wdict = {1: w1, 2: w2, 3: w3, 4: w4, 5: w5, 6: w6, 7: w7, 12: w12}
 
 for whnum in warehouse_nums:
     askusql = '''SELECT pm.brand_name,COUNT(1) FROM panda.`stg_warehouse` sw 
@@ -103,12 +100,6 @@ l6 = [int(x) for x in w6]
 l6.append(sum(l6))
 l7 = [int(x) for x in w7]
 l7.append(sum(l7))
-l8 = [int(x) for x in w8]
-l8.append(sum(l8))
-l9 = [int(x) for x in w9]
-l9.append(sum(l9))
-l11 = [int(x) for x in w11]
-l11.append(sum(l11))
 l12 = [int(x) for x in w12]
 l12.append(sum(l12))
 l1.insert(0, '分拾')
@@ -118,12 +109,9 @@ l4.insert(0, '上架')
 l5.insert(0, '维修')
 l6.insert(0, '报废')
 l7.insert(0, 'B端')
-l8.insert(0, '预上架')
-l9.insert(0, '外包维修')
-l11.insert(0, '京东')
 l12.insert(0, '代卖库')
 
-matrix = np.matrix([sku, l1, l2, l3, l5, l6, l7, l8, l9, l11, l12, l4])
+matrix = np.matrix([sku, l1, l2, l3, l5, l6, l7, l12, l4])
 matrix2 = matrix.transpose().tolist()
 
 tablesql = '''
@@ -136,9 +124,6 @@ CREATE TABLE ods.ods_warehouse_sum
 `维修` SMALLINT(4), 
 `报废` SMALLINT(4), 
 `B端` SMALLINT(4), 
-`预上架` SMALLINT(4), 
-`外包维修` SMALLINT(4), 
-`京东` SMALLINT(4),
 `待卖` SMALLINT(4),
 `上架` SMALLINT(4),
 `总计` SMALLINT(4)
@@ -173,13 +158,10 @@ sheet.write(0, 3, '市场')
 sheet.write(0, 4, '维修')
 sheet.write(0, 5, '报废')
 sheet.write(0, 6, 'B端')
-sheet.write(0, 7, '预上架')
-sheet.write(0, 8, '外包维修')
-sheet.write(0, 9, '京东')
-sheet.write(0, 10, '待卖')
-sheet.write(0, 11, '上架')
-sheet.write(0, 12, '总计')
-sheet.write(0, 13, '占比')
+sheet.write(0, 7, '待卖')
+sheet.write(0, 8, '上架')
+sheet.write(0, 9, '总计')
+sheet.write(0, 10, '占比')
 querySql = '''
 select * from ods.ods_warehouse_sum
 '''
@@ -188,21 +170,18 @@ result = dst_cur.fetchall()
 for i, r in enumerate(result):
     for j, x in enumerate(r):
         sheet.write(i+1, j, int(x) if j > 0 else x)
-    sheet.write(i+1, len(r), int(r[11])/int(r[12]))
+    sheet.write(i+1, len(r), int(r[8])/int(r[9]))
 sheetLength = len(sheet.rows)
 lastRow = len(result) - 1
 sheet.write(sheetLength, 0, '占比')
-sheet.write(sheetLength, 1, int(result[lastRow][1])/int(result[lastRow][12]))
-sheet.write(sheetLength, 2, int(result[lastRow][2])/int(result[lastRow][12]))
-sheet.write(sheetLength, 3, int(result[lastRow][3])/int(result[lastRow][12]))
-sheet.write(sheetLength, 4, int(result[lastRow][4])/int(result[lastRow][12]))
-sheet.write(sheetLength, 5, int(result[lastRow][5])/int(result[lastRow][12]))
-sheet.write(sheetLength, 6, int(result[lastRow][6])/int(result[lastRow][12]))
-sheet.write(sheetLength, 7, int(result[lastRow][7])/int(result[lastRow][12]))
-sheet.write(sheetLength, 8, int(result[lastRow][8])/int(result[lastRow][12]))
-sheet.write(sheetLength, 9, int(result[lastRow][9])/int(result[lastRow][12]))
-sheet.write(sheetLength, 10, int(result[lastRow][10])/int(result[lastRow][12]))
-sheet.write(sheetLength, 11, int(result[lastRow][11])/int(result[lastRow][12]))
+sheet.write(sheetLength, 1, int(result[lastRow][1])/int(result[lastRow][9]))
+sheet.write(sheetLength, 2, int(result[lastRow][2])/int(result[lastRow][9]))
+sheet.write(sheetLength, 3, int(result[lastRow][3])/int(result[lastRow][9]))
+sheet.write(sheetLength, 4, int(result[lastRow][4])/int(result[lastRow][9]))
+sheet.write(sheetLength, 5, int(result[lastRow][5])/int(result[lastRow][9]))
+sheet.write(sheetLength, 6, int(result[lastRow][6])/int(result[lastRow][9]))
+sheet.write(sheetLength, 7, int(result[lastRow][7])/int(result[lastRow][9]))
+sheet.write(sheetLength, 8, int(result[lastRow][8])/int(result[lastRow][9]))
 
 path = cf.get('path', 'path')
 wb.save(path + str(dt.datetime.today().date()) + 'warehouse.xls')

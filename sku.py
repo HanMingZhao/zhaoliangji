@@ -21,8 +21,7 @@ if whnum not in warehousenums:
     sys.exit(0)
 '''
 starttime = time.time()
-warehousenums = {1: '分拾', 2: '检测', 3: '市场', 4: '上架', 5: '维修', 6: '报废', 7: 'B端', 8: '预上架', 9: '外包维修',
-                 11: '京东', 12: '待卖'}
+warehousenums = {1: '分拾', 2: '检测', 3: '市场', 4: '上架', 5: '维修', 6: '报废', 7: 'B端', 12: '待卖'}
 
 wb = xlwt.Workbook()
 cf = configparser.ConfigParser()
