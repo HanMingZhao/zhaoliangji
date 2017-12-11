@@ -1,0 +1,96 @@
+import pymysql
+import config
+import xlwt
+import time
+
+
+class Product:
+    def __init__(self, props, cycle_time):
+        self.props = props
+        self.cycle_time = cycle_time
+
+start_time = time.time()
+cf = config.product
+src_con = pymysql.connect(host=cf['host'], user=cf['user'], passwd=cf['pass'], port=cf['port'], db=cf['db'],
+                          charset=config.charset)
+src_cur = src_con.cursor()
+workbook = xlwt.Workbook()
+
+props_sql = '''
+SELECT ppv.pvid,ppv.pv_name FROM panda.`pdi_prop_value` ppv
+WHERE ppv.pnid = {}
+'''
+
+version_dict = config.properties_dict(src_cur, props_sql, 5)
+memory_dict = config.properties_dict(src_cur, props_sql, 11)
+color_dict = config.properties_dict(src_cur, props_sql, 10)
+
+yipin_batch_sql = '''
+SELECT pb.batch_no FROM panda.`pdi_batch` pb
+WHERE pb.`suppiler`=272
+'''
+src_cur.execute(yipin_batch_sql)
+result = src_cur.fetchall()
+yipin = []
+for r in result:
+    yipin.append(str(r[0]))
+
+print('collecting products... {}'.format(time.time()-start_time))
+product_sql = '''
+SELECT (UNIX_TIMESTAMP(sw.`out_time`)-UNIX_TIMESTAMP(sw.`in_time`))/60/60/24,sw.`key_props` FROM panda.`stg_warehouse` sw
+LEFT JOIN panda.`odi_order` oo
+ON sw.`product_id` = oo.`product_id`
+WHERE oo.`order_status` IN (1,2,4,5)
+LIMIT 100
+'''
+src_cur.execute(product_sql)
+print('collect finish... {}'.format(time.time()-start_time))
+result = src_cur.fetchall()
+product_list = []
+for r in result:
+    if r[0] is not None and r[1] is not None:
+        product = Product(r[1], r[0])
+        properties = product.props.split(';')
+        for feature in properties:
+            f = feature.split(':')
+            if f[0] == '5':
+                product.version = version_dict[str(f[1])]
+            if f[0] == '10':
+                product.color = color_dict[str(f[1])]
+            if f[0] == '11':
+                product.memory = memory_dict[str(f[1])]
+        product_list.append(product)
+
+product_dict_count = {}
+product_dict_time = {}
+for p in product_list:
+    name = p.version + ':' + p.color + ':' + p.memory
+    if name in product_dict_count:
+        product_dict_count[name] = product_dict_count[name] + 1
+    else:
+        product_dict_count[name] = 1
+    if name in product_dict_time:
+        product_dict_time[name] = product_dict_time[name] + p.cycle_time
+    else:
+        product_dict_time[name] = p.cycle_time
+
+# print(product_dict_time)
+sheet = workbook.add_sheet('sheet')
+sheet.write(0, 0, '型号')
+sheet.write(0, 1, '颜色')
+sheet.write(0, 2, '内存')
+sheet.write(0, 3, '数量')
+sheet.write(0, 4, '总时长')
+sheet.write(0, 5, '平均时长')
+for i, p in enumerate(product_dict_count):
+    pv, pc, pm = p.split(':')
+    sheet.write(i+1, 0, pv)
+    sheet.write(i+1, 1, pc)
+    sheet.write(i+1, 2, pm)
+    sheet.write(i+1, 3, product_dict_count[p])
+    sheet.write(i+1, 4, product_dict_time[p])
+    sheet.write(i+1, 5, product_dict_time[p]/product_dict_count[p])
+
+workbook.save('warehousemean.xls')
+src_cur.close()
+src_con.close()
