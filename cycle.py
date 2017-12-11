@@ -96,8 +96,10 @@ for i, p in enumerate(sale_product_dict_count):
 store_product_sql = '''
 SELECT (UNIX_TIMESTAMP(NOW())-UNIX_TIMESTAMP(sw.`in_time`))/60/60/24,sw.`key_props` FROM panda.`stg_warehouse` sw
 WHERE sw.`warehouse_status` =1
+and sw.batch_no not in ({})
+and sw.warehouse_num not in (3,12)
 '''
-src_cur.execute(store_product_sql)
+src_cur.execute(store_product_sql.format(','.join(yipin)))
 result = src_cur.fetchall()
 store_product_list = []
 for r in result:
