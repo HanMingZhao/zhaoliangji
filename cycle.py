@@ -2,6 +2,7 @@ import pymysql
 import config
 import xlwt
 import time
+import decimal
 
 
 class Product:
@@ -122,6 +123,7 @@ for r in result:
 store_product_dict_count = {}
 store_product_dict_time = {}
 store_product_cost = {}
+mis = 0
 for p in store_product_list:
     name = p.version + ':' + p.color + ':' + p.memory
     if name in store_product_dict_count:
@@ -133,10 +135,13 @@ for p in store_product_list:
     else:
         store_product_dict_time[name] = p.cycle_time
     if name in store_product_cost:
-        store_product_cost[name] = store_product_cost[name] + p.cost
+        if p.color is None:
+            mis += 1
+        store_product_cost[name] = store_product_cost[name] + p.cost if p.cost is not None else decimal.Decimal('2500')
     else:
         store_product_cost[name] = p.cost
 
+print(mis)
 # print(product_dict_time)
 sheet.write(0, 10, '型号')
 sheet.write(0, 11, '颜色')
