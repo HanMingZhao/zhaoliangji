@@ -116,7 +116,7 @@ for r in result:
 
 store_product_dict_count = {}
 store_product_dict_time = {}
-for p in sale_product_list:
+for p in store_product_list:
     name = p.version + ':' + p.color + ':' + p.memory
     if name in store_product_dict_count:
         store_product_dict_count[name] = store_product_dict_count[name] + 1
