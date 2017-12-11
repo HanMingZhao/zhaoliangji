@@ -36,18 +36,21 @@ for r in result:
     yipin.append(str(r[0]))
 
 print('collecting products... {}'.format(time.time()-start_time))
-product_sql = '''
-SELECT (UNIX_TIMESTAMP(sw.`out_time`)-UNIX_TIMESTAMP(sw.`in_time`))/60/60/24,sw.`key_props` FROM panda.`stg_warehouse` sw
+sale_product_sql = '''
+SELECT (UNIX_TIMESTAMP(sw.`out_time`)-UNIX_TIMESTAMP(sw.`in_time`))/60/60/24 `time`,sw.`key_props` 
+FROM panda.`stg_warehouse` sw
 LEFT JOIN panda.`odi_order` oo
 ON sw.`product_id` = oo.`product_id`
 WHERE oo.`order_status` IN (1,2,4,5)
+and oo.order_type in (1,2)
+and sw.in_time > '2017-1-1'
 and sw.out_time > '0000-00-00 00:00:00'
 and sw.batch_no not in ({})
 '''
-src_cur.execute(product_sql.format(','.join(yipin)))
+src_cur.execute(sale_product_sql.format(','.join(yipin)))
 print('collect finish... {}'.format(time.time()-start_time))
 result = src_cur.fetchall()
-product_list = []
+sale_product_list = []
 for r in result:
     if r[0] is not None and r[1] is not None:
         product = Product(r[1], r[0])
@@ -60,20 +63,20 @@ for r in result:
                 product.color = color_dict[str(f[1])]
             if f[0] == '11':
                 product.memory = memory_dict[str(f[1])]
-        product_list.append(product)
+        sale_product_list.append(product)
 
-product_dict_count = {}
-product_dict_time = {}
-for p in product_list:
+sale_product_dict_count = {}
+sale_product_dict_time = {}
+for p in sale_product_list:
     name = p.version + ':' + p.color + ':' + p.memory
-    if name in product_dict_count:
-        product_dict_count[name] = product_dict_count[name] + 1
+    if name in sale_product_dict_count:
+        sale_product_dict_count[name] = sale_product_dict_count[name] + 1
     else:
-        product_dict_count[name] = 1
-    if name in product_dict_time:
-        product_dict_time[name] = product_dict_time[name] + p.cycle_time
+        sale_product_dict_count[name] = 1
+    if name in sale_product_dict_time:
+        sale_product_dict_time[name] = sale_product_dict_time[name] + p.cycle_time
     else:
-        product_dict_time[name] = p.cycle_time
+        sale_product_dict_time[name] = p.cycle_time
 
 # print(product_dict_time)
 sheet = workbook.add_sheet('sheet')
@@ -81,16 +84,63 @@ sheet.write(0, 0, '型号')
 sheet.write(0, 1, '颜色')
 sheet.write(0, 2, '内存')
 sheet.write(0, 3, '数量')
-sheet.write(0, 4, '总时长')
-sheet.write(0, 5, '平均时长')
-for i, p in enumerate(product_dict_count):
+sheet.write(0, 4, '平均时长')
+for i, p in enumerate(sale_product_dict_count):
     pv, pc, pm = p.split(':')
     sheet.write(i+1, 0, pv)
     sheet.write(i+1, 1, pc)
     sheet.write(i+1, 2, pm)
-    sheet.write(i+1, 3, product_dict_count[p])
-    sheet.write(i+1, 4, product_dict_time[p])
-    sheet.write(i+1, 5, product_dict_time[p]/product_dict_count[p])
+    sheet.write(i+1, 3, sale_product_dict_count[p])
+    sheet.write(i+1, 4, sale_product_dict_time[p]/sale_product_dict_count[p])
+
+store_product_sql = '''
+SELECT (UNIX_TIMESTAMP(NOW())-UNIX_TIMESTAMP(sw.`in_time`))/60/60/24,sw.`key_props` FROM panda.`stg_warehouse` sw
+WHERE sw.`warehouse_status` =1
+'''
+src_cur.execute(store_product_sql)
+result = src_cur.fetchall()
+store_product_list = []
+for r in result:
+    if r[0] is not None and r[1] is not None:
+        product = Product(r[1], r[0])
+        properties = product.props.split(';')
+        for feature in properties:
+            f = feature.split(':')
+            if f[0] == '5':
+                product.version = version_dict[str(f[1])]
+            if f[0] == '10':
+                product.color = color_dict[str(f[1])]
+            if f[0] == '11':
+                product.memory = memory_dict[str(f[1])]
+        store_product_list.append(product)
+
+store_product_dict_count = {}
+store_product_dict_time = {}
+for p in sale_product_list:
+    name = p.version + ':' + p.color + ':' + p.memory
+    if name in store_product_dict_count:
+        store_product_dict_count[name] = store_product_dict_count[name] + 1
+    else:
+        store_product_dict_count[name] = 1
+    if name in store_product_dict_time:
+        store_product_dict_time[name] = store_product_dict_time[name] + p.cycle_time
+    else:
+        store_product_dict_time[name] = p.cycle_time
+
+# print(product_dict_time)
+sheet.write(0, 10, '型号')
+sheet.write(0, 11, '颜色')
+sheet.write(0, 12, '内存')
+sheet.write(0, 13, '数量')
+sheet.write(0, 14, '平均在库时长')
+for i, p in enumerate(sale_product_dict_count):
+    pv, pc, pm = p.split(':')
+    sheet.write(i+1, 10, pv)
+    sheet.write(i+1, 11, pc)
+    sheet.write(i+1, 12, pm)
+    sheet.write(i+1, 13, sale_product_dict_count[p])
+    sheet.write(i+1, 14, sale_product_dict_time[p]/sale_product_dict_count[p])
+
 
 workbook.save('warehousemean.xls')
 src_cur.close()
