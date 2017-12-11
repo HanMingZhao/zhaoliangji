@@ -94,7 +94,10 @@ for i, p in enumerate(sale_product_dict_count):
     sheet.write(i+1, 4, sale_product_dict_time[p]/sale_product_dict_count[p])
 
 store_product_sql = '''
-SELECT (UNIX_TIMESTAMP(NOW())-UNIX_TIMESTAMP(sw.`in_time`))/60/60/24,sw.`key_props` FROM panda.`stg_warehouse` sw
+SELECT (UNIX_TIMESTAMP(NOW())-UNIX_TIMESTAMP(sw.`in_time`))/60/60/24,sw.`key_props`,ppc.cost 
+FROM panda.`stg_warehouse` sw
+left join panda.pdi_product_cost ppc
+on sw.product_id = ppc.product_id
 WHERE sw.`warehouse_status` =1
 and sw.warehouse_num not in (3,12)
 '''
@@ -104,6 +107,7 @@ store_product_list = []
 for r in result:
     if r[0] is not None and r[1] is not None:
         product = Product(r[1], r[0])
+        product.cost = r[2]
         properties = product.props.split(';')
         for feature in properties:
             f = feature.split(':')
@@ -117,6 +121,7 @@ for r in result:
 
 store_product_dict_count = {}
 store_product_dict_time = {}
+store_product_cost = {}
 for p in store_product_list:
     name = p.version + ':' + p.color + ':' + p.memory
     if name in store_product_dict_count:
@@ -127,6 +132,10 @@ for p in store_product_list:
         store_product_dict_time[name] = store_product_dict_time[name] + p.cycle_time
     else:
         store_product_dict_time[name] = p.cycle_time
+    if name in store_product_cost:
+        store_product_cost[name] = store_product_cost[name] + p.cost
+    else:
+        store_product_cost[name] = p.cost
 
 # print(product_dict_time)
 sheet.write(0, 10, '型号')
@@ -134,6 +143,7 @@ sheet.write(0, 11, '颜色')
 sheet.write(0, 12, '内存')
 sheet.write(0, 13, '数量')
 sheet.write(0, 14, '平均在库时长')
+sheet.write(0, 15, '成本')
 for i, p in enumerate(store_product_dict_count):
     pv, pc, pm = p.split(':')
     sheet.write(i+1, 10, pv)
@@ -141,6 +151,7 @@ for i, p in enumerate(store_product_dict_count):
     sheet.write(i+1, 12, pm)
     sheet.write(i+1, 13, store_product_dict_count[p])
     sheet.write(i+1, 14, store_product_dict_time[p]/store_product_dict_count[p])
+    sheet.write(i+1, 15, store_product_cost[p])
 
 
 workbook.save('warehousemean.xls')
