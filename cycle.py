@@ -41,9 +41,9 @@ SELECT (UNIX_TIMESTAMP(sw.`out_time`)-UNIX_TIMESTAMP(sw.`in_time`))/60/60/24,sw.
 LEFT JOIN panda.`odi_order` oo
 ON sw.`product_id` = oo.`product_id`
 WHERE oo.`order_status` IN (1,2,4,5)
-LIMIT 100
+and sw.batch_no not in ({})
 '''
-src_cur.execute(product_sql)
+src_cur.execute(product_sql.format(','.join(yipin)))
 print('collect finish... {}'.format(time.time()-start_time))
 result = src_cur.fetchall()
 product_list = []
