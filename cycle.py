@@ -133,13 +133,13 @@ sheet.write(0, 11, '颜色')
 sheet.write(0, 12, '内存')
 sheet.write(0, 13, '数量')
 sheet.write(0, 14, '平均在库时长')
-for i, p in enumerate(sale_product_dict_count):
+for i, p in enumerate(store_product_dict_count):
     pv, pc, pm = p.split(':')
     sheet.write(i+1, 10, pv)
     sheet.write(i+1, 11, pc)
     sheet.write(i+1, 12, pm)
-    sheet.write(i+1, 13, sale_product_dict_count[p])
-    sheet.write(i+1, 14, sale_product_dict_time[p]/sale_product_dict_count[p])
+    sheet.write(i+1, 13, store_product_dict_count[p])
+    sheet.write(i+1, 14, store_product_dict_time[p]/store_product_dict_count[p])
 
 
 workbook.save('warehousemean.xls')
