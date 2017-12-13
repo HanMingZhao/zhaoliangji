@@ -1,5 +1,4 @@
 # Created by .ignore support plugin (hsz.mobi)
-*.xls
-conf.py
-test.py
 .idea/*
+*.xls
+test.py

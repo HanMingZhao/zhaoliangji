@@ -13,7 +13,8 @@ trans = {'iPhone SE': 114,
          'iPhone6s': 14,
          'iPhone6s Plus': 15,
          'iPhone7': 127,
-         'iPhone7 Plus': 129}
+         'iPhone7 Plus': 129,
+         'iPhone8': 525}
 
 wb = xlwt.Workbook()
 sheet = wb.add_sheet('sheet')
