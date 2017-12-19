@@ -29,8 +29,6 @@ sale_sql = '''
 SELECT pp.`key_props` FROM panda.`odi_order` oo
 LEFT JOIN panda.`pdi_product` pp
 ON oo.`product_id` = pp.`product_id`
-LEFT JOIN panda.`pdi_model` pm
-ON pp.`model_id`= pm.`model_id`
 WHERE oo.`order_status` IN (1,2,4,5)
 AND oo.`order_type` IN (1,2)
 AND oo.`pay_at` > '2017-11-1'
@@ -52,6 +50,7 @@ SELECT pp.key_props FROM panda.`stg_warehouse` sw
 LEFT JOIN panda.`pdi_product` pp
 ON sw.`product_id` = pp.product_id
 WHERE sw.`warehouse_status` = 1
+and pp.status = 1
 AND sw.`warehouse_num` IN (1,2,4,7)
 '''
 
