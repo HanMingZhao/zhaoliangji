@@ -50,7 +50,6 @@ SELECT pp.key_props FROM panda.`stg_warehouse` sw
 LEFT JOIN panda.`pdi_product` pp
 ON sw.`product_id` = pp.product_id
 WHERE sw.`warehouse_status` = 1
-and pp.status = 1
 AND sw.`warehouse_num` IN (1,2,4,7)
 '''
 
@@ -62,12 +61,12 @@ sheet.write(0, 1, '内存')
 sheet.write(0, 2, '颜色')
 sheet.write(0, 3, '售卖')
 sheet.write(0, 4, '库存')
-# product_set = set()
-# for p in sale_dict:
-#     product_set.add(p)
-# for p in store_dict:
-#     product_set.add(p)
-for i, p in enumerate(sale_dict):
+product_set = set()
+for p in sale_dict:
+    product_set.add(p)
+for p in store_dict:
+    product_set.add(p)
+for i, p in enumerate(product_set):
     pv, pm, pc = p.split(':')
     sheet.write(i+1, 0, pv)
     sheet.write(i+1, 1, pm)
