@@ -45,7 +45,7 @@ SELECT sw.`key_props` FROM panda.`stg_warehouse` sw
 LEFT JOIN panda.`pdi_model` pm
 ON pm.`model_id` = sw.`model_id`
 WHERE sw.`warehouse_status`=1
-and sw.warehouse_num in (1,2,4,5,7)
+and sw.warehouse_num in (1,2,4,7)
 '''
 src_cur.execute(store_sql)
 result = src_cur.fetchall()
