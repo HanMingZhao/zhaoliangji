@@ -30,7 +30,6 @@ SELECT pp.`key_props` FROM panda.`odi_order` oo
 LEFT JOIN panda.`pdi_product` pp
 ON oo.`product_id` = pp.`product_id`
 WHERE oo.`order_status` IN (1,2,4,5)
-AND oo.`order_type` IN (1,2)
 AND oo.`pay_at` > '2017-11-1'
 '''
 src_cur.execute(sale_sql)
