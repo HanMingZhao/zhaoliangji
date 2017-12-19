@@ -37,10 +37,32 @@ AND oo.`pay_at` > '2017-11-1'
 '''
 src_cur.execute(sale_sql)
 result = src_cur.fetchall()
-product_dict = config.product_count(result, version_dict, memory_dict, color_dict)
+sale_dict = config.product_count(result, version_dict, memory_dict, color_dict)
 sheet = workbook.add_sheet('sheet')
-config.sheet_head(sheet, 0)
-config.write_sheet1(product_dict, sheet, 0)
+
+store_sql = '''
+SELECT sw.`key_props` FROM panda.`stg_warehouse` sw
+LEFT JOIN panda.`pdi_model` pm
+ON pm.`model_id` = sw.`model_id`
+WHERE sw.`warehouse_status`=1
+and sw.warehouse_num in (1,2,4,5,7)
+'''
+src_cur.execute(store_sql)
+result = src_cur.fetchall()
+store_dict = config.product_count(result, version_dict, memory_dict, color_dict)
+sheet.write(0, 0, '型号')
+sheet.write(0, 1, '内存')
+sheet.write(0, 2, '颜色')
+sheet.write(0, 3, '售卖')
+sheet.write(0, 4, '库存')
+
+for i, p in enumerate(sale_dict):
+    pv, pm, pc = p.split(':')
+    sheet.write(i+1, 0, pv)
+    sheet.write(i+1, 1, pm)
+    sheet.write(i+1, 2, pc)
+    sheet.write(i+1, 3, sale_dict[p])
+    sheet.write(i+1, 4, store_dict[p] if p in store_dict else 0)
 
 workbook.save(config.path + config.today.strftime(config.date_format) + '预备.xls')
 src_cur.close()

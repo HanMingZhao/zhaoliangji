@@ -246,26 +246,26 @@ sheet = wb.add_sheet('上架量')
 sheet_head(sheet, 0)
 write_sheet1(sku, sheet, 0)
 
-print('预上架...', time.time()-stime)
-pregroundSql = '''
-SELECT pm.`model_name`,pp.`key_props` FROM panda.`stg_warehouse_switch` sws 
-LEFT JOIN panda.`pdi_product` pp
-ON sws.product_id = pp.product_id
-LEFT JOIN panda.`pdi_model` pm
-ON pp.`model_id` = pm.`model_id`
-WHERE sws.`switch_status` =2
-AND sws.`dst_warehouse` = 8
-AND sws.`check_time`> '{}'
-AND sws.`check_time`< '{}'
-GROUP BY sws.`dst_warehouse`,sws.imei
-'''
-scur.execute(pregroundSql.format(yesterday.strftime(dateFormat), today.strftime(dateFormat)))
-result = scur.fetchall()
-presku = product_count(result)
-
-sheet = wb.add_sheet('预上架量')
-sheet_head(sheet, 0)
-write_sheet1(presku, sheet, 0)
+# print('预上架...', time.time()-stime)
+# pregroundSql = '''
+# SELECT pm.`model_name`,pp.`key_props` FROM panda.`stg_warehouse_switch` sws
+# LEFT JOIN panda.`pdi_product` pp
+# ON sws.product_id = pp.product_id
+# LEFT JOIN panda.`pdi_model` pm
+# ON pp.`model_id` = pm.`model_id`
+# WHERE sws.`switch_status` =2
+# AND sws.`dst_warehouse` = 8
+# AND sws.`check_time`> '{}'
+# AND sws.`check_time`< '{}'
+# GROUP BY sws.`dst_warehouse`,sws.imei
+# '''
+# scur.execute(pregroundSql.format(yesterday.strftime(dateFormat), today.strftime(dateFormat)))
+# result = scur.fetchall()
+# presku = product_count(result)
+#
+# sheet = wb.add_sheet('预上架量')
+# sheet_head(sheet, 0)
+# write_sheet1(presku, sheet, 0)
 
 print('总库存。。。', time.time()-stime)
 storeSql = '''
@@ -273,6 +273,7 @@ SELECT pm.`model_name`,sw.`key_props` FROM panda.`stg_warehouse` sw
 LEFT JOIN panda.`pdi_model` pm
 ON pm.`model_id` = sw.`model_id`
 WHERE sw.`warehouse_status`=1
+and sw.warehouse_num in (1,2,4,5,7)
 {}
 '''
 scur.execute(storeSql.format(''))
@@ -291,13 +292,13 @@ sheet = wb.add_sheet('上架库')
 sheet_head(sheet, 0)
 write_sheet1(storagesku, sheet, 0)
 
-print('预上架库', time.time()-stime)
-scur.execute(storeSql.format(condition.format(8)))
-result = scur.fetchall()
-storagesku = product_count(result)
-sheet = wb.add_sheet('预上架库')
-sheet_head(sheet, 0)
-write_sheet1(storagesku, sheet, 0)
+# print('预上架库', time.time()-stime)
+# scur.execute(storeSql.format(condition.format(8)))
+# result = scur.fetchall()
+# storagesku = product_count(result)
+# sheet = wb.add_sheet('预上架库')
+# sheet_head(sheet, 0)
+# write_sheet1(storagesku, sheet, 0)
 
 print('B端库...', time.time()-stime)
 scur.execute(storeSql.format(condition.format(7)))
@@ -324,13 +325,13 @@ sheet = wb.add_sheet('上架大于15天')
 sheet_head(sheet, 0)
 write_sheet1(roundsku, sheet, 0)
 
-print('预上架库15天。。。', time.time()-stime)
-scur.execute(roundSql.format(8))
-result = scur.fetchall()
-roundsku = product_count(result)
-sheet = wb.add_sheet('预上架大于15天')
-sheet_head(sheet, 0)
-write_sheet1(roundsku, sheet, 0)
+# print('预上架库15天。。。', time.time()-stime)
+# scur.execute(roundSql.format(8))
+# result = scur.fetchall()
+# roundsku = product_count(result)
+# sheet = wb.add_sheet('预上架大于15天')
+# sheet_head(sheet, 0)
+# write_sheet1(roundsku, sheet, 0)
 
 print('B端库15天。。。', time.time()-stime)
 scur.execute(roundSql.format(7))
