@@ -33,7 +33,7 @@ LEFT JOIN panda.`pdi_model` pm
 ON pp.`model_id`= pm.`model_id`
 WHERE oo.`order_status` IN (1,2,4,5)
 AND oo.`order_type` IN (1,2)
-AND oo.`pay_at` > '2017-5-1'
+AND oo.`pay_at` > '2017-11-1'
 '''
 src_cur.execute(sale_sql)
 result = src_cur.fetchall()
@@ -42,7 +42,7 @@ sheet = workbook.add_sheet('sheet')
 config.sheet_head(sheet, 0)
 config.write_sheet1(product_dict, sheet, 0)
 
-workbook.save('预备.xls')
+workbook.save(config.path + config.today.strptime(config.date_format) + '预备.xls')
 src_cur.close()
 src_con.close()
 print('over...', time.time()-start_time)
