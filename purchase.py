@@ -50,6 +50,7 @@ SELECT pp.key_props FROM panda.`stg_warehouse` sw
 LEFT JOIN panda.`pdi_product` pp
 ON sw.`product_id` = pp.product_id
 WHERE sw.`warehouse_status` = 1
+and pp.status != 3
 AND sw.`warehouse_num` IN (1,2,4,7)
 '''
 
