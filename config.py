@@ -41,7 +41,7 @@ def properties_dict(db_cursor, sql, prop_id):
     return dic
 
 
-def product_count(sql_results, version_dict, memory_dict, color_dict, rate_dict):
+def product_count(sql_results, version_dict, memory_dict, color_dict):
     product_list = []
     for sr in sql_results:
         if sr[0] is not None:
@@ -64,6 +64,23 @@ def product_count(sql_results, version_dict, memory_dict, color_dict, rate_dict)
         else:
             product_dict[name] = 1
     return product_dict
+
+
+def write_sheet1(count_dict, sheety, idx):
+    for n, obj in enumerate(count_dict):
+        objv, objm, objc = obj.split(':')
+        sheety.write(n+1, idx, objv)
+        sheety.write(n+1, idx+1, objm)
+        sheety.write(n+1, idx+2, objc)
+        sheety.write(n+1, idx+3, count_dict[obj])
+
+
+def sheet_head(sheety, idx):
+    sheety.write(0, idx, '型号')
+    sheety.write(0, idx+1, '内存')
+    sheety.write(0, idx+2, '颜色')
+    sheety.write(0, idx+3, '总库存')
+
 
 version_memory_dict = {4: {21, 23, 24}, 5: {21, 22, 23}, 14: {21, 22, 23, 24}, 15: {21, 22, 23, 24}, 16: {21, 23, 24},
                        114: {21, 22, 23, 24}, 127: {22, 24, 128}, 129: {22, 24, 128}, 525: {23, 128}, 544: {23, 128},
