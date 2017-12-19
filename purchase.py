@@ -62,13 +62,17 @@ sheet.write(0, 1, '内存')
 sheet.write(0, 2, '颜色')
 sheet.write(0, 3, '售卖')
 sheet.write(0, 4, '库存')
-
-for i, p in enumerate(sale_dict):
+product_set = set()
+for p in sale_dict:
+    product_set.add(p)
+for p in store_dict:
+    product_set.add(p)
+for i, p in enumerate(product_set):
     pv, pm, pc = p.split(':')
     sheet.write(i+1, 0, pv)
     sheet.write(i+1, 1, pm)
     sheet.write(i+1, 2, pc)
-    sheet.write(i+1, 3, sale_dict[p])
+    sheet.write(i+1, 3, sale_dict[p] if p in sale_dict else 0)
     sheet.write(i+1, 4, store_dict[p] if p in store_dict else 0)
 
 workbook.save(config.path + config.today.strftime(config.date_format) + 'yubei.xls')
