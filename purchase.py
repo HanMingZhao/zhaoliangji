@@ -45,7 +45,7 @@ sheet = workbook.add_sheet('sheet')
 # and sw.warehouse_num in (1,2,4,7)
 # '''
 store_sql = '''
-SELECT pp.key_props FROM panda.`stg_warehouse` sw
+SELECT sw.key_props FROM panda.`stg_warehouse` sw
 LEFT JOIN panda.`pdi_product` pp
 ON sw.`product_id` = pp.product_id
 WHERE sw.`warehouse_status` = 1
