@@ -40,13 +40,21 @@ result = src_cur.fetchall()
 sale_dict = config.product_count(result, version_dict, memory_dict, color_dict)
 sheet = workbook.add_sheet('sheet')
 
+# store_sql = '''
+# SELECT sw.`key_props` FROM panda.`stg_warehouse` sw
+# LEFT JOIN panda.`pdi_model` pm
+# ON pm.`model_id` = sw.`model_id`
+# WHERE sw.`warehouse_status`=1
+# and sw.warehouse_num in (1,2,4,7)
+# '''
 store_sql = '''
-SELECT sw.`key_props` FROM panda.`stg_warehouse` sw
-LEFT JOIN panda.`pdi_model` pm
-ON pm.`model_id` = sw.`model_id`
-WHERE sw.`warehouse_status`=1
-and sw.warehouse_num in (1,2,4,7)
+SELECT pp.key_props FROM panda.`stg_warehouse` sw
+LEFT JOIN panda.`pdi_product` pp
+ON sw.`product_id` = pp.product_id
+WHERE sw.`warehouse_status` = 1
+AND sw.`warehouse_num` IN (1,2,4,7)
 '''
+
 src_cur.execute(store_sql)
 result = src_cur.fetchall()
 store_dict = config.product_count(result, version_dict, memory_dict, color_dict)
