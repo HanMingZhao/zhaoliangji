@@ -42,7 +42,7 @@ sheet = workbook.add_sheet('sheet')
 config.sheet_head(sheet, 0)
 config.write_sheet1(product_dict, sheet, 0)
 
-workbook.save(config.path + config.today.strptime(config.date_format) + '预备.xls')
+workbook.save(config.path + config.today.strftime(config.date_format) + '预备.xls')
 src_cur.close()
 src_con.close()
 print('over...', time.time()-start_time)
