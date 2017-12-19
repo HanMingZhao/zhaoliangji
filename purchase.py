@@ -64,7 +64,7 @@ for i, p in enumerate(sale_dict):
     sheet.write(i+1, 3, sale_dict[p])
     sheet.write(i+1, 4, store_dict[p] if p in store_dict else 0)
 
-workbook.save(config.path + config.today.strftime(config.date_format) + '预备.xls')
+workbook.save(config.path + config.today.strftime(config.date_format) + 'yubei.xls')
 src_cur.close()
 src_con.close()
 print('over...', time.time()-start_time)
