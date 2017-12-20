@@ -118,6 +118,7 @@ year = today.year
 if today.day == 1:
     month -= 1
 first = datetime.datetime.strptime(str(year)+'-'+str(month)+'-'+str(1), dateFormat)
+lastweek = today-datetime.timedelta(8)
 
 print('日销量...', time.time()-stime)
 sheet = wb.add_sheet('销售总计')
@@ -217,6 +218,13 @@ scur.execute(modelSaleSql.format(yesterday.strftime(dateFormat), today.strftime(
 result = scur.fetchall()
 dayCount = product_count(result)
 write_sheet1(dayCount, sheet, 0)
+
+sheet = wb.add_sheet('7日销售')
+sheet_head(sheet, 0)
+scur.execute(modelSaleSql.format(lastweek.strftime(dateFormat), today.strftime(dateFormat)))
+result = scur.fetchall()
+weekCount = product_count(result)
+write_sheet1(weekCount, sheet, 0)
 
 sheet = wb.add_sheet('月销')
 sheet_head(sheet, 0)
