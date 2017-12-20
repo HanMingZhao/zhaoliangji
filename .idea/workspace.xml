@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4a99546f-643b-4833-b464-5e20828d8662" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/supplier.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -154,12 +153,12 @@
       <file leaf-file-name="supplier.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/supplier.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="318">
-              <caret line="44" column="0" lean-forward="true" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+            <state relative-caret-position="368">
+              <caret line="54" column="0" lean-forward="true" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
-                <marker date="1513760460252" expanded="true" signature="289:514" ph="SELECT ps.`n... pdi_product_cost" />
-                <marker date="1513760460252" expanded="true" signature="641:895" ph="SELECT ps.na... pdi_suppiler_track" />
+                <marker date="1513760644200" expanded="true" signature="289:514" ph="SELECT ps.`n... pdi_product_cost" />
+                <marker date="1513760644200" expanded="true" signature="683:937" ph="SELECT ps.na... pdi_suppiler_track" />
               </folding>
             </state>
           </provider>
@@ -871,12 +870,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/supplier.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="44" column="0" lean-forward="true" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+        <state relative-caret-position="368">
+          <caret line="54" column="0" lean-forward="true" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
-            <marker date="1513760460252" expanded="true" signature="289:514" ph="SELECT ps.`n... pdi_product_cost" />
-            <marker date="1513760460252" expanded="true" signature="641:895" ph="SELECT ps.na... pdi_suppiler_track" />
+            <marker date="1513760644200" expanded="true" signature="289:514" ph="SELECT ps.`n... pdi_product_cost" />
+            <marker date="1513760644200" expanded="true" signature="683:937" ph="SELECT ps.na... pdi_suppiler_track" />
           </folding>
         </state>
       </provider>

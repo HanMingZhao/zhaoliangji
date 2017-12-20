@@ -43,7 +43,7 @@ for r in result:
 sheet = workbook.add_sheet('sheet')
 sheet.write(0, 0, '供应商')
 sheet.write(0, 1, '进货')
-sheet.write(0, 0, '退货')
+sheet.write(0, 2, '退货')
 for i, s in enumerate(suppliers):
     sheet.write(i+1, 0, s)
     sheet.write(i+1, 1, in_dict[s] if s in in_dict else 0)
