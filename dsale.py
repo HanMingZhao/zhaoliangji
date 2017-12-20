@@ -33,8 +33,8 @@ ON oo.`user_id`=aui.`user_id`
 LEFT JOIN panda.`pdi_product` pp
 ON oo.`product_id` = pp.product_id
 WHERE oo.`order_status` IN (1,2,4,5)
-AND oo.`create_at`>'{}'
-AND oo.`create_at`<'{}'
+AND oo.`pay_at`>'{}'
+AND oo.`pay_at`<'{}'
 AND oo.order_type in (1,2)
 ) ooo 
 LEFT JOIN panda.`pdi_model` pm
