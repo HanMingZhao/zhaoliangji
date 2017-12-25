@@ -28,7 +28,8 @@ def product_count(result, vd, md, cd, ed, rd):
                     p.memory = md[f[1]]
                 if f[0] == '12':
                     p.rate = rd[f[1]]
-            product_list.append(p)
+            if hasattr(p, 'rate'):
+                product_list.append(p)
     product_dict = collections.OrderedDict()
     for prod in product_list:
         name = prod.version + ':' + prod.memory + ':' + prod.color + ':' + prod.edition + ':' + prod.rate
