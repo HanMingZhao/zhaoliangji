@@ -7,7 +7,7 @@
 # cf = conf.test
 # # option = cf.product
 # src_con = db.connect(host=cf['host'], user=cf['user'], passwd=cf['pass'], port=cf['port'], db=cf['db'],
-#                      charset=conf.charset)
+#                      char=conf.char)
 # src_cur = src_con.cursor()
 #
 # wb = xlwt.Workbook()

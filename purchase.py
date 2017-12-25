@@ -11,7 +11,7 @@ class Product:
         self.props = props
 cf = config.product
 src_con = pymysql.connect(host=cf['host'], user=cf['user'], passwd=cf['pass'], port=cf['port'], db=cf['db'],
-                          charset=config.charset)
+                          charset=config.char)
 src_cur = src_con.cursor()
 
 workbook = xlwt.Workbook()

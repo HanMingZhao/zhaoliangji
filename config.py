@@ -18,7 +18,7 @@ target = 5500
 
 path = '/var/www/python/'
 
-charset = 'utf8'
+char = 'utf8'
 
 date_format = '%Y-%m-%d'
 

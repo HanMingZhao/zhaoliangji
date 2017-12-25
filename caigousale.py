@@ -7,11 +7,11 @@ import config as conf
 warehousenums = {3: '市场', 12: '待卖'}
 cf = conf.product
 src_con = db.connect(host=cf['host'], user=cf['user'], passwd=cf['pass'], port=cf['port'], db=cf['db'],
-                     charset=conf.charset)
+                     charset=conf.char)
 src_cur = src_con.cursor()
 cf = conf.test
 dst_con = db.connect(host=cf['host'], user=cf['user'], passwd=cf['pass'], port=cf['port'], db=cf['db'],
-                     charset=conf.charset)
+                     charset=conf.char)
 dst_cur = dst_con.cursor()
 start_time = time.time()
 wb = xlwt.Workbook()
