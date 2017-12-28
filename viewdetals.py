@@ -36,7 +36,7 @@ for i, res in enumerate(result):
     sheet.write(i+1, 2, r[1])
     try:
         sheet.write(i+1, 3, r.get(prefix+str(r[0])))
-    finally:
+    except:
         sheet.write(i+1, 3, 0)
 print('2017sqlscan...', time.time()-start)
 cur.execute(product_sql.format('2017-1-1', '2018-1-1'))
@@ -53,7 +53,7 @@ for i, res in enumerate(result):
     sheet.write(i+1, 2, r[1])
     try:
         sheet.write(i+1, 3, r.get(prefix+str(r[0])))
-    finally:
+    except:
         sheet.write(i+1, 3, 0)
 
 workbook.save('view.xls')
