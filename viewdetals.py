@@ -19,6 +19,7 @@ left join panda.pdi_product pp
 on oo.product_id = pp.product_id
 WHERE oo.order_status IN (1,2,4,5)
 AND oo.order_type IN (1,2)
+and oo.product_id not in (84,0)
 AND oo.pay_at > '{}'
 AND oo.pay_at < '{}'
 '''
