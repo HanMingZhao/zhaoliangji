@@ -14,7 +14,7 @@ workbook = xlwt.Workbook()
 prefix = 'count_product_detail_key:'
 print('2016sqlscan...', time.time()-start)
 product_sql = '''
-SELECT oo.product_id,pp.product_name,date(oo.pay_at) FROM panda.`odi_order` oo
+SELECT DISTINCT(oo.product_id),pp.product_name,date(oo.pay_at) FROM panda.`odi_order` oo
 left join panda.pdi_product pp 
 on oo.product_id = pp.product_id
 WHERE oo.order_status IN (1,2,4,5)
@@ -34,7 +34,7 @@ for i, res in enumerate(result):
     sheet.write(i+1, 0, str(res[2]))
     sheet.write(i+1, 1, res[0])
     sheet.write(i+1, 2, res[1])
-    sheet.write(i+1, 3, str(r.get(prefix+str(res[0])), encoding='utf-8') if r.exists(prefix+str(res[0])) else 0)
+    sheet.write(i+1, 3, int(r.get(prefix+str(res[0])), encoding='utf-8') if r.exists(prefix+str(res[0])) else 0)
 
 print('2017sqlscan...', time.time()-start)
 cur.execute(product_sql.format('2017-1-1', '2018-1-1'))
@@ -49,7 +49,7 @@ for i, res in enumerate(result):
     sheet.write(i+1, 0, str(res[2]))
     sheet.write(i+1, 1, res[0])
     sheet.write(i+1, 2, res[1])
-    sheet.write(i+1, 3, str(r.get(prefix+str(res[0])), encoding='utf-8') if r.exists(prefix+str(res[0])) else 0)
+    sheet.write(i+1, 3, int(r.get(prefix+str(res[0])), encoding='utf-8') if r.exists(prefix+str(res[0])) else 0)
 
 workbook.save('view.xls')
 cur.close()
