@@ -2,19 +2,16 @@ import pymysql as db
 import numpy as np
 import xlwt
 import datetime as dt
-import configparser
+import config
 
 warehouse_nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12]
 
-cf = configparser.ConfigParser()
-cf.read('conf.conf')
-dbhost = cf.get('db', 'host')
-dbuser = cf.get('db', 'user')
-dbport = cf.getint('db', 'port')
-dbpass = cf.get('db', 'pass')
-dbase = cf.get('db', 'db')
-src_con = db.connect(host=dbhost, user=dbuser, passwd=dbpass, db=dbase, charset='utf8')
-dst_con = db.connect(host='114.215.176.190', user='root', passwd='huodao123', db='ods', port=33069, charset='utf8')
+cf = config.product
+cft = config.new_test
+src_con = db.connect(host=cf['host'], user=cf['user'], passwd=cf['pass'], db=cf['db'], port=cf['port'],
+                     charset=config.char)
+dst_con = db.connect(host=cft['host'], user=cft['user'], passwd=cft['pass'], db=cft['db'], port=cft['port'],
+                     charset=config.char)
 
 src_cur = src_con.cursor()
 dst_cur = dst_con.cursor()
@@ -204,7 +201,7 @@ sheet.write(sheetLength, 9, int(result[lastRow][9])/int(result[lastRow][12]))
 sheet.write(sheetLength, 10, int(result[lastRow][10])/int(result[lastRow][12]))
 sheet.write(sheetLength, 11, int(result[lastRow][11])/int(result[lastRow][12]))
 
-path = cf.get('path', 'path')
+path = config.path
 wb.save(path + str(dt.datetime.today().date()) + 'warehouse.xls')
 
 src_cur.close()

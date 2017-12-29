@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4a99546f-643b-4833-b464-5e20828d8662" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.py" afterPath="$PROJECT_DIR$/config.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -49,16 +50,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="viewdetals.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="viewdetals.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/viewdetals.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="93">
-              <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="22" selection-end-column="20" />
+            <state relative-caret-position="25">
+              <caret line="29" column="17" lean-forward="false" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
-                <marker date="1514450960364" expanded="true" signature="509:765" ph="SELECT oo.pr... odi_order" />
-                <marker date="1514450960364" expanded="true" signature="509:766" ph="SELECT DISTI... " />
+                <marker date="1514451720114" expanded="true" signature="509:797" ph="SELECT oo.pr... odi_order" />
+                <marker date="1514451720114" expanded="true" signature="509:798" ph="SELECT DISTI... " />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="wh.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wh.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="50">
+              <caret line="6" column="48" lean-forward="false" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="48" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -83,11 +94,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="config.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="6" column="20" lean-forward="false" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="36" />
+            <state relative-caret-position="468">
+              <caret line="20" column="18" lean-forward="true" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -208,9 +219,9 @@
         <option value="$PROJECT_DIR$/dsale.py" />
         <option value="$PROJECT_DIR$/supplier.py" />
         <option value="$PROJECT_DIR$/purchase.py" />
-        <option value="$PROJECT_DIR$/config.py" />
         <option value="$PROJECT_DIR$/sales.py" />
         <option value="$PROJECT_DIR$/viewdetals.py" />
+        <option value="$PROJECT_DIR$/config.py" />
       </list>
     </option>
   </component>
@@ -640,13 +651,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wh.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="6" column="48" lean-forward="false" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/whsku.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4025">
@@ -799,14 +803,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="6" column="20" lean-forward="false" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sales.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="675">
@@ -861,13 +857,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/viewdetals.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="22" selection-end-column="20" />
+        <state relative-caret-position="25">
+          <caret line="29" column="17" lean-forward="false" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
           <folding>
             <element signature="e#0#12#0" expanded="true" />
-            <marker date="1514450960364" expanded="true" signature="509:765" ph="SELECT oo.pr... odi_order" />
-            <marker date="1514450960364" expanded="true" signature="509:766" ph="SELECT DISTI... " />
+            <marker date="1514451720114" expanded="true" signature="509:797" ph="SELECT oo.pr... odi_order" />
+            <marker date="1514451720114" expanded="true" signature="509:798" ph="SELECT DISTI... " />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wh.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="6" column="48" lean-forward="false" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="20" column="18" lean-forward="true" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+          <folding />
         </state>
       </provider>
     </entry>

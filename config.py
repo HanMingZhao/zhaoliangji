@@ -14,6 +14,12 @@ test = {'host': '114.215.176.190',
         'port': 33069,
         'db': 'panda'}
 
+new_test = {'host': 'rm-bp13wnvyc2dh86ju1o.mysql.rds.aliyuncs.com',
+            'user': 'jaxmysql',
+            'pass': 'wjnuEf0dns6PEAX1',
+            'port': 3306,
+            'db': 'panda'}
+
 target = 5500
 
 path = '/var/www/python/'
