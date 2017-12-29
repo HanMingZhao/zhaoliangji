@@ -185,7 +185,7 @@ result = dst_cur.fetchall()
 for i, r in enumerate(result):
     for j, x in enumerate(r):
         sheet.write(i+1, j, int(x) if j > 0 else x)
-    sheet.write(i+1, len(r), int(r[11])/int(r[12]))
+    sheet.write(i+1, len(r), int(r[11])/int(r[12]) if int(r[12])>0 else 0)
 sheetLength = len(sheet.rows)
 lastRow = len(result) - 1
 sheet.write(sheetLength, 0, '占比')

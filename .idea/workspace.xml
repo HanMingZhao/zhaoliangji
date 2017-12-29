@@ -4,6 +4,7 @@
     <list default="true" id="4a99546f-643b-4833-b464-5e20828d8662" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.py" afterPath="$PROJECT_DIR$/config.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wh.py" afterPath="$PROJECT_DIR$/wh.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -64,12 +65,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="wh.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="wh.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wh.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="50">
-              <caret line="6" column="48" lean-forward="false" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="48" />
-              <folding />
+            <state relative-caret-position="-4738">
+              <caret line="10" column="79" lean-forward="false" selection-start-line="10" selection-start-column="77" selection-end-line="10" selection-end-column="79" />
+              <folding>
+                <element signature="e#0#20#0" expanded="true" />
+                <marker date="1514519548071" expanded="true" signature="584:903" ph="SELECT DISTI... *" />
+                <marker date="1514519548071" expanded="true" signature="622:745" ph="SELECT sw.*,... stg_warehouse" />
+                <marker date="1514519548071" expanded="true" signature="1015:1338" ph="SELECT DISTI... *" />
+                <marker date="1514519548071" expanded="true" signature="1053:1176" ph="SELECT sw.*,... stg_warehouse" />
+                <marker date="1514519548071" expanded="true" signature="1959:2234" ph="SELECT pm.br... stg_warehouse" />
+                <marker date="1514519548071" expanded="true" signature="2399:2669" ph="SELECT pm.mo... stg_warehouse" />
+                <marker date="1514519548071" expanded="true" signature="3699:3741" ph="drop table i... " />
+                <marker date="1514519548071" expanded="true" signature="3743:4053" ph="CREATE TABLE... ods_warehouse_sum" />
+                <marker date="1514519548071" expanded="true" signature="4881:4973" ph="insert into ods.ods_warehouse_sum... " />
+                <marker date="1514519548071" expanded="true" signature="5426:5461" ph="select * fro... ods_warehouse_sum" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -94,11 +107,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="config.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="468">
-              <caret line="20" column="18" lean-forward="true" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+              <caret line="20" column="24" lean-forward="false" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -166,9 +179,9 @@
       <find>today</find>
       <find>db_</find>
       <find>product_count</find>
-      <find>cf</find>
       <find>decimal</find>
       <find>write_she</find>
+      <find>cf</find>
     </findStrings>
     <replaceStrings>
       <replace>storesql</replace>
@@ -210,7 +223,6 @@
         <option value="$PROJECT_DIR$/spu.py" />
         <option value="$PROJECT_DIR$/featuresku.py" />
         <option value="$PROJECT_DIR$/sku.py" />
-        <option value="$PROJECT_DIR$/wh.py" />
         <option value="$PROJECT_DIR$/caigousale.py" />
         <option value="$PROJECT_DIR$/cycle.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
@@ -222,6 +234,7 @@
         <option value="$PROJECT_DIR$/sales.py" />
         <option value="$PROJECT_DIR$/viewdetals.py" />
         <option value="$PROJECT_DIR$/config.py" />
+        <option value="$PROJECT_DIR$/wh.py" />
       </list>
     </option>
   </component>
@@ -433,7 +446,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23933902" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -443,7 +455,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.4978678" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3188248" sideWeight="0.49573562" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38193688" sideWeight="0.46801707" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38193688" sideWeight="0.46801707" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39934713" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -867,19 +879,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wh.py">
+    <entry file="file://$PROJECT_DIR$/config.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="6" column="48" lean-forward="false" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="48" />
+        <state relative-caret-position="468">
+          <caret line="20" column="24" lean-forward="false" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config.py">
+    <entry file="file://$PROJECT_DIR$/wh.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="20" column="18" lean-forward="true" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
-          <folding />
+        <state relative-caret-position="-4738">
+          <caret line="10" column="79" lean-forward="false" selection-start-line="10" selection-start-column="77" selection-end-line="10" selection-end-column="79" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+            <marker date="1514519548071" expanded="true" signature="584:903" ph="SELECT DISTI... *" />
+            <marker date="1514519548071" expanded="true" signature="622:745" ph="SELECT sw.*,... stg_warehouse" />
+            <marker date="1514519548071" expanded="true" signature="1015:1338" ph="SELECT DISTI... *" />
+            <marker date="1514519548071" expanded="true" signature="1053:1176" ph="SELECT sw.*,... stg_warehouse" />
+            <marker date="1514519548071" expanded="true" signature="1959:2234" ph="SELECT pm.br... stg_warehouse" />
+            <marker date="1514519548071" expanded="true" signature="2399:2669" ph="SELECT pm.mo... stg_warehouse" />
+            <marker date="1514519548071" expanded="true" signature="3699:3741" ph="drop table i... " />
+            <marker date="1514519548071" expanded="true" signature="3743:4053" ph="CREATE TABLE... ods_warehouse_sum" />
+            <marker date="1514519548071" expanded="true" signature="4881:4973" ph="insert into ods.ods_warehouse_sum... " />
+            <marker date="1514519548071" expanded="true" signature="5426:5461" ph="select * fro... ods_warehouse_sum" />
+          </folding>
         </state>
       </provider>
     </entry>
