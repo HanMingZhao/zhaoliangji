@@ -15,8 +15,8 @@ def product_count(sql_results, version_dict, memory_dict, color_dict, rate_dict)
     for sr in sql_results:
         if sr[0] is not None:
             p = Product(sr[0])
+            print(sr[0])
             properties = p.props.split(';')
-            print(properties)
             for f in properties:
                 feature = f.split(':')
                 if feature[0] == '5':
