@@ -28,7 +28,7 @@ def product_count(sql_results, version_dict, memory_dict, color_dict, rate_dict)
                     if feature[0] == '12':
                         p.rate = rate_dict[feature[1]]
                 except:
-                    print(feature)
+                    continue
             product_list.append(p)
     product_dict = collections.OrderedDict()
     for prod in product_list:
