@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4a99546f-643b-4833-b464-5e20828d8662" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weekppt.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -89,15 +88,15 @@
       <file leaf-file-name="weekppt.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/weekppt.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1043">
-              <caret line="110" column="6" lean-forward="false" selection-start-line="110" selection-start-column="0" selection-end-line="110" selection-end-column="6" />
+            <state relative-caret-position="468">
+              <caret line="30" column="35" lean-forward="false" selection-start-line="30" selection-start-column="35" selection-end-line="30" selection-end-column="35" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
-                <marker date="1514893772964" expanded="true" signature="1429:1508" ph="SELECT ppv.p... pdi_prop_value" />
-                <marker date="1514893772964" expanded="true" signature="1717:1937" ph="SELECT pp.`k... pdi_product_track" />
-                <marker date="1514893772964" expanded="true" signature="2441:2680" ph="SELECT pp.ke... odi_order" />
-                <marker date="1514893772964" expanded="true" signature="3155:3301" ph="SELECT bai.p... boss_api_info" />
-                <marker date="1514893772964" expanded="true" signature="3155:3302" ph="SELECT bai.c... boss_api_info" />
+                <marker date="1514894006960" expanded="true" signature="1544:1623" ph="SELECT ppv.p... pdi_prop_value" />
+                <marker date="1514894006960" expanded="true" signature="1832:2052" ph="SELECT pp.`k... pdi_product_track" />
+                <marker date="1514894006960" expanded="true" signature="2556:2795" ph="SELECT pp.ke... odi_order" />
+                <marker date="1514894006960" expanded="true" signature="3270:3416" ph="SELECT bai.p... boss_api_info" />
+                <marker date="1514894006960" expanded="true" signature="3270:3417" ph="SELECT bai.c... boss_api_info" />
               </folding>
             </state>
           </provider>
@@ -957,15 +956,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/weekppt.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1043">
-          <caret line="110" column="6" lean-forward="false" selection-start-line="110" selection-start-column="0" selection-end-line="110" selection-end-column="6" />
+        <state relative-caret-position="468">
+          <caret line="30" column="35" lean-forward="false" selection-start-line="30" selection-start-column="35" selection-end-line="30" selection-end-column="35" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
-            <marker date="1514893772964" expanded="true" signature="1429:1508" ph="SELECT ppv.p... pdi_prop_value" />
-            <marker date="1514893772964" expanded="true" signature="1717:1937" ph="SELECT pp.`k... pdi_product_track" />
-            <marker date="1514893772964" expanded="true" signature="2441:2680" ph="SELECT pp.ke... odi_order" />
-            <marker date="1514893772964" expanded="true" signature="3155:3301" ph="SELECT bai.p... boss_api_info" />
-            <marker date="1514893772964" expanded="true" signature="3155:3302" ph="SELECT bai.c... boss_api_info" />
+            <marker date="1514894006960" expanded="true" signature="1544:1623" ph="SELECT ppv.p... pdi_prop_value" />
+            <marker date="1514894006960" expanded="true" signature="1832:2052" ph="SELECT pp.`k... pdi_product_track" />
+            <marker date="1514894006960" expanded="true" signature="2556:2795" ph="SELECT pp.ke... odi_order" />
+            <marker date="1514894006960" expanded="true" signature="3270:3416" ph="SELECT bai.p... boss_api_info" />
+            <marker date="1514894006960" expanded="true" signature="3270:3417" ph="SELECT bai.c... boss_api_info" />
           </folding>
         </state>
       </provider>
