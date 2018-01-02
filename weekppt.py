@@ -91,7 +91,7 @@ AND oo.`pay_at` < '2018-1-1'
 cur.execute(sales_sql)
 result = cur.fetchall()
 sale_dict = product_count(sales_sql, vd, md, cd, rd)
-sheet.write('销量')
+sheet = wb.add_sheet('销量')
 sheet.write(0, 0, '型号')
 sheet.write(0, 1, '内存')
 sheet.write(0, 2, '颜色')
