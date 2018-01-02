@@ -18,14 +18,17 @@ def product_count(sql_results, version_dict, memory_dict, color_dict, rate_dict)
             properties = p.props.split(';')
             for f in properties:
                 feature = f.split(':')
-                if feature[0] == '5':
-                    p.version = version_dict[feature[1]]
-                if feature[0] == '10':
-                    p.color = color_dict[feature[1]]
-                if feature[0] == '11':
-                    p.memory = memory_dict[feature[1]]
-                if feature[0] == '12':
-                    p.rate = rate_dict[feature[1]]
+                try:
+                    if feature[0] == '5':
+                        p.version = version_dict[feature[1]]
+                    if feature[0] == '10':
+                        p.color = color_dict[feature[1]]
+                    if feature[0] == '11':
+                        p.memory = memory_dict[feature[1]]
+                    if feature[0] == '12':
+                        p.rate = rate_dict[feature[1]]
+                except:
+                    print(feature[1])
             product_list.append(p)
     product_dict = collections.OrderedDict()
     for prod in product_list:
