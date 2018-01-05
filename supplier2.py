@@ -5,7 +5,7 @@ import xlwt
 
 def supplier_sum(db_cursor, workbook, sheet_name, start, end):
     in_sql = '''
-    SELECT ps.`name`,COUNT(1) FROM panda.`pdi_product_cost` ppc
+    SELECT ppc.supplier,ps.`name`,COUNT(1) FROM panda.`pdi_product_cost` ppc
     LEFT JOIN PANDA.`pdi_suppiler` ps
     ON ppc.`supplier` = ps.`suppiler_id`
     WHERE ppc.`created_at` >'{}'
@@ -15,11 +15,13 @@ def supplier_sum(db_cursor, workbook, sheet_name, start, end):
     db_cursor.execute(in_sql.format(start, end))
     result = cursor.fetchall()
     sheet = workbook.add_sheet(sheet_name)
-    sheet.write(0, 0, '供应商')
-    sheet.write(0, 1, '供货数量')
+    sheet.write(0, 0, '供应商Id')
+    sheet.write(0, 1, '供应商Id')
+    sheet.write(0, 2, '供货数量')
     for i, r in enumerate(result):
         sheet.write(i+1, 0, r[0])
         sheet.write(i+1, 1, r[1])
+        sheet.write(i+1, 2, r[2])
 
 cf = conf.product
 connect = db.connect(host=cf['host'], user=cf['user'], passwd=cf['pass'], port=cf['port'], charset=conf.char)
