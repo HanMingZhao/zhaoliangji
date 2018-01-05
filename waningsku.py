@@ -23,17 +23,20 @@ def product_count(sql_results, version_dict, memory_dict, color_dict):
     return product_dict
 
 
-def sales_sku(cursor, workbook, start, end, sheet):
+def sales_sku(cursor, workbook, start, end, condition, sheet):
     sale_sql = '''
     select pp.key_props from panda.odi_order oo
     left join panda.pdi_product pp 
     on oo.product_id = pp.product_id
+    left join panda.pdi_model pm
+    on pp.model_id = pm.model_id
     where oo.order_status in (1,2,4,5)
     and oo.order_type in (1,2)
     and oo.pay_at < '{}'
     and oo.pay_at > '{}'
+    and {}
     '''
-    count = cursor.execute(sale_sql.format(end, start))
+    count = cursor.execute(sale_sql.format(end, start, condition))
     sales_result = cursor.fetchall()
     sales_dict = conf.product_count(sales_result, vd, md, cd)
 
@@ -74,7 +77,11 @@ md = conf.properties_dict(cur, propsql, 11)
 cd = conf.properties_dict(cur, propsql, 10)
 
 rolling_date = conf.today - datetime.timedelta(15)
-sales_sku(cur, wb, rolling_date.strftime(conf.date_format), conf.today.strftime(conf.date_format), 'last15days')
+start_str = rolling_date.strftime(conf.date_format)
+end_str = conf.today.strftime(conf.date_format)
+sales_sku(cur, wb, start_str, end_str, 'pm.model_name like \'%iphone%\'', 'iphone')
+sales_sku(cur, wb, start_str, end_str, 'pm.pcid=2', 'ipad')
+sales_sku(cur, wb, start_str, end_str, 'pm.pcid=1 and pm.model_name not like \'%iphone%\'', 'android')
 
 wb.save('last15days.xls')
 cur.close()
