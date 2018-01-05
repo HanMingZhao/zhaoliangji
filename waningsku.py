@@ -81,7 +81,7 @@ rolling_date = conf.today - datetime.timedelta(15)
 start_str = rolling_date.strftime(conf.date_format)
 end_str = conf.today.strftime(conf.date_format)
 sales_sku(cur, wb, start_str, end_str, 'pm.model_name like \'%iphone%\'', 'sws.sku_name like \'%iphone%\'', 'iphone')
-sales_sku(cur, wb, start_str, end_str, 'pm.pcid=2', 'sws.sku_name like \'%ipad%\'''ipad')
+sales_sku(cur, wb, start_str, end_str, 'pm.pcid=2', 'sws.sku_name like \'%ipad%\'', 'ipad')
 sales_sku(cur, wb, start_str, end_str, 'pm.pcid=1 and pm.model_name not like \'%iphone%\'',
           'sws.sku_name not like \'%iphone%\' and sws.sku_name not like \'%ipad%\'', 'android')
 

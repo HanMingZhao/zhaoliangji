@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4a99546f-643b-4833-b464-5e20828d8662" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/waningsku.py" afterPath="$PROJECT_DIR$/waningsku.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -162,16 +163,16 @@
       <file leaf-file-name="waningsku.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/waningsku.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="444">
-              <caret line="85" column="79" lean-forward="false" selection-start-line="85" selection-start-column="79" selection-end-line="85" selection-end-column="79" />
+            <state relative-caret-position="293">
+              <caret line="46" column="47" lean-forward="false" selection-start-line="46" selection-start-column="47" selection-end-line="46" selection-end-column="47" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
-                <marker date="1515126586958" expanded="true" signature="889:1191" ph="select pp.ke... odi_order" />
-                <marker date="1515126586958" expanded="true" signature="889:1200" ph="select pp.ke... odi_order" />
-                <marker date="1515126586958" expanded="true" signature="889:1202" ph="select pp.ke... odi_order" />
-                <marker date="1515126586958" expanded="true" signature="1400:1462" ph="select sws.k... stg_warning_sku" />
-                <marker date="1515126586958" expanded="true" signature="1400:1475" ph="select sws.k... stg_warning_sku" />
-                <marker date="1515126586958" expanded="true" signature="2364:2443" ph="SELECT ppv.p... pdi_prop_value" />
+                <marker date="1515126652712" expanded="true" signature="889:1191" ph="select pp.ke... odi_order" />
+                <marker date="1515126652712" expanded="true" signature="889:1200" ph="select pp.ke... odi_order" />
+                <marker date="1515126652712" expanded="true" signature="889:1202" ph="select pp.ke... odi_order" />
+                <marker date="1515126652712" expanded="true" signature="1405:1467" ph="select sws.k... stg_warning_sku" />
+                <marker date="1515126652712" expanded="true" signature="1405:1480" ph="select sws.k... stg_warning_sku" />
+                <marker date="1515126652712" expanded="true" signature="2391:2470" ph="SELECT ppv.p... pdi_prop_value" />
               </folding>
             </state>
           </provider>
@@ -1112,16 +1113,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/waningsku.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="444">
-          <caret line="85" column="79" lean-forward="false" selection-start-line="85" selection-start-column="79" selection-end-line="85" selection-end-column="79" />
+        <state relative-caret-position="293">
+          <caret line="46" column="47" lean-forward="false" selection-start-line="46" selection-start-column="47" selection-end-line="46" selection-end-column="47" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
-            <marker date="1515126586958" expanded="true" signature="889:1191" ph="select pp.ke... odi_order" />
-            <marker date="1515126586958" expanded="true" signature="889:1200" ph="select pp.ke... odi_order" />
-            <marker date="1515126586958" expanded="true" signature="889:1202" ph="select pp.ke... odi_order" />
-            <marker date="1515126586958" expanded="true" signature="1400:1462" ph="select sws.k... stg_warning_sku" />
-            <marker date="1515126586958" expanded="true" signature="1400:1475" ph="select sws.k... stg_warning_sku" />
-            <marker date="1515126586958" expanded="true" signature="2364:2443" ph="SELECT ppv.p... pdi_prop_value" />
+            <marker date="1515126652712" expanded="true" signature="889:1191" ph="select pp.ke... odi_order" />
+            <marker date="1515126652712" expanded="true" signature="889:1200" ph="select pp.ke... odi_order" />
+            <marker date="1515126652712" expanded="true" signature="889:1202" ph="select pp.ke... odi_order" />
+            <marker date="1515126652712" expanded="true" signature="1405:1467" ph="select sws.k... stg_warning_sku" />
+            <marker date="1515126652712" expanded="true" signature="1405:1480" ph="select sws.k... stg_warning_sku" />
+            <marker date="1515126652712" expanded="true" signature="2391:2470" ph="SELECT ppv.p... pdi_prop_value" />
           </folding>
         </state>
       </provider>
