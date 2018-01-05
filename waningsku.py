@@ -1,5 +1,6 @@
 import pymysql as db
 import config as conf
+import datetime
 import xlwt
 
 
@@ -59,7 +60,7 @@ def sales_sku(cursor, workbook, start, end, sheet):
         sheet.write(i + 1, 4, sales_dict[s] if s in sales_dict else 0)
         sheet.write(i + 1, 5, sales_dict[s] / count if s in sales_dict else 0)
 
-cf = conf.new_test
+cf = conf.product
 connect = db.connect(host=cf['host'], user=cf['user'], passwd=cf['pass'], port=cf['port'], charset=conf.char)
 cur = connect.cursor()
 wb = xlwt.Workbook()
@@ -72,20 +73,9 @@ vd = conf.properties_dict(cur, propsql, 5)
 md = conf.properties_dict(cur, propsql, 11)
 cd = conf.properties_dict(cur, propsql, 10)
 
-sales_sku(cur, wb, '2017-1-1', '2017-2-1', '1')
-sales_sku(cur, wb, '2017-2-1', '2017-3-1', '2')
-sales_sku(cur, wb, '2017-3-1', '2017-4-1', '3')
-sales_sku(cur, wb, '2017-4-1', '2017-5-1', '4')
-sales_sku(cur, wb, '2017-5-1', '2017-6-1', '5')
-sales_sku(cur, wb, '2017-6-1', '2017-7-1', '6')
-sales_sku(cur, wb, '2017-7-1', '2017-8-1', '7')
-sales_sku(cur, wb, '2017-8-1', '2017-9-1', '8')
-sales_sku(cur, wb, '2017-9-1', '2017-10-1', '9')
-sales_sku(cur, wb, '2017-10-1', '2017-11-1', '10')
-sales_sku(cur, wb, '2017-11-1', '2017-12-1', '11')
-sales_sku(cur, wb, '2017-12-1', '2018-1-1', '12')
+rolling_date = conf.today - datetime.timedelta(15)
+sales_sku(cur, wb, rolling_date.strftime(conf.date_format), conf.today.strftime(conf.date_format), 'last15days')
 
-
-wb.save('2017salesku.xls')
+wb.save('last15days.xls')
 cur.close()
 connect.close()
