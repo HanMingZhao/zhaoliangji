@@ -36,7 +36,7 @@ def sales_sku(cursor, workbook, start, end, sale_condition, sku_condition, sheet
     and oo.pay_at > '{}'
     and {}
     '''
-    count = cursor.execute(sale_sql.format(end, start, condition))
+    count = cursor.execute(sale_sql.format(end, start, sale_condition))
     sales_result = cursor.fetchall()
     sales_dict = conf.product_count(sales_result, vd, md, cd)
 
@@ -44,7 +44,7 @@ def sales_sku(cursor, workbook, start, end, sale_condition, sku_condition, sheet
     select sws.key_props,sws.sku_id from panda.stg_warning_sku sws
     where {}
     '''
-    cursor.execute(sku_sql)
+    cursor.execute(sku_sql.format(sku_condition))
     sku_result = cursor.fetchall()
     sku_dict = product_count(sku_result, vd, md, cd)
 

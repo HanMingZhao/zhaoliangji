@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="4a99546f-643b-4833-b464-5e20828d8662" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/waningsku.py" afterPath="$PROJECT_DIR$/waningsku.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -163,16 +162,16 @@
       <file leaf-file-name="waningsku.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/waningsku.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
-              <caret line="44" column="14" lean-forward="false" selection-start-line="44" selection-start-column="14" selection-end-line="44" selection-end-column="14" />
+            <state relative-caret-position="444">
+              <caret line="85" column="79" lean-forward="false" selection-start-line="85" selection-start-column="79" selection-end-line="85" selection-end-column="79" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
-                <marker date="1515126446034" expanded="true" signature="869:1171" ph="select pp.ke... odi_order" />
-                <marker date="1515126446034" expanded="true" signature="869:1180" ph="select pp.ke... odi_order" />
-                <marker date="1515126446034" expanded="true" signature="869:1182" ph="select pp.ke... odi_order" />
-                <marker date="1515126446034" expanded="true" signature="1380:1442" ph="select sws.k... stg_warning_sku" />
-                <marker date="1515126446034" expanded="true" signature="1380:1457" ph="select sws.k... stg_warning_sku" />
-                <marker date="1515126446034" expanded="true" signature="2346:2425" ph="SELECT ppv.p... pdi_prop_value" />
+                <marker date="1515126586958" expanded="true" signature="889:1191" ph="select pp.ke... odi_order" />
+                <marker date="1515126586958" expanded="true" signature="889:1200" ph="select pp.ke... odi_order" />
+                <marker date="1515126586958" expanded="true" signature="889:1202" ph="select pp.ke... odi_order" />
+                <marker date="1515126586958" expanded="true" signature="1400:1462" ph="select sws.k... stg_warning_sku" />
+                <marker date="1515126586958" expanded="true" signature="1400:1475" ph="select sws.k... stg_warning_sku" />
+                <marker date="1515126586958" expanded="true" signature="2364:2443" ph="SELECT ppv.p... pdi_prop_value" />
               </folding>
             </state>
           </provider>
@@ -505,7 +504,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23933902" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -515,7 +513,7 @@
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3188248" sideWeight="0.49573562" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.44940153" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38193688" sideWeight="0.46588486" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38193688" sideWeight="0.46588486" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39934713" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1114,16 +1112,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/waningsku.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="44" column="14" lean-forward="false" selection-start-line="44" selection-start-column="14" selection-end-line="44" selection-end-column="14" />
+        <state relative-caret-position="444">
+          <caret line="85" column="79" lean-forward="false" selection-start-line="85" selection-start-column="79" selection-end-line="85" selection-end-column="79" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
-            <marker date="1515126446034" expanded="true" signature="869:1171" ph="select pp.ke... odi_order" />
-            <marker date="1515126446034" expanded="true" signature="869:1180" ph="select pp.ke... odi_order" />
-            <marker date="1515126446034" expanded="true" signature="869:1182" ph="select pp.ke... odi_order" />
-            <marker date="1515126446034" expanded="true" signature="1380:1442" ph="select sws.k... stg_warning_sku" />
-            <marker date="1515126446034" expanded="true" signature="1380:1457" ph="select sws.k... stg_warning_sku" />
-            <marker date="1515126446034" expanded="true" signature="2346:2425" ph="SELECT ppv.p... pdi_prop_value" />
+            <marker date="1515126586958" expanded="true" signature="889:1191" ph="select pp.ke... odi_order" />
+            <marker date="1515126586958" expanded="true" signature="889:1200" ph="select pp.ke... odi_order" />
+            <marker date="1515126586958" expanded="true" signature="889:1202" ph="select pp.ke... odi_order" />
+            <marker date="1515126586958" expanded="true" signature="1400:1462" ph="select sws.k... stg_warning_sku" />
+            <marker date="1515126586958" expanded="true" signature="1400:1475" ph="select sws.k... stg_warning_sku" />
+            <marker date="1515126586958" expanded="true" signature="2364:2443" ph="SELECT ppv.p... pdi_prop_value" />
           </folding>
         </state>
       </provider>
