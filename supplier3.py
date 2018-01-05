@@ -52,7 +52,7 @@ for i, res in enumerate(init_result):
     sheet.write(i+1, 0, res[0])
     sheet.write(i+1, 1, res[1])
 
-query_add_supplier(cursor, wb, '6', '7-1', '6-10')
+query_add_supplier(cursor, wb, '6', '7-11', '6-10')
 query_add_supplier(cursor, wb, '11', '8-1', '11-12')
 
 wb.save('supplier3.xls')
