@@ -23,7 +23,7 @@ def product_count(sql_results, version_dict, memory_dict, color_dict):
     return product_dict
 
 
-def sales_sku(cursor, workbook, start, end, condition, sheet):
+def sales_sku(cursor, workbook, start, end, sale_condition, sku_condition, sheet):
     sale_sql = '''
     select pp.key_props from panda.odi_order oo
     left join panda.pdi_product pp 
@@ -42,6 +42,7 @@ def sales_sku(cursor, workbook, start, end, condition, sheet):
 
     sku_sql = '''
     select sws.key_props,sws.sku_id from panda.stg_warning_sku sws
+    where {}
     '''
     cursor.execute(sku_sql)
     sku_result = cursor.fetchall()
@@ -79,9 +80,10 @@ cd = conf.properties_dict(cur, propsql, 10)
 rolling_date = conf.today - datetime.timedelta(15)
 start_str = rolling_date.strftime(conf.date_format)
 end_str = conf.today.strftime(conf.date_format)
-sales_sku(cur, wb, start_str, end_str, 'pm.model_name like \'%iphone%\'', 'iphone')
-sales_sku(cur, wb, start_str, end_str, 'pm.pcid=2', 'ipad')
-sales_sku(cur, wb, start_str, end_str, 'pm.pcid=1 and pm.model_name not like \'%iphone%\'', 'android')
+sales_sku(cur, wb, start_str, end_str, 'pm.model_name like \'%iphone%\'', 'sws.sku_name like \'%iphone%\'', 'iphone')
+sales_sku(cur, wb, start_str, end_str, 'pm.pcid=2', 'sws.sku_name like \'%ipad%\'''ipad')
+sales_sku(cur, wb, start_str, end_str, 'pm.pcid=1 and pm.model_name not like \'%iphone%\'',
+          'sws.sku_name not like \'%iphone%\' and sws.sku_name not like \'%ipad%\'', 'android')
 
 wb.save('last15days.xls')
 cur.close()
