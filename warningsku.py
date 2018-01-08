@@ -92,10 +92,10 @@ wb = xlwt.Workbook()
 ios_high = 0.02
 ios_mid = 0.01
 
-ipad_high = 0.0015
+ipad_high = 0.002
 ipad_mid = 0.0005
 
-android_high = 0.002
+android_high = 0.003
 android_mid = 0.001
 
 propsql = '''
