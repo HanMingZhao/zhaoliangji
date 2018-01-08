@@ -29,6 +29,7 @@ char = 'utf8'
 date_format = '%Y-%m-%d'
 
 domain = 'https://panda.huodao.hk'
+warning_sku = domain + '/api/product/update_warning_sku?sku_id={}&category={}'
 
 today = dt.datetime.today()
 yesterday = today - dt.timedelta(1)
