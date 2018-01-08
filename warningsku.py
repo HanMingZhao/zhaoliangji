@@ -79,13 +79,13 @@ def sales_sku(cursor, workbook, start, end, sale_condition, sku_condition, sheet
             level = sales_dict[s]/count
             if level > high_level:
                 resp = re.get(conf.warning_sku.format(sku_dict[s], 1))
-                print(s, level, resp)
+                print(s, level, conf.warning_sku.format(sku_dict[s], 1), resp)
             elif mid_level < level < high_level:
                 resp = re.get(conf.warning_sku.format(sku_dict[s], 2))
-                print(resp)
+                print(conf.warning_sku.format(sku_dict[s], 2), resp)
             elif level < mid_level:
                 resp = re.get(conf.warning_sku.format(sku_dict[s], 3))
-                print(resp)
+                print(conf.warning_sku.format(sku_dict[s], 2), resp)
 
 cf = conf.product
 connect = db.connect(host=cf['host'], user=cf['user'], passwd=cf['pass'], port=cf['port'], charset=conf.char)
