@@ -15,6 +15,7 @@ sheet.write(0, 1, '下单')
 sheet.write(0, 2, '下周购买')
 sheet.write(0, 3, '转化')
 while end_time < conf.today:
+    print(start_time)
     next_time = start_time + datetime.timedelta(7)
     count_sql = '''
     SELECT oo.`user_id` FROM panda.`odi_order` oo
@@ -50,6 +51,7 @@ while end_time < conf.today:
     sheet.write(row, 1, count)
     sheet.write(row, 2, result[0])
     sheet.write(row, 3, result[0]/count)
+    start_time += datetime.timedelta(7)
 
 wb.save(conf.path+'nwb.xls')
 cursor.close()
