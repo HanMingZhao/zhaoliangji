@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="4a99546f-643b-4833-b464-5e20828d8662" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/warningsku.py" afterPath="$PROJECT_DIR$/warningsku.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -142,20 +141,20 @@
         <entry file="file://$PROJECT_DIR$/warningsku.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="447">
-              <caret line="87" column="22" lean-forward="false" selection-start-line="87" selection-start-column="22" selection-end-line="87" selection-end-column="22" />
+              <caret line="87" column="62" lean-forward="false" selection-start-line="87" selection-start-column="62" selection-end-line="87" selection-end-column="62" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
-                <marker date="1515394712509" expanded="true" signature="935:1067" ph="select count... odi_order" />
-                <marker date="1515394712509" expanded="true" signature="935:1071" ph="select count... odi_order" />
-                <marker date="1515394712509" expanded="true" signature="935:1093" ph="select count... odi_order" />
-                <marker date="1515394712509" expanded="true" signature="935:1097" ph="select count... odi_order" />
-                <marker date="1515394712509" expanded="true" signature="935:1098" ph="select count... odi_order" />
-                <marker date="1515394712509" expanded="true" signature="1246:1548" ph="select pp.ke... odi_order" />
-                <marker date="1515394712509" expanded="true" signature="1246:1557" ph="select pp.ke... odi_order" />
-                <marker date="1515394712509" expanded="true" signature="1246:1559" ph="select pp.ke... odi_order" />
-                <marker date="1515394712509" expanded="true" signature="1754:1816" ph="select sws.k... stg_warning_sku" />
-                <marker date="1515394712509" expanded="true" signature="1754:1829" ph="select sws.k... stg_warning_sku" />
-                <marker date="1515394712509" expanded="true" signature="3346:3425" ph="SELECT ppv.p... pdi_prop_value" />
+                <marker date="1515394785557" expanded="true" signature="935:1067" ph="select count... odi_order" />
+                <marker date="1515394785557" expanded="true" signature="935:1071" ph="select count... odi_order" />
+                <marker date="1515394785557" expanded="true" signature="935:1093" ph="select count... odi_order" />
+                <marker date="1515394785557" expanded="true" signature="935:1097" ph="select count... odi_order" />
+                <marker date="1515394785557" expanded="true" signature="935:1098" ph="select count... odi_order" />
+                <marker date="1515394785557" expanded="true" signature="1246:1548" ph="select pp.ke... odi_order" />
+                <marker date="1515394785557" expanded="true" signature="1246:1557" ph="select pp.ke... odi_order" />
+                <marker date="1515394785557" expanded="true" signature="1246:1559" ph="select pp.ke... odi_order" />
+                <marker date="1515394785557" expanded="true" signature="1754:1816" ph="select sws.k... stg_warning_sku" />
+                <marker date="1515394785557" expanded="true" signature="1754:1829" ph="select sws.k... stg_warning_sku" />
+                <marker date="1515394785557" expanded="true" signature="3469:3548" ph="SELECT ppv.p... pdi_prop_value" />
               </folding>
             </state>
           </provider>
@@ -1086,20 +1085,20 @@
     <entry file="file://$PROJECT_DIR$/warningsku.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="447">
-          <caret line="87" column="22" lean-forward="false" selection-start-line="87" selection-start-column="22" selection-end-line="87" selection-end-column="22" />
+          <caret line="87" column="62" lean-forward="false" selection-start-line="87" selection-start-column="62" selection-end-line="87" selection-end-column="62" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
-            <marker date="1515394712509" expanded="true" signature="935:1067" ph="select count... odi_order" />
-            <marker date="1515394712509" expanded="true" signature="935:1071" ph="select count... odi_order" />
-            <marker date="1515394712509" expanded="true" signature="935:1093" ph="select count... odi_order" />
-            <marker date="1515394712509" expanded="true" signature="935:1097" ph="select count... odi_order" />
-            <marker date="1515394712509" expanded="true" signature="935:1098" ph="select count... odi_order" />
-            <marker date="1515394712509" expanded="true" signature="1246:1548" ph="select pp.ke... odi_order" />
-            <marker date="1515394712509" expanded="true" signature="1246:1557" ph="select pp.ke... odi_order" />
-            <marker date="1515394712509" expanded="true" signature="1246:1559" ph="select pp.ke... odi_order" />
-            <marker date="1515394712509" expanded="true" signature="1754:1816" ph="select sws.k... stg_warning_sku" />
-            <marker date="1515394712509" expanded="true" signature="1754:1829" ph="select sws.k... stg_warning_sku" />
-            <marker date="1515394712509" expanded="true" signature="3346:3425" ph="SELECT ppv.p... pdi_prop_value" />
+            <marker date="1515394785557" expanded="true" signature="935:1067" ph="select count... odi_order" />
+            <marker date="1515394785557" expanded="true" signature="935:1071" ph="select count... odi_order" />
+            <marker date="1515394785557" expanded="true" signature="935:1093" ph="select count... odi_order" />
+            <marker date="1515394785557" expanded="true" signature="935:1097" ph="select count... odi_order" />
+            <marker date="1515394785557" expanded="true" signature="935:1098" ph="select count... odi_order" />
+            <marker date="1515394785557" expanded="true" signature="1246:1548" ph="select pp.ke... odi_order" />
+            <marker date="1515394785557" expanded="true" signature="1246:1557" ph="select pp.ke... odi_order" />
+            <marker date="1515394785557" expanded="true" signature="1246:1559" ph="select pp.ke... odi_order" />
+            <marker date="1515394785557" expanded="true" signature="1754:1816" ph="select sws.k... stg_warning_sku" />
+            <marker date="1515394785557" expanded="true" signature="1754:1829" ph="select sws.k... stg_warning_sku" />
+            <marker date="1515394785557" expanded="true" signature="3469:3548" ph="SELECT ppv.p... pdi_prop_value" />
           </folding>
         </state>
       </provider>

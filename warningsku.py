@@ -75,17 +75,16 @@ def sales_sku(cursor, workbook, start, end, sale_condition, sku_condition, sheet
         sheet.write(i + 1, 3, pc)
         sheet.write(i + 1, 4, sales_dict[s] if s in sales_dict else 0)
         sheet.write(i + 1, 5, sales_dict[s] / count if s in sales_dict else 0)
-        if s in sales_dict:
-            level = sales_dict[s]/count
-            if level > high_level:
-                resp = re.get(conf.warning_sku.format(sku_dict[s], 1))
-                print(s, level, conf.warning_sku.format(sku_dict[s], 1), resp)
-            elif mid_level < level < high_level:
-                resp = re.get(conf.warning_sku.format(sku_dict[s], 2))
-                print(conf.warning_sku.format(sku_dict[s], 2), resp)
-            elif level < mid_level:
-                resp = re.get(conf.warning_sku.format(sku_dict[s], 3))
-                print(conf.warning_sku.format(sku_dict[s], 2), resp)
+        level = sales_dict[s]/count if s in sales_dict else 0
+        if level > high_level:
+            resp = re.get(conf.warning_sku.format(sku_dict[s], 1))
+            print(s, level, conf.warning_sku.format(sku_dict[s], 1), resp)
+        elif mid_level < level < high_level:
+            resp = re.get(conf.warning_sku.format(sku_dict[s], 2))
+            print(conf.warning_sku.format(sku_dict[s], 2), resp)
+        elif level < mid_level:
+            resp = re.get(conf.warning_sku.format(sku_dict[s], 3))
+            print(conf.warning_sku.format(sku_dict[s], 2), resp)
 
 cf = conf.product
 connect = db.connect(host=cf['host'], user=cf['user'], passwd=cf['pass'], port=cf['port'], charset=conf.char)
