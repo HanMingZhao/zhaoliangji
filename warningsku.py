@@ -79,6 +79,7 @@ def sales_sku(cursor, workbook, start, end, sale_condition, sku_condition, sheet
             level = sales_dict[s]/count
             if level > high_level:
                 re.get(conf.warning_sku.format(sku_dict[s], 1))
+                print(s, level)
             elif mid_level < level < high_level:
                 re.get(conf.warning_sku.format(sku_dict[s], 2))
             elif level < mid_level:
