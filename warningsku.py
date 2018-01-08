@@ -24,6 +24,17 @@ def product_count(sql_results, version_dict, memory_dict, color_dict):
 
 
 def sales_sku(cursor, workbook, start, end, sale_condition, sku_condition, sheet):
+    count_sql = '''
+    select count(1) from panda.odi_order oo 
+    where oo.order_status in (1,2,4,5) 
+    and oo.order_type in (1,2) 
+    and oo.pay_at > '{}' 
+    and oo.pay_at < '{}' 
+    '''
+    cursor.execute(count_sql.format(start, end))
+    count_result = cursor.fetchone()
+    count = count_result[0]
+
     sale_sql = '''
     select pp.key_props from panda.odi_order oo
     left join panda.pdi_product pp 
@@ -36,7 +47,7 @@ def sales_sku(cursor, workbook, start, end, sale_condition, sku_condition, sheet
     and oo.pay_at > '{}'
     and {}
     '''
-    count = cursor.execute(sale_sql.format(end, start, sale_condition))
+    cursor.execute(sale_sql.format(end, start, sale_condition))
     sales_result = cursor.fetchall()
     sales_dict = conf.product_count(sales_result, vd, md, cd)
 
@@ -69,6 +80,8 @@ connect = db.connect(host=cf['host'], user=cf['user'], passwd=cf['pass'], port=c
 cur = connect.cursor()
 wb = xlwt.Workbook()
 
+address = conf.domain + '/api/product/update_warning_sku?sku_id={}&category={}'
+
 propsql = '''
 SELECT ppv.pvid,ppv.pv_name FROM panda.`pdi_prop_value` ppv
 WHERE ppv.pnid = {}
@@ -85,6 +98,6 @@ sales_sku(cur, wb, start_str, end_str, 'pm.pcid=2', 'sws.sku_name like \'%ipad%\
 sales_sku(cur, wb, start_str, end_str, 'pm.pcid=1 and pm.model_name not like \'%iphone%\'',
           'sws.sku_name not like \'%iphone%\' and sws.sku_name not like \'%ipad%\'', 'android')
 
-wb.save('last15days.xls')
+wb.save(conf.path + 'last15days.xls')
 cur.close()
 connect.close()

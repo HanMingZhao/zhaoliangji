@@ -28,6 +28,8 @@ char = 'utf8'
 
 date_format = '%Y-%m-%d'
 
+domain = 'https://panda.huodao.hk'
+
 today = dt.datetime.today()
 yesterday = today - dt.timedelta(1)
 last_week_day = today - dt.timedelta(7)
