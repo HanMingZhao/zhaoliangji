@@ -57,8 +57,8 @@ SELECT pp.`key_props` FROM panda.`pdi_product_track` ppt
 LEFT JOIN panda.`pdi_product` pp
 ON ppt.`product_id` = pp.`product_id`
 WHERE ppt.`track_type`=1
-AND ppt.`created_at` >'2017-12-18'
-AND ppt.`created_at` <'2018-1-1'
+AND ppt.`created_at` >'2017-12-25'
+AND ppt.`created_at` <'2018-1-8'
 '''
 cur.execute(grounding_sql)
 result = cur.fetchall()
@@ -83,8 +83,8 @@ LEFT JOIN panda.`pdi_product` pp
 ON oo.`product_id` = pp.`product_id`
 WHERE oo.`order_status` IN (1,2,4,5)
 AND oo.`order_type` IN (1,2)
-AND oo.`pay_at`>'2017-12-18'
-AND oo.`pay_at` < '2018-1-1'
+AND oo.`pay_at`>'2017-12-25'
+AND oo.`pay_at` < '2018-1-8'
 '''
 cur.execute(sales_sql)
 result = cur.fetchall()
@@ -105,8 +105,8 @@ for i, p in enumerate(sale_dict):
 
 pv_sql = '''
 SELECT bai.created_at,bai.pv,bai.ip,bai.register FROM panda.`boss_api_info` bai
-WHERE bai.created_at >='2017-12-18'
-AND bai.created_at < '2018-1-1'
+WHERE bai.created_at >='2017-12-25'
+AND bai.created_at < '2018-1-8'
 '''
 cur.execute(pv_sql)
 result = cur.fetchall()
