@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="4a99546f-643b-4833-b464-5e20828d8662" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/salingavg.py" afterPath="$PROJECT_DIR$/salingavg.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -150,13 +149,13 @@
       <file leaf-file-name="salingavg.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/salingavg.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="57" column="30" lean-forward="true" selection-start-line="57" selection-start-column="30" selection-end-line="57" selection-end-column="30" />
+            <state relative-caret-position="347">
+              <caret line="40" column="30" lean-forward="false" selection-start-line="40" selection-start-column="30" selection-end-line="40" selection-end-column="30" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
-                <marker date="1515464502415" expanded="true" signature="897:976" ph="SELECT ppv.p... pdi_prop_value" />
-                <marker date="1515464502415" expanded="true" signature="1138:1243" ph="SELECT pp.`k... pdi_product" />
-                <marker date="1515464502415" expanded="true" signature="1138:1244" ph="SELECT pp.`k... pdi_product" />
+                <marker date="1515464546134" expanded="true" signature="897:976" ph="SELECT ppv.p... pdi_prop_value" />
+                <marker date="1515464546134" expanded="true" signature="1138:1252" ph="SELECT pp.`k... pdi_product" />
+                <marker date="1515464546134" expanded="true" signature="1138:1253" ph="SELECT pp.`k... pdi_product" />
               </folding>
             </state>
           </provider>
@@ -1158,13 +1157,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/salingavg.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="57" column="30" lean-forward="true" selection-start-line="57" selection-start-column="30" selection-end-line="57" selection-end-column="30" />
+        <state relative-caret-position="347">
+          <caret line="40" column="30" lean-forward="false" selection-start-line="40" selection-start-column="30" selection-end-line="40" selection-end-column="30" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
-            <marker date="1515464502415" expanded="true" signature="897:976" ph="SELECT ppv.p... pdi_prop_value" />
-            <marker date="1515464502415" expanded="true" signature="1138:1243" ph="SELECT pp.`k... pdi_product" />
-            <marker date="1515464502415" expanded="true" signature="1138:1244" ph="SELECT pp.`k... pdi_product" />
+            <marker date="1515464546134" expanded="true" signature="897:976" ph="SELECT ppv.p... pdi_prop_value" />
+            <marker date="1515464546134" expanded="true" signature="1138:1252" ph="SELECT pp.`k... pdi_product" />
+            <marker date="1515464546134" expanded="true" signature="1138:1253" ph="SELECT pp.`k... pdi_product" />
           </folding>
         </state>
       </provider>
