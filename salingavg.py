@@ -38,7 +38,7 @@ md = conf.properties_dict(cursor, propsql, 11)
 cd = conf.properties_dict(cursor, propsql, 10)
 
 props_sql = '''
-SELECT pp.`key_props` FROM panda.`pdi_product` pp
+SELECT pp.`key_props`,pp.price FROM panda.`pdi_product` pp
 WHERE pp.`status` = 1
 AND pp.`key_props` LIKE '%12:26;%'
 '''
