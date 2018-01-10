@@ -1,6 +1,8 @@
 import pymysql as db
 import config as conf
 import xlwt
+import numpy as np
+import pandas as pd
 
 
 class Product:
@@ -24,7 +26,7 @@ def product_count(sql_results, version_dict, memory_dict):
             product_list.append(p)
     return product_list
 
-cf = conf.product
+cf = conf.new_test
 connect = db.connect(host=cf['host'], user=cf['user'], passwd=cf['pass'], port=cf['port'], charset=conf.char)
 cursor = connect.cursor()
 wb = xlwt.Workbook()
@@ -45,18 +47,25 @@ AND pp.`key_props` LIKE '%12:26;%'
 cursor.execute(props_sql)
 result = cursor.fetchall()
 grounding_list = product_count(result, vd, md)
-sheet = wb.add_sheet('sheet')
-sheet.write(0, 0, '型号')
-sheet.write(0, 1, '内存')
-sheet.write(0, 2, '数量')
-sheet.write(0, 3, '价格')
+series_list = []
 for r in grounding_list:
-    row = len(sheet.rows)
-    sheet.write(row, 0, r.version)
-    sheet.write(row, 1, r.memory)
-    sheet.write(row, 2, 1)
-    sheet.write(row, 3, r.price)
+    series_list.append((r.version, r.memory, r.price))
+frame = pd.DataFrame(series_list, columns=['型号', '内存', '价格'])
+means = frame['价格'].groupby([frame['型号'], frame['内存']]).mean()
 
-wb.save('95avg.xls')
+
+# sheet = wb.add_sheet('sheet')
+# sheet.write(0, 0, '型号')
+# sheet.write(0, 1, '内存')
+# sheet.write(0, 2, '数量')
+# sheet.write(0, 3, '价格')
+# for r in grounding_list:
+#     row = len(sheet.rows)
+#     sheet.write(row, 0, r.version)
+#     sheet.write(row, 1, r.memory)
+#     sheet.write(row, 2, 1)
+#     sheet.write(row, 3, r.price)
+
+# wb.save('95avg.xls')
 cursor.close()
 connect.close()
