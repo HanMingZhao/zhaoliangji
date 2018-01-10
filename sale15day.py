@@ -44,9 +44,9 @@ for sd in sku_dict:
     daily_result = cursor.fetchall()
     for dr in daily_result:
         row = len(sheet.rows)
-        sheet.write(0, 0, dr[0].strftime(conf.date_format))
-        sheet.write(0, 1, sku_dict[sd])
-        sheet.write(0, 2, dr[1])
+        sheet.write(row, 0, dr[0].strftime(conf.date_format))
+        sheet.write(row, 1, sku_dict[sd])
+        sheet.write(row, 2, dr[1])
 
 wb.save(conf.path + '15daysale.xls')
 cursor.close()
