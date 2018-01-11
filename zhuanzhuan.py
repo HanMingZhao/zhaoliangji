@@ -52,7 +52,7 @@ for i in range(1, 100):
     print('scanning page {}...'.format(i), time.time()-start)
     req = requests.get(url=address.format(i))
     resp = req.json()
-    if resp[respData][datas] is not None:
+    if resp['respData']['datas'] is not None:
         rows = len(sheet.rows)
         for j, r in enumerate(resp[respData][datas]):
             row = rows + j
