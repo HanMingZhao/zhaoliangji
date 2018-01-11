@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4a99546f-643b-4833-b464-5e20828d8662" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zhuanzhuan.py" afterPath="$PROJECT_DIR$/zhuanzhuan.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -132,11 +133,11 @@
       <file leaf-file-name="zhuanzhuan.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/zhuanzhuan.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="925">
-              <caret line="87" column="13" lean-forward="false" selection-start-line="87" selection-start-column="13" selection-end-line="87" selection-end-column="13" />
+            <state relative-caret-position="319">
+              <caret line="72" column="41" lean-forward="false" selection-start-line="72" selection-start-column="41" selection-end-line="72" selection-end-column="41" />
               <folding>
-                <marker date="1513128449144" expanded="true" signature="2607:2686" ph="SELECT ppv.p... pdi_prop_value" />
-                <marker date="1513128449144" expanded="true" signature="2818:3059" ph="SELECT AVG(p... pdi_product" />
+                <marker date="1515636507275" expanded="true" signature="2641:2720" ph="SELECT ppv.p... pdi_prop_value" />
+                <marker date="1515636507275" expanded="true" signature="2852:3093" ph="SELECT AVG(p... pdi_product" />
               </folding>
             </state>
           </provider>
@@ -260,7 +261,6 @@
         <option value="$PROJECT_DIR$/caigousale.py" />
         <option value="$PROJECT_DIR$/cycle.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/zhuanzhuan.py" />
         <option value="$PROJECT_DIR$/report.py" />
         <option value="$PROJECT_DIR$/dsale.py" />
         <option value="$PROJECT_DIR$/supplier.py" />
@@ -281,6 +281,7 @@
         <option value="$PROJECT_DIR$/salingavg.py" />
         <option value="$PROJECT_DIR$/groundings.py" />
         <option value="$PROJECT_DIR$/sale15day.py" />
+        <option value="$PROJECT_DIR$/zhuanzhuan.py" />
       </list>
     </option>
   </component>
@@ -497,9 +498,9 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38193688" sideWeight="0.53411514" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.4978678" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3188248" sideWeight="0.49573562" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24483134" sideWeight="0.49573562" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.44940153" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37758434" sideWeight="0.46588486" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.55603915" sideWeight="0.46588486" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15191898" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -978,7 +979,7 @@
         <state relative-caret-position="200">
           <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="17" selection-end-column="3" />
           <folding>
-            <element signature="e#0#14#0" expanded="true" />
+            <element signature="e#0#14#0" expanded="false" />
             <marker date="1514192665984" expanded="true" signature="286:511" ph="SELECT ps.`n... pdi_product_cost" />
             <marker date="1514192665984" expanded="true" signature="680:934" ph="SELECT ps.na... pdi_suppiler_track" />
           </folding>
@@ -990,7 +991,7 @@
         <state relative-caret-position="125">
           <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="12" selection-end-column="27" />
           <folding>
-            <element signature="e#0#20#0" expanded="true" />
+            <element signature="e#0#20#0" expanded="false" />
             <marker date="1515121257727" expanded="true" signature="141:385" ph="SELECT ppc.s... pdi_product_cost" />
           </folding>
         </state>
@@ -1171,11 +1172,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/zhuanzhuan.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="925">
-          <caret line="87" column="13" lean-forward="false" selection-start-line="87" selection-start-column="13" selection-end-line="87" selection-end-column="13" />
+        <state relative-caret-position="319">
+          <caret line="72" column="41" lean-forward="false" selection-start-line="72" selection-start-column="41" selection-end-line="72" selection-end-column="41" />
           <folding>
-            <marker date="1513128449144" expanded="true" signature="2607:2686" ph="SELECT ppv.p... pdi_prop_value" />
-            <marker date="1513128449144" expanded="true" signature="2818:3059" ph="SELECT AVG(p... pdi_product" />
+            <marker date="1515636507275" expanded="true" signature="2641:2720" ph="SELECT ppv.p... pdi_prop_value" />
+            <marker date="1515636507275" expanded="true" signature="2852:3093" ph="SELECT AVG(p... pdi_product" />
           </folding>
         </state>
       </provider>
