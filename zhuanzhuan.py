@@ -56,14 +56,14 @@ for i in range(1, 100):
         rows = len(sheet.rows)
         for j, r in enumerate(resp[respData][datas]):
             row = rows + j
-            version = r['title'].split(' ')[0]
+            version = r['title'].split(' ')[1]
             memory = r['title'].split(' ')[-2]
             color = r['title'].split(' ')[-1]
             rate = r['subTitle'].split(' ')[0]
             net = r['subTitle'].split(' ')[1]
             price = r['salePrice']
             if len(r[title].split(' ')) > 3:
-                version = version + ' ' + r['title'].split(' ')[1]
+                version = version + ' ' + r['title'].split(' ')[2]
             sheet.write(row, 0, version)
             sheet.write(row, 1, memory)
             sheet.write(row, 2, color)
