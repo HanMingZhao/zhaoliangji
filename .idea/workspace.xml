@@ -149,13 +149,14 @@
       <file leaf-file-name="skutrend.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/skutrend.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="48" column="38" lean-forward="false" selection-start-line="48" selection-start-column="38" selection-end-line="48" selection-end-column="38" />
+            <state relative-caret-position="350">
+              <caret line="32" column="41" lean-forward="false" selection-start-line="32" selection-start-column="41" selection-end-line="32" selection-end-column="41" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
-                <marker date="1515845581919" expanded="true" signature="197:410" ph="SELECT DATE(... " />
-                <marker date="1515845581919" expanded="true" signature="197:547" ph="SELECT DATE(... " />
-                <marker date="1515845581919" expanded="true" signature="622:751" ph="SELECT sws.k... stg_warning_sku" />
+                <marker date="1515845948774" expanded="true" signature="144:357" ph="SELECT DATE(... " />
+                <marker date="1515845948774" expanded="true" signature="144:494" ph="SELECT DATE(... " />
+                <marker date="1515845948774" expanded="true" signature="569:699" ph="SELECT sws.k... stg_warning_sku" />
+                <marker date="1515845948774" expanded="true" signature="569:701" ph="SELECT sws.k... stg_warning_sku" />
               </folding>
             </state>
           </provider>
@@ -1189,13 +1190,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/skutrend.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="48" column="38" lean-forward="false" selection-start-line="48" selection-start-column="38" selection-end-line="48" selection-end-column="38" />
+        <state relative-caret-position="350">
+          <caret line="32" column="41" lean-forward="false" selection-start-line="32" selection-start-column="41" selection-end-line="32" selection-end-column="41" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
-            <marker date="1515845581919" expanded="true" signature="197:410" ph="SELECT DATE(... " />
-            <marker date="1515845581919" expanded="true" signature="197:547" ph="SELECT DATE(... " />
-            <marker date="1515845581919" expanded="true" signature="622:751" ph="SELECT sws.k... stg_warning_sku" />
+            <marker date="1515845948774" expanded="true" signature="144:357" ph="SELECT DATE(... " />
+            <marker date="1515845948774" expanded="true" signature="144:494" ph="SELECT DATE(... " />
+            <marker date="1515845948774" expanded="true" signature="569:699" ph="SELECT sws.k... stg_warning_sku" />
+            <marker date="1515845948774" expanded="true" signature="569:701" ph="SELECT sws.k... stg_warning_sku" />
           </folding>
         </state>
       </provider>
