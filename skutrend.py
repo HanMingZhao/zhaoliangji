@@ -44,8 +44,8 @@ for itr in iphone_top_result:
         sale_dict[day.strftime(conf.date_format)] = 0
     for edr in each_day_result:
         sale_dict[edr[0].strftime(conf.date_format)] = edr[1]
+    row = len(sheet.rows)
     for i, sd in enumerate(sale_dict):
-        row = len(sheet.rows)
         sheet.write(row, 0, itr[1])
         sheet.write(row, i+1, sale_dict[sd])
 wb.save(conf.path + 'trendsku.xls')
