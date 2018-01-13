@@ -13,9 +13,9 @@ LEFT JOIN panda.`pdi_product` pp
 ON oo.product_id = pp.`product_id`
 WHERE oo.order_status IN (1,2,4,5)
 AND oo.order_type IN (1,2)
-AND pp.`key_props` LIKE '{};'
-AND pp.`key_props` LIKE '{};'
-AND pp.`key_props` LIKE '{};'
+AND pp.`key_props` LIKE '%{};%'
+AND pp.`key_props` LIKE '%{};%'
+AND pp.`key_props` LIKE '%{};%'
 AND oo.pay_at > '{}'
 AND oo.pay_at < '{}'
 GROUP BY DATE(oo.pay_at)
