@@ -1,7 +1,10 @@
 # -*- coding:utf-8 -*-
 import datetime as dt
+import pymysql as db
 import collections
 
+
+charset = 'utf8'
 product = {'host': 'rm-m5etsh5q078zz937i.mysql.rds.aliyuncs.com',
            'user': 'zlj_reader',
            'pass': 'h=DGhEXKRq38gTtH',
@@ -20,11 +23,13 @@ new_test = {'host': 'rm-bp13wnvyc2dh86ju1o.mysql.rds.aliyuncs.com',
             'port': 3306,
             'db': 'panda'}
 
+product_connect = db.connect(host=product['host'], user=product['user'], passwd=product['pass'], port=product['port'],
+                             charset=charset)
+product_cursor = product_connect.cursor()
+
 target = 5500
 
 path = '/var/www/python/'
-
-char = 'utf8'
 
 date_format = '%Y-%m-%d'
 
