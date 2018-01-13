@@ -3,11 +3,11 @@ import datetime
 import xlwt
 
 base_sql = '''
-SELECT DISTINCT(oo.`user_id`) FROM panda.`odi_order` oo
-WHERE oo.`order_status` IN (1,2,4,5)
-AND oo.order_type IN (1,2)
-AND oo.`pay_at` >'{}'
-AND oo.`pay_at` <'{}'
+SELECT DISTINCT(oo.user_id) FROM panda.`odi_order` oo
+WHERE oo.`order_status` NOT IN (1,2,4,5)
+AND oo.`order_type` IN (1,2)
+AND oo.`create_at` > '{}'
+AND oo.`create_at` < '{}'
 {}
 '''
 
@@ -15,10 +15,10 @@ condition = '''
 AND oo.`user_id` IN 
 (
 SELECT DISTINCT(oo.`user_id`) FROM panda.`odi_order` oo
-WHERE oo.`order_status` NOT IN (1,2,4,5)
+WHERE oo.`order_status` IN (1,2,4,5)
 AND oo.`order_type` IN (1,2)
-AND oo.`create_at` > '{}'
-AND oo.`create_at` < '{}'
+AND oo.pay_at > '{}'
+AND oo.`pay_at` < '{}'
 )
 '''
 wb = xlwt.Workbook()
@@ -33,13 +33,13 @@ for i in range(100):
     if day >= conf.today:
         break
     next_day = day + datetime.timedelta(1)
-    before_day = day - datetime.timedelta(2)
+    next3day = day + datetime.timedelta(3)
     total = conf.product_cursor.execute(base_sql.format(day.strftime(conf.date_format),
                                                         next_day.strftime(conf.date_format), ''))
     past = conf.product_cursor.execute(base_sql.format(day.strftime(conf.date_format),
                                                        next_day.strftime(conf.date_format),
-                                                       condition.format(before_day.strftime(conf.date_format),
-                                                                        day.strftime(conf.date_format))))
+                                                       condition.format(next_day.strftime(conf.date_format),
+                                                                        next3day.strftime(conf.date_format))))
     row = len(sheet.rows)
     sheet.write(row, 0, day.strftime(conf.date_format))
     sheet.write(row, 1, total)
