@@ -39,7 +39,7 @@ def product_count(sql_results, version_dict, memory_dict, color_dict, rate_dict)
     return product_dict
 
 cf = config.product
-con = db.connect(host=cf['host'], user=cf['user'], passwd=cf['pass'], port=cf['port'], charset=config.char)
+con = db.connect(host=cf['host'], user=cf['user'], passwd=cf['pass'], port=cf['port'], charset=config.charset)
 cur = con.cursor()
 wb = xlwt.Workbook()
 
