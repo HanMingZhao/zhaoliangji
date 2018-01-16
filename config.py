@@ -38,6 +38,7 @@ warning_sku = domain + '/api/product/update_warning_sku?sku_id={}&category={}'
 
 today = dt.datetime.today()
 yesterday = today - dt.timedelta(1)
+tomorrow = today + dt.timedelta(1)
 last_week_day = today - dt.timedelta(7)
 
 
