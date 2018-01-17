@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4a99546f-643b-4833-b464-5e20828d8662" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/monthcontrast.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.py" afterPath="$PROJECT_DIR$/config.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -29,11 +27,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="config.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="config.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="181">
-              <caret line="29" column="13" lean-forward="false" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
+            <state relative-caret-position="431">
+              <caret line="36" column="59" lean-forward="false" selection-start-line="36" selection-start-column="59" selection-end-line="36" selection-end-column="59" />
               <folding>
                 <element signature="e#23#44#0" expanded="true" />
               </folding>
@@ -63,16 +61,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="monthcontrast.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="monthcontrast.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/monthcontrast.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="494">
-              <caret line="70" column="0" lean-forward="false" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+            <state relative-caret-position="94">
+              <caret line="22" column="95" lean-forward="false" selection-start-line="22" selection-start-column="95" selection-end-line="22" selection-end-column="95" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
-                <marker date="1516183537613" expanded="true" signature="49:128" ph="SELECT ppv.p... pdi_prop_value" />
-                <marker date="1516183537613" expanded="true" signature="332:465" ph="SELECT ppt.`... pdi_product_track" />
-                <marker date="1516183537613" expanded="true" signature="332:472" ph="SELECT ppt.`... pdi_product_track" />
+                <marker date="1516183673948" expanded="true" signature="49:128" ph="SELECT ppv.p... pdi_prop_value" />
+                <marker date="1516183673948" expanded="true" signature="332:465" ph="SELECT ppt.`... pdi_product_track" />
+                <marker date="1516183673948" expanded="true" signature="332:472" ph="SELECT ppt.`... pdi_product_track" />
               </folding>
             </state>
           </provider>
@@ -270,8 +268,8 @@
         <option value="$PROJECT_DIR$/13-16.csv" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/telephonesale.py" />
-        <option value="$PROJECT_DIR$/monthcontrast.py" />
         <option value="$PROJECT_DIR$/config.py" />
+        <option value="$PROJECT_DIR$/monthcontrast.py" />
       </list>
     </option>
   </component>
@@ -1045,25 +1043,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/monthcontrast.py">
+    <entry file="file://$PROJECT_DIR$/config.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="70" column="0" lean-forward="false" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+        <state relative-caret-position="431">
+          <caret line="36" column="59" lean-forward="false" selection-start-line="36" selection-start-column="59" selection-end-line="36" selection-end-column="59" />
           <folding>
-            <element signature="e#0#21#0" expanded="true" />
-            <marker date="1516183537613" expanded="true" signature="49:128" ph="SELECT ppv.p... pdi_prop_value" />
-            <marker date="1516183537613" expanded="true" signature="332:465" ph="SELECT ppt.`... pdi_product_track" />
-            <marker date="1516183537613" expanded="true" signature="332:472" ph="SELECT ppt.`... pdi_product_track" />
+            <element signature="e#23#44#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config.py">
+    <entry file="file://$PROJECT_DIR$/monthcontrast.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="29" column="13" lean-forward="false" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
+        <state relative-caret-position="94">
+          <caret line="22" column="95" lean-forward="false" selection-start-line="22" selection-start-column="95" selection-end-line="22" selection-end-column="95" />
           <folding>
-            <element signature="e#23#44#0" expanded="true" />
+            <element signature="e#0#21#0" expanded="true" />
+            <marker date="1516183673948" expanded="true" signature="49:128" ph="SELECT ppv.p... pdi_prop_value" />
+            <marker date="1516183673948" expanded="true" signature="332:465" ph="SELECT ppt.`... pdi_product_track" />
+            <marker date="1516183673948" expanded="true" signature="332:472" ph="SELECT ppt.`... pdi_product_track" />
           </folding>
         </state>
       </provider>

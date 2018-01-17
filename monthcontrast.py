@@ -30,13 +30,13 @@ sheet.write(0, 0, '型号')
 sheet.write(0, 1, '内存')
 sheet.write(0, 2, '颜色')
 sheet.write(0, 3, '数量')
-for r in result2017:
+for r in shangjia2017dict:
     row = len(sheet.rows)
     pv, pm, pc = r.split(':')
     sheet.write(row, 0, pv)
     sheet.write(row, 1, pm)
     sheet.write(row, 2, pc)
-    sheet.write(row, 3, result2017[r])
+    sheet.write(row, 3, shangjia2017dict[r])
 
 add18 = []
 
@@ -45,14 +45,14 @@ sheet.write(0, 0, '型号')
 sheet.write(0, 1, '内存')
 sheet.write(0, 2, '颜色')
 sheet.write(0, 3, '数量')
-for r in result2018:
+for r in shangjia2018dict:
     row = len(sheet.rows)
     pv, pm, pc = r.split(':')
     sheet.write(row, 0, pv)
     sheet.write(row, 1, pm)
     sheet.write(row, 2, pc)
-    sheet.write(row, 3, result2018[r])
-    if r not in result2017:
+    sheet.write(row, 3, shangjia2018dict[r])
+    if r not in shangjia2017dict:
         add18.append(r)
 
 sheet = wb.add_sheet('xinzeng')
