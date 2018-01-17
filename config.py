@@ -27,7 +27,7 @@ product_connect = db.connect(host=product['host'], user=product['user'], passwd=
                              charset=charset)
 product_cursor = product_connect.cursor()
 
-target = 5500
+target = 9000
 
 path = '/var/www/python/'
 
