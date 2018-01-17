@@ -15,8 +15,7 @@ AND oo.`phone`= '{}'
 saled = []
 for phone in dframe['phone']:
     count = conf.product_cursor.execute(two_day_sale_sql.format(conf.yesterday.strftime(conf.date_format),
-                                                        conf.tomorrow.strftime(conf.date_format), phone))
-    print(phone)
+                                                                conf.tomorrow.strftime(conf.date_format), phone))
     if count > 0:
         saled.append(phone)
 sheet = wb.add_sheet('sheet')
