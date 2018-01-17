@@ -20,7 +20,7 @@ conf.product_cursor.execute(shangjia_sql.format('2018-1-1', ''))
 result2018 = conf.product_cursor.fetchall()
 shangjia2018dict = conf.product_count(result2018, vd, md, cd)
 
-conf.product_cursor.execute(shangjia_sql.format('2017-12-1', '2018-1-1'))
+conf.product_cursor.execute(shangjia_sql.format('2017-12-1', 'and ppt.created_at < \'2018-1-1\''))
 result2017 = conf.product_cursor.fetchall()
 shangjia2017dict = conf.product_count(result2017, vd, md, cd)
 
