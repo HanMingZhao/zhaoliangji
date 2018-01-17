@@ -60,6 +60,7 @@ sheet.write(0, 0, '型号')
 sheet.write(0, 1, '内存')
 sheet.write(0, 2, '颜色')
 for a in add18:
+    row = len(sheet.rows)
     pv, pm, pc = a.split(':')
     sheet.write(row, 0, pv)
     sheet.write(row, 1, pm)
