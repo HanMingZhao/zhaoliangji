@@ -54,19 +54,33 @@ for r in shangjia2018dict:
     sheet.write(row, 3, shangjia2018dict[r])
     if r not in shangjia2017dict:
         add18.append(r)
-
+sale2018 = '''
+SELECT pp.key_props FROM panda.`odi_order` oo
+LEFT JOIN panda.`pdi_product` pp
+ON pp.product_id = oo.product_id
+WHERE oo.order_status IN (1,2,4,5)
+AND oo.order_type IN (1,2)
+AND oo.pay_at >'2018-1-1'
+'''
+count = conf.product_cursor.execute(sale2018)
+sale2018result = conf.product_cursor.fetchall()
+sale2018dict = conf.product_count(sale2018result, vd, md, cd)
 sheet = wb.add_sheet('xinzeng')
 sheet.write(0, 0, '型号')
 sheet.write(0, 1, '内存')
 sheet.write(0, 2, '颜色')
-sheet.write(0, 3, '数量')
+sheet.write(0, 3, '销量')
+sheet.write(0, 4, '占比')
+sheet.write(0, 8, '总销量')
+sheet.write(1, 8, count)
 for a in add18:
     row = len(sheet.rows)
     pv, pm, pc = a.split(':')
     sheet.write(row, 0, pv)
     sheet.write(row, 1, pm)
     sheet.write(row, 2, pc)
-    sheet.write(row, 3, shangjia2018dict[a])
+    sheet.write(row, 3, sale2018dict[a] if a in sale2018dict else 0)
+    sheet.write(row, 4, sale2018dict[a]/count if a in sale2018dict else 0)
 
 wb.save('shangjiaxinzeng.xls')
 conf.product_cursor.close()
