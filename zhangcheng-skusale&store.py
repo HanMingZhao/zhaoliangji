@@ -30,13 +30,16 @@ def sale_product(workbook, mbrand, mtype, sheet_name, version_dict, memory_dict,
     sale_result = conf.product_cursor.fetchall()
     sale_dict = conf.product_count(sale_result, version_dict, memory_dict, color_dict)
 
-    store_sql ='''
+    store_sql = '''
     SELECT sw.key_props FROM panda.`stg_warehouse` sw
+    left join panda.pdi_product pp
+    on sw.product_id = pp.product_id
     WHERE sw.warehouse_num IN (1,2,4,7)
     AND sw.warehouse_status = 1
     AND sw.brand_id = {}
+    and pp.type_id = {}
     '''
-    conf.product_cursor.execute(store_sql.format(mbrand))
+    conf.product_cursor.execute(store_sql.format(mbrand, mtype))
     store_result = conf.product_cursor.fetchall()
     store_dict = conf.product_count(store_result, version_dict, memory_dict, color_dict)
 
