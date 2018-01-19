@@ -393,7 +393,7 @@ sheet.write(0, 7, '日活')
 sheet.write(0, 8, 'ios日活')
 sheet.write(0, 9, 'android日活')
 for i, r in enumerate(result):
-    sheet.write(i+1, 0, r[0])
+    sheet.write(i+1, 0, r[0].strftime(cf.date_format))
     sheet.write(i+1, 1, r[1])
     sheet.write(i+1, 2, r[2])
     sheet.write(i+1, 3, r[3])
