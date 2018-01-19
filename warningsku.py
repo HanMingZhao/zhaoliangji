@@ -87,7 +87,7 @@ def sales_sku(cursor, workbook, start, end, sale_condition, sku_condition, sheet
             print(s, level, high_level, conf.warning_sku.format(sku_dict[s], 3), resp)
 
 cf = conf.product
-connect = db.connect(host=cf['host'], user=cf['user'], passwd=cf['pass'], port=cf['port'], charset=conf.char)
+connect = db.connect(host=cf['host'], user=cf['user'], passwd=cf['pass'], port=cf['port'], charset=conf.charset)
 cur = connect.cursor()
 wb = xlwt.Workbook()
 

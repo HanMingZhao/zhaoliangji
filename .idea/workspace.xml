@@ -27,10 +27,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="warningsku.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="warningsku.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/warningsku.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="244">
+            <state relative-caret-position="1850">
               <caret line="102" column="0" lean-forward="false" selection-start-line="102" selection-start-column="0" selection-end-line="108" selection-end-column="43" />
               <folding>
                 <marker date="1515395730122" expanded="true" signature="935:1067" ph="select count... odi_order" />
@@ -107,18 +107,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="zhangcheng-skusale&amp;store.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="zhangcheng-skusale&amp;store.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/zhangcheng-skusale&amp;store.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1306">
-              <caret line="39" column="42" lean-forward="true" selection-start-line="39" selection-start-column="42" selection-end-line="39" selection-end-column="42" />
+            <state relative-caret-position="75">
+              <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
-                <marker date="1516274687948" expanded="true" signature="152:257" ph="SELECT sws.k... stg_warning_sku" />
-                <marker date="1516274687948" expanded="true" signature="486:891" ph="SELECT pp.`k... odi_order" />
-                <marker date="1516274687948" expanded="true" signature="486:892" ph="SELECT pp.`k... odi_order" />
-                <marker date="1516274687948" expanded="true" signature="1259:1405" ph="SELECT sw.ke... stg_warehouse" />
-                <marker date="1516274687948" expanded="true" signature="2883:2962" ph="SELECT ppv.p... pdi_prop_value" />
+                <marker date="1516274918276" expanded="true" signature="152:257" ph="SELECT sws.k... stg_warning_sku" />
+                <marker date="1516274918276" expanded="true" signature="486:891" ph="SELECT pp.`k... odi_order" />
+                <marker date="1516274918276" expanded="true" signature="486:892" ph="SELECT pp.`k... odi_order" />
+                <marker date="1516274918276" expanded="true" signature="1260:1478" ph="SELECT sw.ke... stg_warehouse" />
+                <marker date="1516274918276" expanded="true" signature="1260:1502" ph="SELECT sw.ke... stg_warehouse" />
+                <marker date="1516274918276" expanded="true" signature="2987:3066" ph="SELECT ppv.p... pdi_prop_value" />
               </folding>
             </state>
           </provider>
@@ -501,6 +502,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15351813" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -510,7 +512,7 @@
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4178455" sideWeight="0.49573562" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.44940153" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35364527" sideWeight="0.46588486" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35364527" sideWeight="0.46588486" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39934713" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1040,9 +1042,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/zhangcheng-skusale&amp;store.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+            <marker date="1516274918276" expanded="true" signature="152:257" ph="SELECT sws.k... stg_warning_sku" />
+            <marker date="1516274918276" expanded="true" signature="486:891" ph="SELECT pp.`k... odi_order" />
+            <marker date="1516274918276" expanded="true" signature="486:892" ph="SELECT pp.`k... odi_order" />
+            <marker date="1516274918276" expanded="true" signature="1260:1478" ph="SELECT sw.ke... stg_warehouse" />
+            <marker date="1516274918276" expanded="true" signature="1260:1502" ph="SELECT sw.ke... stg_warehouse" />
+            <marker date="1516274918276" expanded="true" signature="2987:3066" ph="SELECT ppv.p... pdi_prop_value" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/warningsku.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
+        <state relative-caret-position="1850">
           <caret line="102" column="0" lean-forward="false" selection-start-line="102" selection-start-column="0" selection-end-line="108" selection-end-column="43" />
           <folding>
             <marker date="1515395730122" expanded="true" signature="935:1067" ph="select count... odi_order" />
@@ -1056,21 +1074,6 @@
             <marker date="1515395730122" expanded="true" signature="1754:1816" ph="select sws.k... stg_warning_sku" />
             <marker date="1515395730122" expanded="true" signature="1754:1829" ph="select sws.k... stg_warning_sku" />
             <marker date="1515395730122" expanded="true" signature="3483:3562" ph="SELECT ppv.p... pdi_prop_value" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zhangcheng-skusale&amp;store.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1306">
-          <caret line="39" column="42" lean-forward="true" selection-start-line="39" selection-start-column="42" selection-end-line="39" selection-end-column="42" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-            <marker date="1516274687948" expanded="true" signature="152:257" ph="SELECT sws.k... stg_warning_sku" />
-            <marker date="1516274687948" expanded="true" signature="486:891" ph="SELECT pp.`k... odi_order" />
-            <marker date="1516274687948" expanded="true" signature="486:892" ph="SELECT pp.`k... odi_order" />
-            <marker date="1516274687948" expanded="true" signature="1259:1405" ph="SELECT sw.ke... stg_warehouse" />
-            <marker date="1516274687948" expanded="true" signature="2883:2962" ph="SELECT ppv.p... pdi_prop_value" />
           </folding>
         </state>
       </provider>
