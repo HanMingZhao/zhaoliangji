@@ -74,8 +74,8 @@ for sr in result:
 count_dict = {}
 sum_dict = {}
 for pta in product_total_amount:
-    earn = (product_total_amount[pta]*decimal.Decimal('%.2f' % 0.98)-58-product_cost[pta]
-            if product_cost[pta] is not None else 0)/2
+    earn = ((product_total_amount[pta] if product_total_amount[pta] is not None else 0) *
+            decimal.Decimal('%.2f' % 0.98)-58-(product_cost[pta] if product_cost[pta] is not None else 0))/2
     if product_sku_dict[pta] in count_dict:
         count_dict[product_sku_dict[pta]] = count_dict[product_sku_dict[pta]] + 1
     else:
