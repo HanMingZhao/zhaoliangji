@@ -1,5 +1,6 @@
 import config as conf
 import xlwt
+import decimal
 
 
 class Product:
@@ -73,9 +74,9 @@ for sr in result:
 count_dict = []
 sum_dict = []
 for pta in product_total_amount:
-    earn = (product_total_amount[pta]*0.98-58-product_cost[pta])*0.5
+    earn = (product_total_amount[pta]*decimal.Decimal('%.2f' % 0.98)-58-product_cost[pta])/2
     if product_sku_dict[pta] in count_dict:
-        count_dict[product_sku_dict[pta]] = count_dict[product_sku_dict[pta]] +1
+        count_dict[product_sku_dict[pta]] = count_dict[product_sku_dict[pta]] + 1
     else:
         count_dict[product_sku_dict[pta]] = 1
     if product_sku_dict[pta] in sum_dict:
