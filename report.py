@@ -400,7 +400,7 @@ for i, r in enumerate(result):
 
 
 path = cf.path
-wb.save('day.xls')
+wb.save(path+'day.xls')
 scur.close()
 scon.close()
 print('overtime...', time.time()-stime)

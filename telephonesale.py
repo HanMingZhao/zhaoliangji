@@ -21,6 +21,6 @@ for phone in dframe['phone']:
 sheet = wb.add_sheet('sheet')
 for i, s in enumerate(saled):
     sheet.write(i, 0, str(s))
-wb.save(conf.today.strftime(conf.date_format) + 'telesale.xls')
+wb.save(conf.path+conf.today.strftime(conf.date_format) + 'telesale.xls')
 conf.product_cursor.close()
 conf.product_connect.close()
