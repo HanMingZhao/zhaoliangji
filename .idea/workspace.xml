@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4a99546f-643b-4833-b464-5e20828d8662" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zhangcheng-daimaiticheng.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/telephonesale.py" afterPath="$PROJECT_DIR$/telephonesale.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -31,8 +31,8 @@
       <file leaf-file-name="warningsku.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/warningsku.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="369">
-              <caret line="119" column="0" lean-forward="true" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
+            <state relative-caret-position="450">
+              <caret line="22" column="38" lean-forward="true" selection-start-line="8" selection-start-column="4" selection-end-line="22" selection-end-column="38" />
               <folding>
                 <marker date="1516326089053" expanded="true" signature="935:1067" ph="select count... odi_order" />
                 <marker date="1516326089053" expanded="true" signature="935:1071" ph="select count... odi_order" />
@@ -50,22 +50,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="nextweekbuy.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/nextweekbuy.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="25">
-              <caret line="1" column="11" lean-forward="false" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="11" />
-              <folding>
-                <marker date="1515404055803" expanded="true" signature="619:808" ph="SELECT oo.`u... odi_order" />
-                <marker date="1515404055803" expanded="true" signature="1005:1393" ph="SELECT COUNT... odi_order" />
-                <marker date="1515404055803" expanded="true" signature="1005:1396" ph="SELECT COUNT... odi_order" />
-                <marker date="1515404055803" expanded="true" signature="1151:1340" ph="SELECT oo.`u... odi_order" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="telephonesale.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="telephonesale.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/telephonesale.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="244">
@@ -73,6 +58,23 @@
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
                 <marker date="1516328435144" expanded="true" signature="133:296" ph="SELECT * FRO... odi_order" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="zhangcheng-daimaiticheng.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/zhangcheng-daimaiticheng.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="494">
+              <caret line="103" column="0" lean-forward="true" selection-start-line="103" selection-start-column="0" selection-end-line="103" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#21#0" expanded="true" />
+                <marker date="1516347458462" expanded="true" signature="148:227" ph="SELECT ppv.p... pdi_prop_value" />
+                <marker date="1516347458462" expanded="true" signature="435:635" ph="SELECT oo.`p... odi_order" />
+                <marker date="1516347458462" expanded="true" signature="823:1091" ph="SELECT oo.`p... odi_order" />
+                <marker date="1516347458462" expanded="true" signature="823:1092" ph="SELECT oo.`p... odi_order" />
+                <marker date="1516347458462" expanded="true" signature="1257:1518" ph="SELECT pp.ke... odi_order" />
               </folding>
             </state>
           </provider>
@@ -103,27 +105,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="monthcontrast.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/monthcontrast.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="395">
-              <caret line="78" column="16" lean-forward="false" selection-start-line="78" selection-start-column="16" selection-end-line="78" selection-end-column="16" />
-              <folding>
-                <element signature="e#0#21#0" expanded="true" />
-                <marker date="1516189734800" expanded="true" signature="49:128" ph="SELECT ppv.p... pdi_prop_value" />
-                <marker date="1516189734800" expanded="true" signature="332:465" ph="SELECT ppt.`... pdi_product_track" />
-                <marker date="1516189734800" expanded="true" signature="332:472" ph="SELECT ppt.`... pdi_product_track" />
-                <marker date="1516189734800" expanded="true" signature="1637:1835" ph="SELECT pp.ke... odi_order" />
-                <marker date="1516189734800" expanded="true" signature="1637:1836" ph="SELECT pp.ke... odi_order" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="zhuanzhuan.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/zhuanzhuan.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1393">
+            <state relative-caret-position="3350">
               <caret line="139" column="18" lean-forward="false" selection-start-line="139" selection-start-column="18" selection-end-line="139" selection-end-column="18" />
               <folding>
                 <marker date="1515723904873" expanded="true" signature="2641:2720" ph="SELECT ppv.p... pdi_prop_value" />
@@ -136,7 +121,7 @@
       <file leaf-file-name="zhangcheng-skusale&amp;store.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/zhangcheng-skusale&amp;store.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
+            <state relative-caret-position="-75">
               <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
@@ -151,36 +136,27 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config.py">
+      <file leaf-file-name="last15daysale.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/last15daysale.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1200">
-              <caret line="72" column="34" lean-forward="true" selection-start-line="72" selection-start-column="34" selection-end-line="72" selection-end-column="34" />
-              <folding />
+            <state relative-caret-position="1000">
+              <caret line="43" column="34" lean-forward="false" selection-start-line="43" selection-start-column="34" selection-end-line="43" selection-end-column="34" />
+              <folding>
+                <marker date="1515408602876" expanded="true" signature="262:341" ph="SELECT ppv.p... pdi_prop_value" />
+                <marker date="1515408602876" expanded="true" signature="502:723" ph="SELECT pp.`k... odi_order" />
+                <marker date="1515408602876" expanded="true" signature="502:727" ph="SELECT pp.`k... odi_order" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="weekly.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/weekly.py">
+      <file leaf-file-name="hoursale.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hoursale.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5875">
-              <caret line="239" column="2" lean-forward="false" selection-start-line="239" selection-start-column="2" selection-end-line="239" selection-end-column="2" />
+            <state relative-caret-position="425">
+              <caret line="22" column="17" lean-forward="false" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
               <folding>
-                <marker date="1512350651305" expanded="true" signature="620:698" ph="SELECT ppv.p... pdi_prop_value" />
-                <marker date="1512350651305" expanded="true" signature="823:902" ph="SELECT ppv.p... pdi_prop_value" />
-                <marker date="1512350651305" expanded="true" signature="1022:1101" ph="SELECT ppv.p... pdi_prop_value" />
-                <marker date="1512350651305" expanded="true" signature="1226:1502" ph="SELECT DATE(... " />
-                <marker date="1512350651305" expanded="true" signature="1881:2309" ph="SELECT pm.`m... odi_order" />
-                <marker date="1512350651305" expanded="true" signature="2664:2968" ph="SELECT pp.`k... odi_order" />
-                <marker date="1512350651305" expanded="true" signature="3992:4471" ph="SELECT pm.mo... product_id" />
-                <marker date="1512350651305" expanded="true" signature="4050:4356" ph="SELECT oo.`p... odi_order" />
-                <marker date="1512350651305" expanded="true" signature="7251:7637" ph="SELECT DATE(... " />
-                <marker date="1512350651305" expanded="true" signature="8081:8366" ph="SELECT DISTI... *" />
-                <marker date="1512350651305" expanded="true" signature="8119:8242" ph="SELECT sw.*,... stg_warehouse" />
-                <marker date="1512350651305" expanded="true" signature="8726:9379" ph="SELECT bt.mo... model_name" />
-                <marker date="1512350651305" expanded="true" signature="8772:9331" ph="SELECT pm.mo... *" />
-                <marker date="1512350651305" expanded="true" signature="9015:9142" ph="SELECT sw.*,... stg_warehouse" />
+                <marker date="1512022687782" expanded="true" signature="789:1028" ph="SELECT DATE(... " />
               </folding>
             </state>
           </provider>
@@ -195,6 +171,16 @@
                 <marker date="1514451720114" expanded="true" signature="509:797" ph="SELECT oo.pr... odi_order" />
                 <marker date="1514451720114" expanded="true" signature="509:798" ph="SELECT DISTI... " />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="72" column="34" lean-forward="true" selection-start-line="72" selection-start-column="34" selection-end-line="72" selection-end-column="34" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -248,7 +234,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/storeinfo.py" />
         <option value="$PROJECT_DIR$/month.py" />
         <option value="$PROJECT_DIR$/cancelorderuser.py" />
         <option value="$PROJECT_DIR$/sale.py" />
@@ -299,6 +284,7 @@
         <option value="$PROJECT_DIR$/warningsku.py" />
         <option value="$PROJECT_DIR$/report.py" />
         <option value="$PROJECT_DIR$/telephonesale.py" />
+        <option value="$PROJECT_DIR$/zhangcheng-daimaiticheng.py" />
       </list>
     </option>
   </component>
@@ -588,13 +574,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://D:/Anaconda3/Lib/site-packages/redis/client.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="97">
-          <caret line="660" column="8" lean-forward="false" selection-start-line="660" selection-start-column="8" selection-end-line="660" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/aftersale.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-3045">
@@ -807,30 +786,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hoursale.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="22" column="17" lean-forward="false" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/investmentorder.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="518">
           <caret line="52" column="36" lean-forward="false" selection-start-line="52" selection-start-column="36" selection-end-line="52" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/last15daysale.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="43" column="34" lean-forward="false" selection-start-line="43" selection-start-column="34" selection-end-line="43" selection-end-column="34" />
-          <folding>
-            <element signature="e#0#20#0" expanded="false" />
-            <marker date="1515408602876" expanded="true" signature="262:341" ph="SELECT ppv.p... pdi_prop_value" />
-            <marker date="1515408602876" expanded="true" signature="502:723" ph="SELECT pp.`k... odi_order" />
-            <marker date="1515408602876" expanded="true" signature="502:727" ph="SELECT pp.`k... odi_order" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -941,17 +900,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/viewdetals.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="625">
-          <caret line="29" column="17" lean-forward="false" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
-          <folding>
-            <marker date="1514451720114" expanded="true" signature="509:797" ph="SELECT oo.pr... odi_order" />
-            <marker date="1514451720114" expanded="true" signature="509:798" ph="SELECT DISTI... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/weekly.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5875">
@@ -993,67 +941,12 @@
         <state relative-caret-position="395">
           <caret line="78" column="16" lean-forward="false" selection-start-line="78" selection-start-column="16" selection-end-line="78" selection-end-column="16" />
           <folding>
-            <element signature="e#0#21#0" expanded="true" />
+            <element signature="e#0#21#0" expanded="false" />
             <marker date="1516189734800" expanded="true" signature="49:128" ph="SELECT ppv.p... pdi_prop_value" />
             <marker date="1516189734800" expanded="true" signature="332:465" ph="SELECT ppt.`... pdi_product_track" />
             <marker date="1516189734800" expanded="true" signature="332:472" ph="SELECT ppt.`... pdi_product_track" />
             <marker date="1516189734800" expanded="true" signature="1637:1835" ph="SELECT pp.ke... odi_order" />
             <marker date="1516189734800" expanded="true" signature="1637:1836" ph="SELECT pp.ke... odi_order" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zhuanzhuan.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1393">
-          <caret line="139" column="18" lean-forward="false" selection-start-line="139" selection-start-column="18" selection-end-line="139" selection-end-column="18" />
-          <folding>
-            <marker date="1515723904873" expanded="true" signature="2641:2720" ph="SELECT ppv.p... pdi_prop_value" />
-            <marker date="1515723904873" expanded="true" signature="2852:3093" ph="SELECT AVG(p... pdi_product" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1200">
-          <caret line="72" column="34" lean-forward="true" selection-start-line="72" selection-start-column="34" selection-end-line="72" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zhangcheng-skusale&amp;store.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-            <marker date="1516274918276" expanded="true" signature="152:257" ph="SELECT sws.k... stg_warning_sku" />
-            <marker date="1516274918276" expanded="true" signature="486:891" ph="SELECT pp.`k... odi_order" />
-            <marker date="1516274918276" expanded="true" signature="486:892" ph="SELECT pp.`k... odi_order" />
-            <marker date="1516274918276" expanded="true" signature="1260:1478" ph="SELECT sw.ke... stg_warehouse" />
-            <marker date="1516274918276" expanded="true" signature="1260:1502" ph="SELECT sw.ke... stg_warehouse" />
-            <marker date="1516274918276" expanded="true" signature="2987:3066" ph="SELECT ppv.p... pdi_prop_value" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/warningsku.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="119" column="0" lean-forward="true" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
-          <folding>
-            <marker date="1516326089053" expanded="true" signature="935:1067" ph="select count... odi_order" />
-            <marker date="1516326089053" expanded="true" signature="935:1071" ph="select count... odi_order" />
-            <marker date="1516326089053" expanded="true" signature="935:1093" ph="select count... odi_order" />
-            <marker date="1516326089053" expanded="true" signature="935:1097" ph="select count... odi_order" />
-            <marker date="1516326089053" expanded="true" signature="935:1098" ph="select count... odi_order" />
-            <marker date="1516326089053" expanded="true" signature="1246:1548" ph="select pp.ke... odi_order" />
-            <marker date="1516326089053" expanded="true" signature="1246:1557" ph="select pp.ke... odi_order" />
-            <marker date="1516326089053" expanded="true" signature="1246:1559" ph="select pp.ke... odi_order" />
-            <marker date="1516326089053" expanded="true" signature="1754:1816" ph="select sws.k... stg_warning_sku" />
-            <marker date="1516326089053" expanded="true" signature="1754:1829" ph="select sws.k... stg_warning_sku" />
-            <marker date="1516326089053" expanded="true" signature="3486:3565" ph="SELECT ppv.p... pdi_prop_value" />
           </folding>
         </state>
       </provider>
@@ -1088,6 +981,109 @@
           <folding>
             <element signature="e#0#19#0" expanded="true" />
             <marker date="1516328435144" expanded="true" signature="133:296" ph="SELECT * FRO... odi_order" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zhuanzhuan.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3350">
+          <caret line="139" column="18" lean-forward="false" selection-start-line="139" selection-start-column="18" selection-end-line="139" selection-end-column="18" />
+          <folding>
+            <marker date="1515723904873" expanded="true" signature="2641:2720" ph="SELECT ppv.p... pdi_prop_value" />
+            <marker date="1515723904873" expanded="true" signature="2852:3093" ph="SELECT AVG(p... pdi_product" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zhangcheng-skusale&amp;store.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-75">
+          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+            <marker date="1516274918276" expanded="true" signature="152:257" ph="SELECT sws.k... stg_warning_sku" />
+            <marker date="1516274918276" expanded="true" signature="486:891" ph="SELECT pp.`k... odi_order" />
+            <marker date="1516274918276" expanded="true" signature="486:892" ph="SELECT pp.`k... odi_order" />
+            <marker date="1516274918276" expanded="true" signature="1260:1478" ph="SELECT sw.ke... stg_warehouse" />
+            <marker date="1516274918276" expanded="true" signature="1260:1502" ph="SELECT sw.ke... stg_warehouse" />
+            <marker date="1516274918276" expanded="true" signature="2987:3066" ph="SELECT ppv.p... pdi_prop_value" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/last15daysale.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1000">
+          <caret line="43" column="34" lean-forward="false" selection-start-line="43" selection-start-column="34" selection-end-line="43" selection-end-column="34" />
+          <folding>
+            <marker date="1515408602876" expanded="true" signature="262:341" ph="SELECT ppv.p... pdi_prop_value" />
+            <marker date="1515408602876" expanded="true" signature="502:723" ph="SELECT pp.`k... odi_order" />
+            <marker date="1515408602876" expanded="true" signature="502:727" ph="SELECT pp.`k... odi_order" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hoursale.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="22" column="17" lean-forward="false" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
+          <folding>
+            <marker date="1512022687782" expanded="true" signature="789:1028" ph="SELECT DATE(... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/viewdetals.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="625">
+          <caret line="29" column="17" lean-forward="false" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
+          <folding>
+            <marker date="1514451720114" expanded="true" signature="509:797" ph="SELECT oo.pr... odi_order" />
+            <marker date="1514451720114" expanded="true" signature="509:798" ph="SELECT DISTI... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/warningsku.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="22" column="38" lean-forward="true" selection-start-line="8" selection-start-column="4" selection-end-line="22" selection-end-column="38" />
+          <folding>
+            <marker date="1516326089053" expanded="true" signature="935:1067" ph="select count... odi_order" />
+            <marker date="1516326089053" expanded="true" signature="935:1071" ph="select count... odi_order" />
+            <marker date="1516326089053" expanded="true" signature="935:1093" ph="select count... odi_order" />
+            <marker date="1516326089053" expanded="true" signature="935:1097" ph="select count... odi_order" />
+            <marker date="1516326089053" expanded="true" signature="935:1098" ph="select count... odi_order" />
+            <marker date="1516326089053" expanded="true" signature="1246:1548" ph="select pp.ke... odi_order" />
+            <marker date="1516326089053" expanded="true" signature="1246:1557" ph="select pp.ke... odi_order" />
+            <marker date="1516326089053" expanded="true" signature="1246:1559" ph="select pp.ke... odi_order" />
+            <marker date="1516326089053" expanded="true" signature="1754:1816" ph="select sws.k... stg_warning_sku" />
+            <marker date="1516326089053" expanded="true" signature="1754:1829" ph="select sws.k... stg_warning_sku" />
+            <marker date="1516326089053" expanded="true" signature="3486:3565" ph="SELECT ppv.p... pdi_prop_value" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="72" column="34" lean-forward="true" selection-start-line="72" selection-start-column="34" selection-end-line="72" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zhangcheng-daimaiticheng.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="103" column="0" lean-forward="true" selection-start-line="103" selection-start-column="0" selection-end-line="103" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+            <marker date="1516347458462" expanded="true" signature="148:227" ph="SELECT ppv.p... pdi_prop_value" />
+            <marker date="1516347458462" expanded="true" signature="435:635" ph="SELECT oo.`p... odi_order" />
+            <marker date="1516347458462" expanded="true" signature="823:1091" ph="SELECT oo.`p... odi_order" />
+            <marker date="1516347458462" expanded="true" signature="823:1092" ph="SELECT oo.`p... odi_order" />
+            <marker date="1516347458462" expanded="true" signature="1257:1518" ph="SELECT pp.ke... odi_order" />
           </folding>
         </state>
       </provider>
