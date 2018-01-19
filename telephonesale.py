@@ -12,12 +12,12 @@ AND oo.`pay_at`>'{}'
 AND oo.`pay_at`<'{}'
 AND oo.`phone`= '{}'
 '''
-saled = []
+saled = set()
 for phone in dframe['phone']:
     count = conf.product_cursor.execute(two_day_sale_sql.format(conf.yesterday.strftime(conf.date_format),
                                                                 conf.tomorrow.strftime(conf.date_format), phone))
     if count > 0:
-        saled.append(phone)
+        saled.add(phone)
 sheet = wb.add_sheet('sheet')
 for i, s in enumerate(saled):
     sheet.write(i, 0, str(s))

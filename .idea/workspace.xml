@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="4a99546f-643b-4833-b464-5e20828d8662" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report.py" afterPath="$PROJECT_DIR$/report.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/telephonesale.py" afterPath="$PROJECT_DIR$/telephonesale.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -66,39 +65,39 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="telephonesale.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="telephonesale.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/telephonesale.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="319">
-              <caret line="23" column="18" lean-forward="false" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
+            <state relative-caret-position="244">
+              <caret line="17" column="37" lean-forward="false" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
-                <marker date="1516327789935" expanded="true" signature="133:296" ph="SELECT * FRO... odi_order" />
+                <marker date="1516328435144" expanded="true" signature="133:296" ph="SELECT * FRO... odi_order" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="report.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="report.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/report.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="402" column="13" lean-forward="false" selection-start-line="402" selection-start-column="13" selection-end-line="402" selection-end-column="13" />
+            <state relative-caret-position="194">
+              <caret line="395" column="54" lean-forward="true" selection-start-line="395" selection-start-column="54" selection-end-line="395" selection-end-column="54" />
               <folding>
-                <marker date="1516327789918" expanded="true" signature="2256:2335" ph="SELECT ppv.p... pdi_prop_value" />
-                <marker date="1516327789918" expanded="true" signature="3238:3436" ph="SELECT DATE(... " />
-                <marker date="1516327789918" expanded="true" signature="3795:4245" ph="SELECT t.dat... t" />
-                <marker date="1516327789918" expanded="true" signature="3826:4226" ph="SELECT DATE(... " />
-                <marker date="1516327789918" expanded="true" signature="4481:4964" ph="SELECT a.dat... a" />
-                <marker date="1516327789918" expanded="true" signature="4535:4730" ph="SELECT DATE(... " />
-                <marker date="1516327789918" expanded="true" signature="4748:4943" ph="SELECT DATE(... " />
-                <marker date="1516327789918" expanded="true" signature="5604:5911" ph="SELECT pm.mo... odi_order" />
-                <marker date="1516327789918" expanded="true" signature="6620:6956" ph="SELECT pm.`m... pdi_product_track" />
-                <marker date="1516327789918" expanded="true" signature="7244:7617" ph="SELECT pm.`m... stg_warehouse_switch" />
-                <marker date="1516327789918" expanded="true" signature="7920:8118" ph="SELECT pm.`m... stg_warehouse" />
-                <marker date="1516327789918" expanded="true" signature="9140:9360" ph="SELECT pm.mo... stg_warehouse" />
-                <marker date="1516327789918" expanded="true" signature="10046:10242" ph="SELECT HOUR(... " />
-                <marker date="1516327789918" expanded="true" signature="10693:10868" ph="SELECT bai.`... boss_api_info" />
+                <marker date="1516327977238" expanded="true" signature="2256:2335" ph="SELECT ppv.p... pdi_prop_value" />
+                <marker date="1516327977238" expanded="true" signature="3238:3436" ph="SELECT DATE(... " />
+                <marker date="1516327977238" expanded="true" signature="3795:4245" ph="SELECT t.dat... t" />
+                <marker date="1516327977238" expanded="true" signature="3826:4226" ph="SELECT DATE(... " />
+                <marker date="1516327977238" expanded="true" signature="4481:4964" ph="SELECT a.dat... a" />
+                <marker date="1516327977238" expanded="true" signature="4535:4730" ph="SELECT DATE(... " />
+                <marker date="1516327977238" expanded="true" signature="4748:4943" ph="SELECT DATE(... " />
+                <marker date="1516327977238" expanded="true" signature="5604:5911" ph="SELECT pm.mo... odi_order" />
+                <marker date="1516327977238" expanded="true" signature="6620:6956" ph="SELECT pm.`m... pdi_product_track" />
+                <marker date="1516327977238" expanded="true" signature="7244:7617" ph="SELECT pm.`m... stg_warehouse_switch" />
+                <marker date="1516327977238" expanded="true" signature="7920:8118" ph="SELECT pm.`m... stg_warehouse" />
+                <marker date="1516327977238" expanded="true" signature="9140:9360" ph="SELECT pm.mo... stg_warehouse" />
+                <marker date="1516327977238" expanded="true" signature="10046:10242" ph="SELECT HOUR(... " />
+                <marker date="1516327977238" expanded="true" signature="10693:10868" ph="SELECT bai.`... boss_api_info" />
               </folding>
             </state>
           </provider>
@@ -298,8 +297,8 @@
         <option value="$PROJECT_DIR$/monthcontrast.py" />
         <option value="$PROJECT_DIR$/zhangcheng-skusale&amp;store.py" />
         <option value="$PROJECT_DIR$/warningsku.py" />
-        <option value="$PROJECT_DIR$/telephonesale.py" />
         <option value="$PROJECT_DIR$/report.py" />
+        <option value="$PROJECT_DIR$/telephonesale.py" />
       </list>
     </option>
   </component>
@@ -517,6 +516,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15351813" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -526,7 +526,7 @@
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4178455" sideWeight="0.49573562" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.44940153" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35364527" sideWeight="0.46588486" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35364527" sideWeight="0.46588486" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39934713" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1058,36 +1058,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/telephonesale.py">
+    <entry file="file://$PROJECT_DIR$/report.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="23" column="18" lean-forward="false" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
+        <state relative-caret-position="194">
+          <caret line="395" column="54" lean-forward="true" selection-start-line="395" selection-start-column="54" selection-end-line="395" selection-end-column="54" />
           <folding>
-            <element signature="e#0#19#0" expanded="true" />
-            <marker date="1516327789935" expanded="true" signature="133:296" ph="SELECT * FRO... odi_order" />
+            <marker date="1516327977238" expanded="true" signature="2256:2335" ph="SELECT ppv.p... pdi_prop_value" />
+            <marker date="1516327977238" expanded="true" signature="3238:3436" ph="SELECT DATE(... " />
+            <marker date="1516327977238" expanded="true" signature="3795:4245" ph="SELECT t.dat... t" />
+            <marker date="1516327977238" expanded="true" signature="3826:4226" ph="SELECT DATE(... " />
+            <marker date="1516327977238" expanded="true" signature="4481:4964" ph="SELECT a.dat... a" />
+            <marker date="1516327977238" expanded="true" signature="4535:4730" ph="SELECT DATE(... " />
+            <marker date="1516327977238" expanded="true" signature="4748:4943" ph="SELECT DATE(... " />
+            <marker date="1516327977238" expanded="true" signature="5604:5911" ph="SELECT pm.mo... odi_order" />
+            <marker date="1516327977238" expanded="true" signature="6620:6956" ph="SELECT pm.`m... pdi_product_track" />
+            <marker date="1516327977238" expanded="true" signature="7244:7617" ph="SELECT pm.`m... stg_warehouse_switch" />
+            <marker date="1516327977238" expanded="true" signature="7920:8118" ph="SELECT pm.`m... stg_warehouse" />
+            <marker date="1516327977238" expanded="true" signature="9140:9360" ph="SELECT pm.mo... stg_warehouse" />
+            <marker date="1516327977238" expanded="true" signature="10046:10242" ph="SELECT HOUR(... " />
+            <marker date="1516327977238" expanded="true" signature="10693:10868" ph="SELECT bai.`... boss_api_info" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/report.py">
+    <entry file="file://$PROJECT_DIR$/telephonesale.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="402" column="13" lean-forward="false" selection-start-line="402" selection-start-column="13" selection-end-line="402" selection-end-column="13" />
+        <state relative-caret-position="244">
+          <caret line="17" column="37" lean-forward="false" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
           <folding>
-            <marker date="1516327789918" expanded="true" signature="2256:2335" ph="SELECT ppv.p... pdi_prop_value" />
-            <marker date="1516327789918" expanded="true" signature="3238:3436" ph="SELECT DATE(... " />
-            <marker date="1516327789918" expanded="true" signature="3795:4245" ph="SELECT t.dat... t" />
-            <marker date="1516327789918" expanded="true" signature="3826:4226" ph="SELECT DATE(... " />
-            <marker date="1516327789918" expanded="true" signature="4481:4964" ph="SELECT a.dat... a" />
-            <marker date="1516327789918" expanded="true" signature="4535:4730" ph="SELECT DATE(... " />
-            <marker date="1516327789918" expanded="true" signature="4748:4943" ph="SELECT DATE(... " />
-            <marker date="1516327789918" expanded="true" signature="5604:5911" ph="SELECT pm.mo... odi_order" />
-            <marker date="1516327789918" expanded="true" signature="6620:6956" ph="SELECT pm.`m... pdi_product_track" />
-            <marker date="1516327789918" expanded="true" signature="7244:7617" ph="SELECT pm.`m... stg_warehouse_switch" />
-            <marker date="1516327789918" expanded="true" signature="7920:8118" ph="SELECT pm.`m... stg_warehouse" />
-            <marker date="1516327789918" expanded="true" signature="9140:9360" ph="SELECT pm.mo... stg_warehouse" />
-            <marker date="1516327789918" expanded="true" signature="10046:10242" ph="SELECT HOUR(... " />
-            <marker date="1516327789918" expanded="true" signature="10693:10868" ph="SELECT bai.`... boss_api_info" />
+            <element signature="e#0#19#0" expanded="true" />
+            <marker date="1516328435144" expanded="true" signature="133:296" ph="SELECT * FRO... odi_order" />
           </folding>
         </state>
       </provider>
